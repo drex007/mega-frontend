@@ -11,7 +11,7 @@ const CarouselSlider = () => {
     const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
 
     return (
-        <div className='overflow-hidden md:h-[50vh] h-[120vh] 2xl:h-[90vh] w-full m-auto relative '>
+        <div className='overflow-hidden md:h-[50vh] lg:h-[120vh] 2xl:h-[90vh] w-full m-auto relative '>
 
             <div className='flex transition-transform duration-500 w-full'
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}>

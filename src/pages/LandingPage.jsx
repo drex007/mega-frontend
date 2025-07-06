@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from '../components/Header'
-import Hero from '../components/Hero'
 import CarouselSlider from '../components/CarouselSlider'
+import AboutUs from '../components/AboutUs'
+import MegaAnimalAndFeed from '../components/MegaAnimalAndFeed'
 
 
 const LandingPage = () => {
@@ -9,8 +10,10 @@ const LandingPage = () => {
         <div className='h-[400px] w-full'>
             <Header />
             <CarouselSlider />
-            {/* <Hero /> */}
-     
+            <AboutUs />
+            <MegaAnimalAndFeed />
+
+
 
 
         </div>

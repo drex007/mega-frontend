@@ -8,6 +8,39 @@ import youngman from  './images/young-man.svg'
 import youngwoman from './images/young-woman.svg'
 import arrowback from './icons/arrow-back.svg'
 import arrowfront from './icons/arrow-front.svg'
+import megsaboutus from './images/megs-about-us.svg'
+import mobileapp from './images/mobil-app.svg'
+import welcometo from './images/welcome-to.svg'
+import silo from './images/silo.svg'
+import megacerealsandgrains from './images/megs-grain-cereal.svg'
+import cassava from  './images/cassava.svg'
+import corn from './images/corn.svg'
+import rice from './images/rice.svg'
+import soya from './images/soya.svg'
+import wheat from './images/wheat.svg'
+import sorgium from './images/sorgium.svg'
+import nutseed from  './images/nuts-seed.svg'
+import nutseedhuman from './images/nuts-seed-huma.svg'
+import ginger from './images/ginger.svg'
+import sesame from  './images/sesame.svg'
+import cashew from './images/cashew-nut.svg'
+import chicken from './images/chicken.svg'
+import cows from  './images/cows.svg'
+import maizeoffals from  './images/maize-offals.svg'
+import ricebran from  './images/rice-bran.svg'
+import wheatbran  from './images/wheat-bran.svg'
+import cassavabran from './images/cassava-bran.svg'
+import soyabeansmeal from './images/soyabeans-meal.svg'
+import bonemeal from  './images/bone-meal.svg'
+import palmkernelfibre  from './images/palmkernel-fibre.svg'
+import palmkernelcake from './images/palmkernelcake.svg'
+import palmkernelshell from './images/palmkernelshell.svg'
+import whitechiken from './images/white-chicken.svg'
+import cowbeef from './images/cow-beef.svg'
+import goatchevon from './images/goat-chevon.svg'
+
+
+
 export {
 
     logo,
@@ -18,5 +51,36 @@ export {
     youngman,
     youngwoman,
     arrowback,
-    arrowfront
+    arrowfront,
+    megsaboutus,
+    mobileapp,
+    welcometo,
+    silo,
+    megacerealsandgrains,
+    cassava,
+    corn,
+    rice,
+    soya, 
+    wheat, 
+    sorgium,
+    nutseed,
+    nutseedhuman,
+    ginger,
+    sesame,
+    cashew,
+    cows,
+    chicken,
+    maizeoffals,
+    ricebran,
+    wheatbran,
+    cassavabran,
+    soyabeansmeal,
+    bonemeal,
+    palmkernelcake,
+    palmkernelfibre,
+    palmkernelshell,
+    whitechiken,
+    cowbeef,
+    goatchevon
+
 }

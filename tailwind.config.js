@@ -38,10 +38,13 @@ export default {
       colors: {
         "primary-light-green": '#0DB14B',
         "primary-dark-green": '#0B933C',
-        "button-green-black": '#103233 ',
+        "primary-bg-dark-gren": "#1E1E1E",
+        "primary-green-black": '#103233',
         "primary-grey": "#C1CBB0",
+        "primary-text-grey": "#6E6E6E",
         "primary-transparent": "#2E2E2E",
         "primary-black-text": "#3D3D3D",
+        "button-dark-green": "#194546",
         "modal-bg": "#11111190",
 
 

@@ -38,6 +38,10 @@ import palmkernelshell from './images/palmkernelshell.svg'
 import whitechiken from './images/white-chicken.svg'
 import cowbeef from './images/cow-beef.svg'
 import goatchevon from './images/goat-chevon.svg'
+import w1 from './images/w1.svg'
+import w2 from './images/w2.svg'
+import w3 from './images/w3.svg'
+import w4 from './images/w4.svg'
 
 
 
@@ -81,6 +85,10 @@ export {
     palmkernelshell,
     whitechiken,
     cowbeef,
-    goatchevon
+    goatchevon,
+    w1,
+    w2,
+    w3,
+    w4
 
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed } from '../assets'
 
 const AboutUs = () => {
-    const images = [corn, wheat, soya, rice, sorgium, cassava]
+
     const contents = [
         {
             "image": corn,
@@ -38,21 +38,21 @@ const AboutUs = () => {
     ]
     return (
         <div className=' bg-white  overflow-hidden' id='about-us'>
-            <p className='px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] text-[30px]'>Africa's Farm-To-Market Plaform</p>
+            <p className='px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[20px]'>Africa's Farm-To-Market Plaform</p>
 
-            <div className='flex flex-1 items-center -mt-4'>
-                <div className='px-16  flex-[0.5]'>
-                    <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] text-[80px]'>About Us</p>
+            <div className='lg:flex flex-1 items-center -mt-4'>
+                <div className='lg:px-16 px-4  flex-[0.5]'>
+                    <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] lg:text-[80px] text-[40px] lg:my-0 my-4'>About Us</p>
                     <p className='font-neulis text-[30px] mb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
                     <p className='font-neulis text-primary-text-grey '>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
 
-                    <div className='py-12 px-16'>
+                    <div className='lg:py-12 lg:px-16 flex lg:justify-self-start justify-center mt-4 lg:mt-0'>
                         <p className='font-medium'>DOWNLOAD THE APP ON </p>
                     </div>
 
                 </div>
-                <div className='flex-[0.5] flex relative justify-end mr-10 items-center'>
+                <div className='hidden  flex-[0.5] lg:flex relative justify-end mr-10 items-center'>
                     <img src={megsaboutus} className='2xl:-mr-[8vw] md:-mr-[10vw] z-10' />
                     <img src={mobileapp} className='z-10' />
                     <div className='absolute 2xl:h-[120%] h-[105%] bg-primary-dark-green w-full rounded-full lg:-mr-[21vw] 2xl:-mr-[32vw]'>
@@ -65,15 +65,15 @@ const AboutUs = () => {
 
             {/* Second */}
             <div className='flex flex-1 items-center py-8'>
-                <div className='flex-[0.35] flex relative justify-start ml-10 items-center'>
+                <div className='hidden flex-[0.35] lg:flex relative justify-start ml-10 items-center'>
                     <div className='absolute h-[130%] bg-primary-dark-green w-full rounded-full lg:-ml-[18vw] 2xl:-ml-[20vw]'>
 
                     </div>
                     <img src={welcometo} className='z-10 -ml-20' />
 
                 </div>
-                <div className='px-16  flex-[0.65]'>
-                    <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] text-[80px]'>Welcome To</p>
+                <div className='lg:px-16 px-4  lg:flex-[0.65]'>
+                    <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] lg:text-[80px] text-[40px]'>Welcome To</p>
                     <p className='font-neulis text-[30px]  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
                     <p className='font-neulis text-primary-text-grey'>Our robust B2B agro platform, supported by an extensive network of representatives across states, regions, and market localities, provides unmatched reach and efficiency. Whether sourcing raw materials or distributing commodities, our swift and reliable infrastructure guarantees quality, speed, and customer satisfaction. We pride ourselves on our innovative approach, blending traditional market expertise with cutting-edge digital systems. Our upcoming app will further enhance our services, allowing for real-time tracking, efficient distribution, and effortless transactions. At Megas Agriculture Limited, our mission is to empower businesses, drive economic growth, and create lasting partnerships within the agro-industry. We are the trusted bridge between producers and markets, both locally and internationally.</p>
@@ -103,7 +103,7 @@ const AboutUs = () => {
 
             </div>
             {/* Fourth */}
-            <div className='grid grid-cols-3 px-auto items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
+            <div className='grid lg:grid-cols-3 grid-cols-1 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
                 {contents?.map((e, i) => {
                     return <div className='flex flex-col items-center justify-center w-5/6 '>
                         <img src={e?.image} className='4/5' />

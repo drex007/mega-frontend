@@ -22,8 +22,8 @@ const CarouselSlider = () => {
             </div>
 
             <div className='absolute -top-[15%] h-full w-full flex justify-between px-8 items-center z-20 '>
-                <img src={arrowback} className='hover:cursor-pointer 2xl:w-[50px]' onClick={prevSlide} />
-                <img src={arrowfront} className='hover:cursor-pointer 2xl:w-[50px]' onClick={nextSlide} />
+                <img src={arrowback} className='hover:cursor-pointer w-[20px] lg:w-[50px]' onClick={prevSlide} />
+                <img src={arrowfront} className='hover:cursor-pointer w-[20px] lg:w-[50px]' onClick={nextSlide} />
 
             </div>
 
@@ -34,7 +34,7 @@ const CarouselSlider = () => {
 
             </div>
             <div className='absolute top-[75%] space-x-6 flex h-full  justify-start  px-8 w-full'>
-                <p className='2xl:text-[100px] lg:text-[70px] text-[50px] font-neulis text-white '>Export With <span className='text-primary-light-green font-semibold'>Megas</span></p>
+                <p className='2xl:text-[100px] lg:text-[70px] text-[20px] font-neulis text-white '>Export With <span className='text-primary-light-green font-semibold'>Megas</span></p>
             </div>
             <div className='absolute flex justify-center top-[90%] space-x-4 w-full' >
                 {slideIndex?.map((e, i) => <div key={i}

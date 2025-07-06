@@ -41,63 +41,63 @@ const MegaAnimalAndFeed = () => {
         {
             "image": maizeoffals,
             "title": "Maize Offal",
-            "text": "Carefully processed to retain value. Ideal industrial uses. Cashew Nut Shell Liquid (CNSL), Oil, Animal Feed, Biofuel."
+            "text": "Fine milling by-products with high-energy content. Clean and dust-free."
         },
         {
             "image": ricebran,
             "title": "Rice Bran",
-            "text": "Available in hulled and unlulled varieties. High oil content and purity ensured through stringent sorting processes."
+            "text": "Stabilized rice bran with minimal fat content, suitable for livestock diets."
         },
         {
             "image": wheatbran,
             "title": "Wheat Bran",
-            "text": "Fresh and dried ginger roots of Grade A quality, high in aroma and flavor, suitable for spice markets."
+            "text": "Wheat Bran: Coarse and fine bran options with high fiber and nutrient value."
         },
         {
             "image": cassavabran,
-            "title": "Maize Offal",
-            "text": "Carefully processed to retain value. Ideal industrial uses. Cashew Nut Shell Liquid (CNSL), Oil, Animal Feed, Biofuel."
+            "title": "Cassava Flour",
+            "text": "Cassava Flour: Fine-milled cassava flour, acarbohydrate-rich alternative feed ingredient."
         },
         {
             "image": soyabeansmeal,
-            "title": "Rice Bran",
-            "text": "Available in hulled and unlulled varieties. High oil content and purity ensured through stringent sorting processes."
+            "title": "Soyabean Meal",
+            "text": "Soya Beans Meal: High-protein content meal, essential for poultry and fish feed."
         },
         {
             "image": bonemeal,
-            "title": "Wheat Bran",
-            "text": "Fresh and dried ginger roots of Grade A quality, high in aroma and flavor, suitable for spice markets."
+            "title": "Bone Meal",
+            "text": "Bone Meal: Crushed and sterilized bone meal with high calcium and phosphorus levels.."
         },
 
         {
             "image": palmkernelfibre,
-            "title": "Maize Offal",
-            "text": "Carefully processed to retain value. Ideal industrial uses. Cashew Nut Shell Liquid (CNSL), Oil, Animal Feed, Biofuel."
+            "title": "Palmkernel fibre",
+            "text": "Palm Kernel Fiber: Roughage-rich material for ruminant feeding."
         },
         {
             "image": palmkernelcake,
-            "title": "Rice Bran",
-            "text": "Available in hulled and unlulled varieties. High oil content and purity ensured through stringent sorting processes."
+            "title": "Palmkernel Cake",
+            "text": "PKC (Palm Kernel Cake): Protein-rich feed ingredient derived from kernel extraction."
         },
         {
             "image": palmkernelshell,
-            "title": "Wheat Bran",
-            "text": "Fresh and dried ginger roots of Grade A quality, high in aroma and flavor, suitable for spice markets."
+            "title": "Palmkernel Shell",
+            "text": "Palm Kernel Shell: Crushed shells for supplemental feed or energy uses."
         },
         {
             "image": whitechiken,
-            "title": "Maize Offal",
-            "text": "Carefully processed to retain value. Ideal industrial uses. Cashew Nut Shell Liquid (CNSL), Oil, Animal Feed, Biofuel."
+            "title": "Chicken",
+            "text": "Chicken: Healthy, farm-raised poultry with strict biosecurity measures."
         },
         {
             "image": cowbeef,
-            "title": "Rice Bran",
-            "text": "Available in hulled and unlulled varieties. High oil content and purity ensured through stringent sorting processes."
+            "title": "Cow & Beef",
+            "text": "Cow/Beef: Grass-fed cows providing tender and flavorful beef."
         },
         {
             "image": goatchevon,
             "title": "Wheat Bran",
-            "text": "Fresh and dried ginger roots of Grade A quality, high in aroma and flavor, suitable for spice markets."
+            "text": "Goat/Chevon: Free-range goats offeringpremium-quality meat."
         },
 
 
@@ -107,7 +107,7 @@ const MegaAnimalAndFeed = () => {
 
     return (
         <div className='bg-primary-green-black overflow-hidden'>
-            <div className='grid grid-cols-3 px-auto items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
+            <div className='grid lg:grid-cols-3 grid-cols-1 px-auto items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
                 {contents?.map((e, i) => {
                     return <div className='flex flex-col items-center justify-center w-5/6 '>
                         <img src={e?.image} className='4/5' />
@@ -137,12 +137,12 @@ const MegaAnimalAndFeed = () => {
                 </div>
 
             </div>
-            <div className='grid grid-cols-6 px-8 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
+            <div className='grid lg:grid-cols-6 grid-cols-2 lg:px-8 px-2 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
                 {contents2?.map((e, i) => {
                     return <div className='flex flex-col items-center justify-center w-full '>
-                        <img src={e?.image} className='w-2/5 lg:w-3/4' />
-                        <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-2/5 font-neulis my-2 font-semibold md:text-[10px]  text-[14px]'>{e?.title}</p>
-                        <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-neulis my-2 text-[12px]'>{e?.text}</p>
+                        <img src={e?.image} className='w-4/5 lg:w-4/5' />
+                        <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[10px]  lg:text-[14px]'>{e?.title}</p>
+                        <p className='rounded-full  px-1 py-4 text-white flex justify-center font-neulis my-2 text-[12px] w-full'>{e?.text}</p>
                     </div>
 
 

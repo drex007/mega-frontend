@@ -10,8 +10,8 @@ const Header = () => {
     return (
         <div className='px-8 py-6 h-[80px] lg:flex  bg-primary-dark-green justify-between'>
             <div className='flex space-x-3 items-center'>
-                <img src={logo} />
-                <img src={textlogowhite} className='max-h-10' />
+                <img src={logo} className='h-[30px] lg:max-h-10' />
+                <img src={textlogowhite} className='h-[30px] lg:max-h-10' />
             </div>
             <div className='hidden lg:flex space-x-8 items-center'>
                 <p className='text-white cursor-pointer lg:text-[14px]'>Megas</p>

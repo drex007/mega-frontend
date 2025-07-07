@@ -1,12 +1,15 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-scroll'
 import { logo, textlogo, textlogowhite } from '../assets'
+import { HiOutlineMenuAlt2 } from "react-icons/hi";
+import { ImCancelCircle } from "react-icons/im";
 
 
 
 
 const Header = () => {
-  
+    const [showMenuBar, setShowMenuBar] = useState(false)
+
     return (
         <div className='px-8 py-6 h-[80px] lg:flex  bg-primary-dark-green justify-between'>
             <div className='flex space-x-3 items-center'>
@@ -22,6 +25,15 @@ const Header = () => {
                 <p className='text-white cursor-pointer lg:text-[12px] border border-white rounded-sm py-1 px-2'>Contact Us</p>
 
 
+            </div>
+
+            <div className='relative lg:hidden flex justify-end -mt-8'>
+                {!showMenuBar && <HiOutlineMenuAlt2 size={40} color='white' className='cursor-pointer' onClick={() => setShowMenuBar(!showMenuBar)} />}
+
+                {showMenuBar && <div className='absolute z-50 transition ease-in duration-90000 lg:hidden flex-col -mr-10 px-4 py-4 min-h-[450px] w-4/5 shadow-2xl shadow-gray-500 rounded-2xl top-0 bg-white   right-0'>
+                    <ImCancelCircle size={30} color='green' className='cursor-pointer' onClick={() => setShowMenuBar(!showMenuBar)} />
+
+                </div>}
             </div>
 
 

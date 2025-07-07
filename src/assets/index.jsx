@@ -4,7 +4,7 @@ import textlogo from './icons/text-logo.svg'
 import textlogowhite from './icons/text-logo-white.svg'
 import ship from "./images/ship.svg"
 import familyfarming from './images/family-farming.svg'
-import youngman from  './images/young-man.svg'
+import youngman from './images/young-man.svg'
 import youngwoman from './images/young-woman.svg'
 import arrowback from './icons/arrow-back.svg'
 import arrowfront from './icons/arrow-front.svg'
@@ -13,26 +13,26 @@ import mobileapp from './images/mobil-app.svg'
 import welcometo from './images/welcome-to.svg'
 import silo from './images/silo.svg'
 import megacerealsandgrains from './images/megs-grain-cereal.svg'
-import cassava from  './images/cassava.svg'
+import cassava from './images/cassava.svg'
 import corn from './images/corn.svg'
 import rice from './images/rice.svg'
 import soya from './images/soya.svg'
 import wheat from './images/wheat.svg'
 import sorgium from './images/sorgium.svg'
-import nutseed from  './images/nuts-seed.svg'
+import nutseed from './images/nuts-seed.svg'
 import nutseedhuman from './images/nuts-seed-huma.svg'
 import ginger from './images/ginger.svg'
-import sesame from  './images/sesame.svg'
+import sesame from './images/sesame.svg'
 import cashew from './images/cashew-nut.svg'
 import chicken from './images/chicken.svg'
-import cows from  './images/cows.svg'
-import maizeoffals from  './images/maize-offals.svg'
-import ricebran from  './images/rice-bran.svg'
-import wheatbran  from './images/wheat-bran.svg'
+import cows from './images/cows.svg'
+import maizeoffals from './images/maize-offals.svg'
+import ricebran from './images/rice-bran.svg'
+import wheatbran from './images/wheat-bran.svg'
 import cassavabran from './images/cassava-bran.svg'
 import soyabeansmeal from './images/soyabeans-meal.svg'
-import bonemeal from  './images/bone-meal.svg'
-import palmkernelfibre  from './images/palmkernel-fibre.svg'
+import bonemeal from './images/bone-meal.svg'
+import palmkernelfibre from './images/palmkernel-fibre.svg'
 import palmkernelcake from './images/palmkernelcake.svg'
 import palmkernelshell from './images/palmkernelshell.svg'
 import whitechiken from './images/white-chicken.svg'
@@ -42,6 +42,11 @@ import w1 from './images/w1.svg'
 import w2 from './images/w2.svg'
 import w3 from './images/w3.svg'
 import w4 from './images/w4.svg'
+import cert1 from './images/cert-1.svg'
+import cert2 from './images/cert-2.svg'
+import cert3 from './images/cert-3.svg'
+import cert4 from './images/cert-4.svg'
+import cert5 from './images/cert-5.svg'
 
 
 
@@ -64,8 +69,8 @@ export {
     cassava,
     corn,
     rice,
-    soya, 
-    wheat, 
+    soya,
+    wheat,
     sorgium,
     nutseed,
     nutseedhuman,
@@ -89,6 +94,11 @@ export {
     w1,
     w2,
     w3,
-    w4
+    w4,
+    cert1,
+    cert2,
+    cert3,
+    cert4,
+    cert5
 
 }

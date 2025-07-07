@@ -3,6 +3,8 @@ import Header from '../components/Header'
 import CarouselSlider from '../components/CarouselSlider'
 import AboutUs from '../components/AboutUs'
 import MegaAnimalAndFeed from '../components/MegaAnimalAndFeed'
+import CertifcationCompliance from '../components/CertifcationCompliance'
+import WhyChooseUs from '../components/WhyChooseUs'
 
 
 const LandingPage = () => {
@@ -12,6 +14,8 @@ const LandingPage = () => {
             <CarouselSlider />
             <AboutUs />
             <MegaAnimalAndFeed />
+            
+            <CertifcationCompliance />
 
 
 

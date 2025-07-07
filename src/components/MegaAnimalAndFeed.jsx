@@ -111,7 +111,7 @@ const MegaAnimalAndFeed = () => {
                 {contents?.map((e, i) => {
                     return <div className='flex flex-col items-center justify-center w-5/6 '>
                         <img src={e?.image} className='4/5' />
-                        <p className='rounded-full bg-primary-light-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis my-2 font-semibold text-[12px]'>{e?.title}</p>
+                        <p className='rounded-full bg-primary-light-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis my-2 font-semibold lg:text-[12px] text-[10px]'>{e?.title}</p>
                         <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-neulis my-2 text-[12px]'>{e?.text}</p>
                     </div>
 
@@ -121,13 +121,13 @@ const MegaAnimalAndFeed = () => {
 
             </div>
             <div className='flex flex-1 items-center -mt-4'>
-                <div className='px-16  flex-[0.5]'>
+                <div className='lg:px-16 px-4  flex-[0.5]'>
                     <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] text-[80px]'>Megas</p>
                     <p className='font-neulis text-[30px] mb-4  text-primary-light-green '>Animal Feed And Livestock AF-LS</p>
 
                     <p className='font-neulis text-white '>High quality feed and livestock products tailored to meet divese qgricultural needs.</p>
                 </div>
-                <div className='flex-[0.5] flex relative justify-end mr-10 items-center w-full'>
+                <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center w-full'>
                     <img src={cows} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10  -mt-[5vh]' />
                     <img src={chicken} className='z-10' />
                     <div className='absolute 2xl:h-[120%] h-[110%] bg-primary-dark-green w-full rounded-full lg:-mr-[25vw] 2xl:-mr-[32vw] z-5'>
@@ -141,8 +141,8 @@ const MegaAnimalAndFeed = () => {
                 {contents2?.map((e, i) => {
                     return <div className='flex flex-col items-center justify-center w-full '>
                         <img src={e?.image} className='w-4/5 lg:w-4/5' />
-                        <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[10px]  lg:text-[14px]'>{e?.title}</p>
-                        <p className='rounded-full  px-1 py-4 text-white flex justify-center font-neulis my-2 text-[12px] w-full'>{e?.text}</p>
+                        <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[9px]  lg:text-[14px]'>{e?.title}</p>
+                        <p className='rounded-full  px-1 py-4 text-white flex justify-center font-neulis my-2 lg:text-[12px] text-[9px] w-full'>{e?.text}</p>
                     </div>
 
 

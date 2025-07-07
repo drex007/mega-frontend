@@ -38,12 +38,12 @@ const AboutUs = () => {
     ]
     return (
         <div className=' bg-white  overflow-hidden' id='about-us'>
-            <p className='px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[20px]'>Africa's Farm-To-Market Plaform</p>
+            <p className='px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[15px]  lg:my-0 my-8'>Africa's Farm-To-Market Plaform</p>
 
             <div className='lg:flex flex-1 items-center -mt-4'>
-                <div className='lg:px-16 px-4  flex-[0.5]'>
-                    <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] lg:text-[80px] text-[40px] lg:my-0 my-4'>About Us</p>
-                    <p className='font-neulis text-[30px] mb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
+                <div className='lg:px-16 px-4  lg:flex-[0.5]'>
+                    <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] lg:text-[80px] text-[40px] lg:my-0 my-1'>About Us</p>
+                    <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
                     <p className='font-neulis text-primary-text-grey '>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
 
@@ -86,13 +86,13 @@ const AboutUs = () => {
             </div>
             {/* Third */}
             <div className='flex flex-1 items-center -mt-4 bg-gradient-to-b from-white to-green-300'>
-                <div className='px-16  flex-[0.5]'>
-                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] text-[80px]'>Megas</p>
+                <div className='lg:px-16 px-4 lg:py-0 py-4 lg:flex-[0.5]'>
+                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[50px]'>Megas</p>
                     <p className='font-neulis text-[30px] mb-4  text-black '>Grains and Cereals</p>
 
                     <p className='font-neulis text-primary-text-grey '>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
                 </div>
-                <div className='flex-[0.5] flex relative justify-end mr-10 items-center'>
+                <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center'>
                     <img src={megacerealsandgrains} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10' />
                     <img src={silo} className='z-10' />
                     <div className='absolute 2xl:h-[120%] h-[110%] bg-primary-dark-green w-full rounded-full lg:-mr-[25vw] 2xl:-mr-[32vw] z-5'>
@@ -105,7 +105,7 @@ const AboutUs = () => {
             {/* Fourth */}
             <div className='grid lg:grid-cols-3 grid-cols-1 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
                 {contents?.map((e, i) => {
-                    return <div className='flex flex-col items-center justify-center w-5/6 '>
+                    return <div className='flex flex-col items-center justify-center lg:w-5/6  w-full'>
                         <img src={e?.image} className='4/5' />
                         <p className='rounded-full bg-primary-light-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis my-2 font-semibold text-[12px]'>{e?.title}</p>
                         <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-neulis my-2 text-[12px]'>{e?.text}</p>
@@ -118,13 +118,13 @@ const AboutUs = () => {
             </div>
             {/* Fifth */}
             <div className='flex flex-1 items-center -mt-4 bg-primary-dark-green'>
-                <div className='px-16  flex-[0.5]'>
+                <div className='lg:px-16 p-4  flex-[0.5]'>
                     <p className='font-neulis text-black font-semibold 2xl:text-[100px] text-[80px]'>Megas</p>
                     <p className='font-neulis text-[30px] mb-4  text-black '>Nuts and Seeds</p>
 
                     <p className='font-neulis text-black '>Explore our variety of nutrient-packed nuts and seeds for food and industrial purpose</p>
                 </div>
-                <div className='flex-[0.5] flex relative justify-end items-center'>
+                <div className='hidden flex-[0.5] lg:flex relative justify-end items-center'>
                     <img src={nutseed} className='2xl:-mr-[8vw] -mr-[10vw]' />
                     <img src={nutseedhuman} className='z-10' />
 

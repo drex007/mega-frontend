@@ -11,7 +11,7 @@ const Header = () => {
     const [showMenuBar, setShowMenuBar] = useState(false)
 
     return (
-        <div className='px-8 py-6 h-[80px] lg:flex  bg-primary-dark-green justify-between'>
+        <div className='lg:px-8 px-2 py-6 h-[80px] lg:flex  bg-primary-dark-green justify-between'>
             <div className='flex space-x-3 items-center'>
                 <img src={logo} className='h-[30px] lg:max-h-10' />
                 <img src={textlogowhite} className='h-[30px] lg:max-h-10' />

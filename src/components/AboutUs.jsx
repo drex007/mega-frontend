@@ -74,7 +74,7 @@ const AboutUs = () => {
                 </div>
                 <div className='lg:px-16 px-4  lg:flex-[0.65]'>
                     <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] lg:text-[80px] text-[40px]'>Welcome To</p>
-                    <p className='font-neulis text-[30px]  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
+                    <p className='font-neulis lg:text-[30px] text-[20px] lg:pb-0 pb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
                     <p className='font-neulis text-primary-text-grey'>Our robust B2B agro platform, supported by an extensive network of representatives across states, regions, and market localities, provides unmatched reach and efficiency. Whether sourcing raw materials or distributing commodities, our swift and reliable infrastructure guarantees quality, speed, and customer satisfaction. We pride ourselves on our innovative approach, blending traditional market expertise with cutting-edge digital systems. Our upcoming app will further enhance our services, allowing for real-time tracking, efficient distribution, and effortless transactions. At Megas Agriculture Limited, our mission is to empower businesses, drive economic growth, and create lasting partnerships within the agro-industry. We are the trusted bridge between producers and markets, both locally and internationally.</p>
 

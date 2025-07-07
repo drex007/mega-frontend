@@ -5,6 +5,8 @@ import AboutUs from '../components/AboutUs'
 import MegaAnimalAndFeed from '../components/MegaAnimalAndFeed'
 import CertifcationCompliance from '../components/CertifcationCompliance'
 import WhyChooseUs from '../components/WhyChooseUs'
+import GlobalFootPrint from '../components/GlobalFootPrint'
+import ImportExport from '../components/Export'
 
 
 const LandingPage = () => {
@@ -14,8 +16,10 @@ const LandingPage = () => {
             <CarouselSlider />
             <AboutUs />
             <MegaAnimalAndFeed />
-            
+
             <CertifcationCompliance />
+            <GlobalFootPrint />
+            <ImportExport />
 
 
 

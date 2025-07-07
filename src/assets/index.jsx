@@ -47,6 +47,8 @@ import cert2 from './images/cert-2.svg'
 import cert3 from './images/cert-3.svg'
 import cert4 from './images/cert-4.svg'
 import cert5 from './images/cert-5.svg'
+import handshake from './images/hand-shake.svg'
+import importexport from './images/export-import.svg'
 
 
 
@@ -99,6 +101,8 @@ export {
     cert2,
     cert3,
     cert4,
-    cert5
+    cert5,
+    handshake,
+    importexport
 
 }

@@ -49,6 +49,9 @@ import cert4 from './images/cert-4.svg'
 import cert5 from './images/cert-5.svg'
 import handshake from './images/hand-shake.svg'
 import importexport from './images/export-import.svg'
+import messageIcon from './icons/message.svg'
+import locationIcon from './icons/location-logo.svg'
+import worldIcon from './icons/world-logo.svg'
 
 
 
@@ -103,6 +106,8 @@ export {
     cert4,
     cert5,
     handshake,
-    importexport
+    importexport,
+    messageIcon,
+    locationIcon, worldIcon
 
 }

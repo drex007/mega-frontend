@@ -4,7 +4,7 @@ import { ship, youngman, youngwoman, familyfarming, arrowback, arrowfront } from
 
 const CarouselSlider = () => {
     // slides = [0, 1, 2, 3]
-    const images = [ship,youngman,  familyfarming,youngwoman,]
+    const images = [ship, youngman, familyfarming, youngwoman,]
     const slideIndex = [0, 1, 2, 3]
     const [currentIndex, setCurrentIndex] = useState(0)
     const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length)
@@ -28,7 +28,7 @@ const CarouselSlider = () => {
             </div>
 
 
-            <div className='absolute space-x-6 top-[10%] h-full flex justify-center items-center w-full'>
+            <div className='absolute space-x-6 lg:top-[10%] top-[3%] h-full flex justify-center items-center w-full'>
                 <button className='rounded-full bg-yellow-300 p-4 2xl:w-[200px] 2xl:py-6 w-[140px] text-[12px] font-neulis-semibold'>Send Quota</button>
                 <button className='rounded-full bg-white p-4 w-[140px] 2xl:w-[200px] 2xl:py-6 text-[12px] font-neulis-semibold' onClick={() => console.log("hiiiii")}>Read Reviews</button>
 

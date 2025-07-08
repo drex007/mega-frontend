@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 
 const LandingPage = () => {
     return (
-        <div className='h-[400px] w-full'>
+        <div className='h-[400px]'>
             <Header />
             <CarouselSlider />
             <AboutUs />

@@ -52,11 +52,28 @@ import importexport from './images/export-import.svg'
 import messageIcon from './icons/message.svg'
 import locationIcon from './icons/location-logo.svg'
 import worldIcon from './icons/world-logo.svg'
+import realEstate from  './images/realestate.svg'
+import security from './icons/security.svg'
+import home from './icons/home.svg'
+import group from './icons/group.svg'
+import calendar from './icons/calendar.svg'
+import localReturn from './icons/localReturn.svg'
+import farmLogo from './icons/farmLogo.svg'
+import trackFarm from './icons/trackFarm.svg'
+import annualReturn from './icons/annualReturn.svg'
+import farmSetup from './icons/farmSetup.svg'
+import selectFarm from  './icons/selectFarm.svg'
+import choose from './icons/choose.svg'
+import signContract from './icons/signContract.svg'
 
 
 
 export {
-
+    annualReturn,
+    farmSetup,
+    selectFarm,
+    choose,
+    signContract,
     logo,
     textlogo,
     textlogowhite,
@@ -108,6 +125,15 @@ export {
     handshake,
     importexport,
     messageIcon,
-    locationIcon, worldIcon
+    locationIcon, worldIcon,
+    realEstate,
+    security,
+    home,
+    calendar, 
+    group,
+    localReturn,
+    farmLogo,
+    trackFarm
+
 
 }

@@ -8,6 +8,7 @@ import WhyChooseUs from '../components/WhyChooseUs'
 import GlobalFootPrint from '../components/GlobalFootPrint'
 import ImportExport from '../components/Export'
 import Footer from '../components/Footer'
+import RealEstate from '../components/RealEstate'
 
 
 const LandingPage = () => {
@@ -20,6 +21,7 @@ const LandingPage = () => {
 
             <CertifcationCompliance />
             <GlobalFootPrint />
+            <RealEstate />
             <ImportExport />
             <Footer />
 

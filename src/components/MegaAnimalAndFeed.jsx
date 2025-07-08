@@ -121,11 +121,11 @@ const MegaAnimalAndFeed = () => {
 
             </div>
             <div className='flex flex-1 items-center -mt-4'>
-                <div className='lg:px-16 px-4  flex-[0.5]'>
-                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] text-[80px]'>Megas</p>
+                <div className='lg:px-16 px-4  lg:flex-[0.5]'>
+                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
                     <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-primary-light-green '>Animal Feed And Livestock AF-LS</p>
 
-                    <p className='font-neulis text-white '>High quality feed and livestock products tailored to meet divese qgricultural needs.</p>
+                    <p className='font-neulis text-white lg:text-[20px] text-[14px] '>High quality feed and livestock products tailored to meet divese qgricultural needs.</p>
                 </div>
                 <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center w-full'>
                     <img src={cows} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10  -mt-[5vh]' />

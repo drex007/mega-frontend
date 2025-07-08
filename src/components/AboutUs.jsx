@@ -45,7 +45,7 @@ const AboutUs = () => {
                     <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] lg:text-[80px] text-[40px] lg:my-0 my-1'>About Us</p>
                     <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
-                    <p className='font-neulis text-primary-text-grey '>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
+                    <p className='font-neulis text-primary-text-grey lg:text-[20px] text-[15px]'>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
 
                     <div className='lg:py-12 lg:px-16 flex lg:justify-self-start justify-center mt-4 lg:mt-0'>
                         <p className='font-medium'>DOWNLOAD THE APP ON </p>
@@ -76,7 +76,7 @@ const AboutUs = () => {
                     <p className='font-neulis text-primary-green-black font-regular 2xl:text-[140px] lg:text-[80px] text-[40px]'>Welcome To</p>
                     <p className='font-neulis lg:text-[30px] text-[20px] lg:pb-0 pb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
-                    <p className='font-neulis text-primary-text-grey'>Our robust B2B agro platform, supported by an extensive network of representatives across states, regions, and market localities, provides unmatched reach and efficiency. Whether sourcing raw materials or distributing commodities, our swift and reliable infrastructure guarantees quality, speed, and customer satisfaction. We pride ourselves on our innovative approach, blending traditional market expertise with cutting-edge digital systems. Our upcoming app will further enhance our services, allowing for real-time tracking, efficient distribution, and effortless transactions. At Megas Agriculture Limited, our mission is to empower businesses, drive economic growth, and create lasting partnerships within the agro-industry. We are the trusted bridge between producers and markets, both locally and internationally.</p>
+                    <p className='font-neulis text-primary-text-grey lg:text-[20px] text-[15px]'>Our robust B2B agro platform, supported by an extensive network of representatives across states, regions, and market localities, provides unmatched reach and efficiency. Whether sourcing raw materials or distributing commodities, our swift and reliable infrastructure guarantees quality, speed, and customer satisfaction. We pride ourselves on our innovative approach, blending traditional market expertise with cutting-edge digital systems. Our upcoming app will further enhance our services, allowing for real-time tracking, efficient distribution, and effortless transactions. At Megas Agriculture Limited, our mission is to empower businesses, drive economic growth, and create lasting partnerships within the agro-industry. We are the trusted bridge between producers and markets, both locally and internationally.</p>
 
 
 
@@ -87,10 +87,10 @@ const AboutUs = () => {
             {/* Third */}
             <div className='flex flex-1 items-center -mt-4 bg-gradient-to-b from-white to-green-300'>
                 <div className='lg:px-16 px-4 lg:py-0 py-4 lg:flex-[0.5]'>
-                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[50px]'>Megas</p>
-                    <p className='font-neulis text-[30px] mb-4  text-black '>Grains and Cereals</p>
+                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
+                    <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-black '>Grains and Cereals</p>
 
-                    <p className='font-neulis text-primary-text-grey '>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
+                    <p className='font-neulis text-primary-text-grey lg:text-[20px] text-[14px]'>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
                 </div>
                 <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center'>
                     <img src={megacerealsandgrains} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10' />
@@ -118,9 +118,9 @@ const AboutUs = () => {
             </div>
             {/* Fifth */}
             <div className='flex flex-1 items-center -mt-4 bg-primary-dark-green'>
-                <div className='lg:px-16 p-4  flex-[0.5]'>
-                    <p className='font-neulis text-black font-semibold 2xl:text-[100px] text-[80px]'>Megas</p>
-                    <p className='font-neulis text-[30px] mb-4  text-black '>Nuts and Seeds</p>
+                <div className='lg:px-16 p-4  lg:flex-[0.5]'>
+                    <p className='font-neulis text-black font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
+                    <p className='font-neulis lg:text-[30px] text-[20px] lg:mb-4  text-black '>Nuts and Seeds</p>
 
                     <p className='font-neulis text-black '>Explore our variety of nutrient-packed nuts and seeds for food and industrial purpose</p>
                 </div>

@@ -141,7 +141,7 @@ const MegaAnimalAndFeed = () => {
                 {contents2?.map((e, i) => {
                     return <div className='flex flex-col items-center justify-center w-full '>
                         <img src={e?.image} className='w-4/5 lg:w-4/5' />
-                        <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[9px]  lg:text-[14px]'>{e?.title}</p>
+                        <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[9px]  lg:text-[12px]'>{e?.title}</p>
                         <p className='rounded-full  px-1 py-4 text-white flex justify-center font-neulis my-2 lg:text-[12px] text-[9px] w-full'>{e?.text}</p>
                     </div>
 

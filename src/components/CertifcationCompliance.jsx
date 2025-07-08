@@ -13,9 +13,9 @@ const CertifcationCompliance = () => {
                         <img src={cert1} />
                         <p className='text-white font-neulis'>Registered with the Corporate Affairs Commission (Nigeria) RC 6944026</p>
                     </div>
-                    <div className='lg:w-2/6 2xl:2/5 flex items-center space-x-4'>
+                    <div className=' hidden  lg:w-2/6 2xl:2/5 lg:flex items-center space-x-4'>
                         <img src={cert4} />
-                        <p className='text-white font-neulis'>Registered with the Corporate Affairs Commission (Nigeria) RC 6944026</p>
+                        <p className='text-white font-neulis'>Licensed Agro-Exporter with the Nigerian Export Promotion Council (NEPC)</p>
                     </div>
 
 

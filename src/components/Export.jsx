@@ -3,7 +3,7 @@ import { importexport } from '../assets'
 
 const ImportExport = () => {
     return (
-        <div className='h-[80vh] lg:flex grid grid-cols-1 flex-1 justify-between items-center px-8 lg:mt-16 font-neulis text-gray-500'>
+        <div className='h-[80vh] lg:flex grid grid-cols-1 flex-1 justify-between items-center px-4 lg:mt-16 mt-8 font-neulis text-gray-500'>
             <div className='lg:flex-[0.5]'>
                 <div className=''>
                     <p className='text-primary-dark-green font-extralight lg:text-[50px] text-[20px] my-2'>Lets Work Together</p>

@@ -10,7 +10,7 @@ const RealEstate = () => {
             <div style={{ backgroundImage: `url(${realEstate})` }} className='lg:h-[100vh] h-[40vh] w-full bg-no-repeat bg-cover flex flex-col items-center justify-center '>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black' >Own A Farm. Grow Wealth</p>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black'>Impact Lives</p>
-                <p className=' lg:text-[20px] text-[12px] text-primary-green-black'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>
+                <p className=' lg:text-[20px] text-[10px] text-primary-green-black'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>
 
                 <p className='px-8 py-3 rounded-full text-white bg-primary-light-green my-2'>Start Your Investment</p>
 
@@ -114,19 +114,19 @@ const RealEstate = () => {
             <div className="lg:flex justify-between grid px-4 lg:space-y-0 space-y-4">
                 <div className='flex flex-col items-center'>
                     <img src={home} />
-                    <p className="text-black font-semibold">Full Ownership</p>
-                    <p className='text-black w-4/5'>Purchase the property outright with full control and responsibility<br></br> • Total control • 100% equity</p>
+                    <p className="text-black font-semibold my-2">Full Ownership</p>
+                    <p className='text-black lg:w-4/5'>Purchase the property outright with full control and responsibility<br></br> • Total control <br></br>• 100% equity</p>
                 </div>
 
                 <div className='flex flex-col items-center'>
                     <img src={calendar} />
-                    <p className="text-black font-semibold">Lease-To-Own</p>
-                    <p className='text-black w-4/5'>Gradually build ownership through lease payments<br></br> • Fixed monthly cost<br></br> • Path to ownership</p>
+                    <p className="text-black font-semibold my-2">Lease-To-Own</p>
+                    <p className='text-black lg:w-4/5'>Gradually build ownership through lease payments<br></br> • Fixed monthly cost<br></br> • Path to ownership</p>
                 </div>
                 <div className='flex flex-col items-center'>
                     <img src={group} />
-                    <p className="text-black font-semibold">Fractional Co-Investment</p>
-                    <p className='text-black w-4/5'>Own a share of the property alonside co-investors <br></br>• Lower upfront cost <></> • Shared expenses</p>
+                    <p className="text-black font-semibold my-2">Fractional Co-Investment</p>
+                    <p className='text-black lg:w-4/5'>Own a share of the property alonside co-investors <br></br>• Lower upfront cost <br></br> • Shared expenses</p>
                 </div>
 
 

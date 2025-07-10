@@ -6,7 +6,7 @@ const GlobalFootPrint = () => {
     return (
         <div className='w-full bg-black text-white font-neulis'>
 
-            <div style={{ backgroundImage: `url(${handshake})` }} className='lg:h-[100vh] h-[20vh] w-full bg-no-repeat bg-cover'>
+            <div style={{ backgroundImage: `url(${handshake})` }} className='lg:h-[100vh] h-[25vh] lg:w-full w-[100vw] bg-no-repeat bg-cover'>
 
             </div>
             <div className='py-8 px-4'>

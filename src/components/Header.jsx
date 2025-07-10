@@ -75,7 +75,7 @@ const Header = () => {
             <div className='relative lg:hidden flex justify-end -mt-8'>
                 {!showMenuBar && <HiOutlineMenuAlt2 size={40} color='white' className='cursor-pointer' onClick={() => setShowMenuBar(!showMenuBar)} />}
 
-                {showMenuBar && <div className='absolute z-50 transition ease-in duration-90000 lg:hidden flex-col -mr-10 px-4 py-4 max-h-[450px] w-4/5 shadow-2xl shadow-gray-500 rounded-2xl top-0 bg-primary-dark-green  right-0'>
+                {showMenuBar && <div className='absolute z-50 transition ease-in duration-90000 lg:hidden -mr-2 flex-col px-4 py-4 max-h-[450px] w-4/5 shadow-2xl shadow-gray-500 rounded-2xl top-0 bg-primary-dark-green  right-0'>
                     <ImCancelCircle size={30} color='white' className=' cursor-pointer' onClick={() => setShowMenuBar(!showMenuBar)} />
                     <div className='items-center text-white font-neulis  text-[15px]'>
                         <p className=' cursor-pointer my-4'>Megas</p>

@@ -65,6 +65,11 @@ import farmSetup from './icons/farmSetup.svg'
 import selectFarm from  './icons/selectFarm.svg'
 import choose from './icons/choose.svg'
 import signContract from './icons/signContract.svg'
+import poultry1 from  './images/poultry-1.svg'
+import ginger1 from './images/ginger-1.svg'
+import cashew1 from './images/cashew-1.svg'
+import cocoa1 from './images/cocoa-1.svg'
+
 
 
 
@@ -133,7 +138,11 @@ export {
     group,
     localReturn,
     farmLogo,
-    trackFarm
+    trackFarm,
+    poultry1,
+    cocoa1,
+    cashew1,
+    ginger1
 
 
 }

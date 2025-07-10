@@ -5,7 +5,7 @@ import { w1, w2, w3, w4 } from '../assets'
 const WhyChooseUs = () => {
     const images = [w1, w2, w3, w4]
     return (
-        <div className='bg-white  rounded-t-[50px] lg:rounded-t-[100px] px-4 lg:px-16 '>
+        <div className='bg-white  rounded-t-[50px] lg:rounded-t-[100px] px-4 lg:px-16 ' id='chooseus'>
             <p className='flex justify-center font-neulis lg:text-[40px] text-[30px] font-extralight py-8'>WHY CHOOSE US ?</p>
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-4  justify-evenly'>
                 {images?.map((e, i) => {

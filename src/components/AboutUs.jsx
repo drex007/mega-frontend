@@ -37,7 +37,7 @@ const AboutUs = () => {
         }
     ]
     return (
-        <div className=' bg-white  overflow-hidden' id='about-us'>
+        <div className=' bg-white  overflow-hidden' id='about'>
             <p className='px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[15px]  lg:my-0 my-8'>Africa's Farm-To-Market Plaform</p>
 
             <div className='lg:flex flex-1 items-center -mt-4'>
@@ -85,7 +85,7 @@ const AboutUs = () => {
 
             </div>
             {/* Third */}
-            <div className='flex flex-1 items-center -mt-4 bg-gradient-to-b from-white to-green-300'>
+            <div className='flex flex-1 items-center -mt-4 bg-gradient-to-b from-white to-green-300' id='products'>
                 <div className='lg:px-16 px-4 lg:py-0 py-4 lg:flex-[0.5]'>
                     <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
                     <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-black '>Grains and Cereals</p>

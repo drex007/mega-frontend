@@ -9,6 +9,7 @@ import GlobalFootPrint from '../components/GlobalFootPrint'
 import ImportExport from '../components/Export'
 import Footer from '../components/Footer'
 import RealEstate from '../components/RealEstate'
+import ContactForm from '../components/ContactForm'
 
 
 const LandingPage = () => {
@@ -23,6 +24,7 @@ const LandingPage = () => {
             <GlobalFootPrint />
             <RealEstate />
             <ImportExport />
+            <ContactForm />
             <Footer />
 
 

@@ -1,11 +1,12 @@
 import React from 'react'
-import { annualReturn, calendar, choose, farmLogo, farmSetup, group, home, localReturn, realEstate, security, selectFarm, signContract, trackFarm } from '../assets'
+import { annualReturn, calendar, choose, farmLogo, farmSetup, group, home, localReturn, realEstate, security, selectFarm, signContract, trackFarm, cocoa1, cashew1, poultry1, ginger1 } from '../assets'
 import RealEstateCard from './RealEstateCard'
+import FarmInvestmentCard from './FarmInvestmentCard'
 
 
 const RealEstate = () => {
     return (
-        <div className='w-full bg-white text-white font-neulis'>
+        <div className='w-full bg-white text-white font-neulis' id='realestate'>
 
             <div style={{ backgroundImage: `url(${realEstate})` }} className='lg:h-[100vh] h-[40vh] w-full bg-no-repeat bg-cover flex flex-col items-center justify-center '>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black' >Own A Farm. Grow Wealth</p>
@@ -66,6 +67,38 @@ const RealEstate = () => {
                     <option value="">Budget</option>
 
                 </select>
+
+            </div>
+            <div className='my-16 grid grid-cols-1 lg:grid-cols-4 px-8 lg:gap-x-4'>
+                <FarmInvestmentCard
+                    image={cocoa1}
+                    text={"Cocoa"}
+                    location={"Cross River"}
+                    price={"N500k - N5m"}
+
+                />
+                <FarmInvestmentCard
+                    image={cashew1}
+                    text={"Cashew"}
+                    location={"Nasarawa"}
+                    price={"N1.5m - N5m"}
+
+                />
+
+                <FarmInvestmentCard
+                    image={poultry1}
+                    text={"Poultry"}
+                    location={"Plateau(Jos)"}
+                    price={"N350k"}
+
+                />
+                <FarmInvestmentCard
+                    image={ginger1}
+                    text={"Ginger"}
+                    location={"Kaduna"}
+                    price={"N700k - N4m"}
+
+                />
 
             </div>
             <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>How It Works?</p>

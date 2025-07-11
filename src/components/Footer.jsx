@@ -3,17 +3,17 @@ import { locationIcon, messageIcon, worldIcon } from '../assets'
 
 const Footer = () => {
     return (
-        <div className='bg-black text-white font-neulis lg:px-8  px-4 py-4 text-[14px] '>
+        <div className='bg-black text-white font-neulis lg:px-8  px-4 py-4 lg:text-[14px] text-[10px] '>
             <div className='flex space-x-2 items-center my-2'>
-                <img src={locationIcon} className='w-[20px]' />
+                <img src={locationIcon} className='lg:w-[20px] w-[15px]' />
                 <p>No. 7 Dadin Kowa Last Gate, Jos, Nigeria</p>
             </div>
             <div className='flex space-x-2 items-center'>
-                <img src={messageIcon} className='w-[20px]'/>
+                <img src={messageIcon} className='lg:w-[20px] w-[15px]'/>
                 <p>info@megasagricultureltd.com</p>
             </div>
             <div className='flex space-x-2 items-center my-2'>
-                <img src={worldIcon} className='w-[20px]' />
+                <img src={worldIcon} className='lg:w-[20px] w-[15px]' />
                 <p>www.megasagriculturallted.com</p>
             </div>
 

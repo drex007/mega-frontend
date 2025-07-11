@@ -37,7 +37,7 @@ const LandingPage = () => {
                         ],
                         contactPoint: {
                             "@type": "ContactPoint",
-                            email: "info@megaexport.com",
+                            email: "info@megasagriculturelted.com",
                             telephone: "+234-123-456-7890",
                             contactType: "Customer Service",
                             areaServed: "NG",

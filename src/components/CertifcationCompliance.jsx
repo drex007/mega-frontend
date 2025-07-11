@@ -22,13 +22,13 @@ const CertifcationCompliance = () => {
 
                 </div>
                 <div className='lg:flex grid grid-cols-1  lg:justify-between p-4'>
-                    <div className='lg:w-1/3 flex items-center space-x-4'>
+                    <div className='lg:w-1/3 flex items-center space-x-4 lg:mb-0 mb-4'>
                         <img src={cert2} />
-                        <p className='text-white font-neulis lg:text-[15px] text-[14px]'>Registered with the Corporate Affairs Commission (Nigeria) RC 6944026</p>
+                        <p className='text-white font-neulis lg:text-[15px] text-[14px]'>Registered with Corporations Canada</p>
                     </div>
                     <div className='lg:w-1/3 flex items-center space-x-4'>
                         <img src={cert5} />
-                        <p className='text-white font-neulis lg:text-[15px] text-[14px]'>Registered with the Corporate Affairs Commission (Nigeria) RC 6944026</p>
+                        <p className='text-white font-neulis lg:text-[15px] text-[14px]'>Compliant with International Agro Export Standards (HACCP, Global GAP, Phytosanitary Compliance, Organic Certifications)</p>
                     </div>
 
 
@@ -37,7 +37,7 @@ const CertifcationCompliance = () => {
                 <div className='lg:flex grid grid-cols-1 lg:justify-between p-4'>
                     <div className='lg:w-1/3 items-center space-x-4 flex'>
                         <img src={cert3} />
-                        <p className='text-white font-neulis lg:text-[15px] text-[14px]'>Registered with the Corporate Affairs Commission (Nigeria) RC 6944026</p>
+                        <p className='text-white font-neulis lg:text-[15px] text-[14px]'>Compliant with International Agro Export Standards (HACCP, Global GAP, Phytosanitary Compliance, Organic Certifications)</p>
                     </div>
 
 

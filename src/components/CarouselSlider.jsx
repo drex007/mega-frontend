@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { ship, youngman, youngwoman, familyfarming, arrowback, arrowfront } from '../assets'
 
 
+
+
+
 const CarouselSlider = () => {
     // slides = [0, 1, 2, 3]
     const images = [ship, youngman, familyfarming, youngwoman,]

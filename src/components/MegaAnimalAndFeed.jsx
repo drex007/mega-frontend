@@ -14,6 +14,8 @@ import {
     goatchevon
 } from '../assets'
 import WhyChooseUs from './WhyChooseUs'
+import { motion } from 'framer-motion'
+import fadeIn from './Variant'
 
 const MegaAnimalAndFeed = () => {
     const contents = [
@@ -107,49 +109,57 @@ const MegaAnimalAndFeed = () => {
 
     return (
         <div className='bg-primary-green-black overflow-hidden'>
-            <div className='grid lg:grid-cols-3 grid-cols-1 px-auto items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
-                {contents?.map((e, i) => {
-                    return <div className='flex flex-col items-center justify-center w-5/6 ' key={i}>
-                        <img src={e?.image} className='4/5' />
-                        <p className='rounded-full bg-primary-light-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis my-2 font-semibold lg:text-[12px] text-[10px]'>{e?.title}</p>
-                        <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-neulis my-2 text-[12px]'>{e?.text}</p>
-                    </div>
+            <motion.div
+
+                variants={fadeIn('up', 0.1)}
+                initial="hidden"
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.1 }}
+            >
+                <div className='grid lg:grid-cols-3 grid-cols-1 px-auto items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
+                    {contents?.map((e, i) => {
+                        return <div className='flex flex-col items-center justify-center w-5/6 ' key={i}>
+                            <img src={e?.image} className='4/5' />
+                            <p className='rounded-full bg-primary-light-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis my-2 font-semibold lg:text-[12px] text-[10px]'>{e?.title}</p>
+                            <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-neulis my-2 text-[12px]'>{e?.text}</p>
+                        </div>
 
 
-                })}
+                    })}
 
-
-            </div>
-            <div className='flex flex-1 items-center -mt-4'>
-                <div className='lg:px-16 px-4  lg:flex-[0.5]'>
-                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
-                    <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-primary-light-green '>Animal Feed And Livestock AF-LS</p>
-
-                    <p className='font-neulis text-white lg:text-[20px] text-[14px] '>High quality feed and livestock products tailored to meet divese qgricultural needs.</p>
-                </div>
-                <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center w-full'>
-                    <img src={cows} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10  -mt-[5vh]' />
-                    <img src={chicken} className='z-10' />
-                    <div className='absolute 2xl:h-[120%] h-[110%] bg-primary-dark-green w-full rounded-full lg:-mr-[25vw] 2xl:-mr-[32vw] z-5'>
-
-                    </div>
 
                 </div>
+                <div className='flex flex-1 items-center -mt-4'>
+                    <div className='lg:px-16 px-4  lg:flex-[0.5]'>
+                        <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
+                        <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-primary-light-green '>Animal Feed And Livestock AF-LS</p>
 
-            </div>
-            <div className='grid lg:grid-cols-6 grid-cols-2 lg:px-8 px-2 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
-                {contents2?.map((e, i) => {
-                    return <div className='flex flex-col items-center justify-center w-full ' key={i}>
-                        <img src={e?.image} className='w-4/5 lg:w-4/5' />
-                        <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[9px]  lg:text-[12px]'>{e?.title}</p>
-                        <p className='rounded-full  px-1 py-4 text-white flex justify-center font-neulis my-2 lg:text-[12px] text-[9px] w-full'>{e?.text}</p>
+                        <p className='font-neulis text-white lg:text-[20px] text-[14px] '>High quality feed and livestock products tailored to meet divese qgricultural needs.</p>
+                    </div>
+                    <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center w-full'>
+                        <img src={cows} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10  -mt-[5vh]' />
+                        <img src={chicken} className='z-10' />
+                        <div className='absolute 2xl:h-[120%] h-[110%] bg-primary-dark-green w-full rounded-full lg:-mr-[25vw] 2xl:-mr-[32vw] z-5'>
+
+                        </div>
+
                     </div>
 
+                </div>
+                <div className='grid lg:grid-cols-6 grid-cols-2 lg:px-8 px-2 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
+                    {contents2?.map((e, i) => {
+                        return <div className='flex flex-col items-center justify-center w-full ' key={i}>
+                            <img src={e?.image} className='w-4/5 lg:w-4/5' />
+                            <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[9px]  lg:text-[12px]'>{e?.title}</p>
+                            <p className='rounded-full  px-1 py-4 text-white flex justify-center font-neulis my-2 lg:text-[12px] text-[9px] w-full'>{e?.text}</p>
+                        </div>
 
-                })}
+
+                    })}
 
 
-            </div>
+                </div>
+            </motion.div>
             <WhyChooseUs />
         </div>
     )

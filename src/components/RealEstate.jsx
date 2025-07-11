@@ -145,26 +145,32 @@ const RealEstate = () => {
             </div>
             <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>Ownership Models</p>
             <div className="lg:flex justify-between grid px-4 lg:space-y-0 space-y-4">
-                <div className='flex flex-col items-center'>
+                <div className='flex flex-col items-center text-black'>
                     <img src={home} />
                     <p className="text-black font-semibold my-2">Full Ownership</p>
-                    <p className='text-black lg:w-4/5'>Purchase the property outright with full control and responsibility<br></br> • Total control <br></br>• 100% equity</p>
+                    <p className='justify-center text-black lg:w-3/5 w-4/5'>Purchase the property outright with full control and responsibility </p>
+                    <p className='flex justify-center'>• Total control</p>
+                    <p className='flex justify-center'>• 100% equity </p>
                 </div>
 
-                <div className='flex flex-col items-center'>
+                <div className='flex flex-col items-center text-black'>
                     <img src={calendar} />
                     <p className="text-black font-semibold my-2">Lease-To-Own</p>
-                    <p className='text-black lg:w-4/5'>Gradually build ownership through lease payments<br></br> • Fixed monthly cost<br></br> • Path to ownership</p>
+                    <p className='text-black lg:w-3/5 w-4/5'>Gradually build ownership through lease payments</p>
+                    <p className='flex justify-center'>• Fixed monthly cost</p>
+                    <p className='flex'>• Path to ownership</p>
                 </div>
-                <div className='flex flex-col items-center'>
+                <div className='flex flex-col items-center text-black'>
                     <img src={group} />
                     <p className="text-black font-semibold my-2">Fractional Co-Investment</p>
-                    <p className='text-black lg:w-4/5'>Own a share of the property alonside co-investors <br></br>• Lower upfront cost <br></br> • Shared expenses</p>
+                    <p className='text-black lg:w-3/5 w-4/5'>Own a share of the property alonside co-investors </p>
+                    <p className='flex justify-center'>• Lower upfront cost </p>
+                    <p className='flex justify-center'>• Shared expenses</p>
                 </div>
 
 
             </div>
-        </div>
+        </div >
     )
 }
 

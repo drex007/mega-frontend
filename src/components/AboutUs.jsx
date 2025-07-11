@@ -1,5 +1,5 @@
 import React from 'react'
-import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed } from '../assets'
+import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed, apple, google } from '../assets'
 
 const AboutUs = () => {
 
@@ -47,8 +47,12 @@ const AboutUs = () => {
 
                     <p className='font-neulis text-primary-text-grey lg:text-[20px] text-[15px]'>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
 
-                    <div className='lg:py-12 lg:px-16 flex lg:justify-self-start justify-center mt-4 lg:mt-0'>
-                        <p className='font-medium'>DOWNLOAD THE APP ON </p>
+                    <div className='lg:py-12 lg:px-4 lg:flex lg:justify-self-start justify-center mt-4 lg:mt-0 items-center lg:space-x-4'>
+                        <p className='font-medium text-[15px] flex justify-center lg:my-0 my-2'>DOWNLOAD THE APP ON </p>
+                        <div className='flex space-x-4 justify-center lg:px-0 px-8'>
+                            <img src={apple} alt="" className='rounded-lg h-[45px] cursor-pointer' />
+                            <img src={google} alt="" className='rounded-lg h-[45px] cursor-pointer' />
+                        </div>
                     </div>
 
                 </div>

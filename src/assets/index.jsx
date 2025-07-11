@@ -69,6 +69,8 @@ import poultry1 from  './images/poultry-1.svg'
 import ginger1 from './images/ginger-1.svg'
 import cashew1 from './images/cashew-1.svg'
 import cocoa1 from './images/cocoa-1.svg'
+import apple from './images/apple.png'
+import google from './images/google.png'
 
 
 
@@ -142,7 +144,9 @@ export {
     poultry1,
     cocoa1,
     cashew1,
-    ginger1
+    ginger1,
+    apple,
+    google
 
 
 }

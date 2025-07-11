@@ -29,8 +29,8 @@ const CarouselSlider = () => {
 
 
             <div className='absolute space-x-6 lg:top-[10%] top-[3%] h-full flex justify-center items-center w-full'>
-                <button className='rounded-full bg-yellow-300 p-4 2xl:w-[200px] 2xl:py-6 w-[140px] text-[12px] font-neulis-semibold'>Send Quota</button>
-                <button className='rounded-full bg-white p-4 w-[140px] 2xl:w-[200px] 2xl:py-6 text-[12px] font-neulis-semibold' onClick={() => console.log("hiiiii")}>Read Reviews</button>
+                <button className='rounded-full bg-yellow-300 p-4 2xl:w-[200px] 2xl:py-6 lg:w-[140px] text-[12px] font-neulis-semibold'>Send Quota</button>
+                <button className='rounded-full bg-white p-4 lg:w-[140px] 2xl:w-[200px] 2xl:py-6 text-[12px] font-neulis-semibold' onClick={() => console.log("hiiiii")}>Read Reviews</button>
 
             </div>
             {currentIndex == 0 && <div className='absolute top-[75%] space-x-6 flex h-full  justify-start  px-8 w-full'>

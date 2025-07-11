@@ -49,9 +49,9 @@ const AboutUs = () => {
 
                     <div className='lg:py-12 lg:px-4 lg:flex lg:justify-self-start justify-center mt-4 lg:mt-0 items-center lg:space-x-4'>
                         <p className='font-medium text-[15px] flex justify-center lg:my-0 my-2'>DOWNLOAD THE APP ON </p>
-                        <div className='flex space-x-4 justify-center lg:px-0 px-8'>
-                            <img src={apple} alt="" className='rounded-lg h-[45px] cursor-pointer' />
-                            <img src={google} alt="" className='rounded-lg h-[45px] cursor-pointer' />
+                        <div className='flex space-x-4 justify-center mx-4'>
+                            <img src={apple} alt="" className='rounded-lg lg:h-[45px] h-[40px] cursor-pointer' />
+                            <img src={google} alt="" className='rounded-lg lg:h-[45px] h-[40px] cursor-pointer' />
                         </div>
                     </div>
 

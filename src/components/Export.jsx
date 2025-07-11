@@ -23,7 +23,7 @@ const ImportExport = () => {
 
             </div>
             <div className='lg:flex-[0.5] flex lg:justify-end'>
-                <img src={importexport} className='' />
+                <img src={importexport} className='' loading='lazy' alt='Incase you are looking for a platform for import and export of agro products' />
             </div>
         </div>
     )

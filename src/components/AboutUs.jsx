@@ -105,7 +105,7 @@ const AboutUs = () => {
             {/* Fourth */}
             <div className='grid lg:grid-cols-3 grid-cols-1 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5'>
                 {contents?.map((e, i) => {
-                    return <div className='flex flex-col items-center justify-center lg:w-5/6  w-full'>
+                    return <div className='flex flex-col items-center justify-center lg:w-5/6  w-full' key={i}>
                         <img src={e?.image} className='4/5' />
                         <p className='rounded-full bg-primary-light-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis my-2 font-semibold text-[12px]'>{e?.title}</p>
                         <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-neulis my-2 text-[12px]'>{e?.text}</p>

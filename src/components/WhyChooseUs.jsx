@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
             <p className='flex justify-center font-neulis lg:text-[40px] text-[30px] font-extralight py-8'>WHY CHOOSE US ?</p>
             <div className='grid grid-cols-2 lg:grid-cols-4 gap-4  justify-evenly'>
                 {images?.map((e, i) => {
-                    return <div className='flex items-center '>
+                    return <div className='flex items-center ' key={i}>
                         <img src={e} className='4/5' />
                     </div>
 

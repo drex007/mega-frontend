@@ -16,7 +16,7 @@ const CarouselSlider = () => {
             <div className='flex transition-transform duration-500 w-full'
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                 {images?.map((e, i) => {
-                    return <img src={e} key={i} className='w-full h-full object-cover flex-shrink-0' />
+                    return <img src={e} key={i} className='w-full h-full object-cover flex-shrink-0' loading='lazt' />
                 })}
 
             </div>

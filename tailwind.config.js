@@ -34,9 +34,18 @@ export default {
 
 
       },
+      fontWeight: {
+        'hairline': '100',
+        'extra-light': '200',
+        'light': '300',
+        'normal': '400',
+        'medium': '500',
+        'bold': '800',
+      },
 
       colors: {
-        "primary-light-green": '#0DB14B',
+        "primary-light-green": '#00C54A',
+        "primary-header": '#0DB14B',
         "primary-dark-green": '#0B933C',
         "primary-bg-dark-gren": "#1E1E1E",
         "primary-green-black": '#103233',
@@ -57,7 +66,8 @@ export default {
         Orbitron: ["Orbitron"],
         irish: ["Irish Grover"],
         african: "African",
-        neulis: ["Neulis"]
+        neulis: ["Neulis"],
+        fractul: ["Fractul"]
 
       },
     },

@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './pages/LandingPage';
+import ServicesPages from './pages/ServicesPages';
 function App() {
 
   return (
@@ -18,13 +19,13 @@ function App() {
 
         } />
 
-        {/* <Route path='/admin' element={
+        <Route path='/services' element={
 
-          <AdminPage />
+          <ServicesPages />
 
         } />
 
-        <Route path='/login' element={
+        {/* <Route path='/login' element={
 
           <LoginPage />
 

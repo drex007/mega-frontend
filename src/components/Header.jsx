@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-scroll'
+import {Link as RouterLink} from 'react-router-dom'
 import { logo, textlogo, textlogowhite } from '../assets'
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { ImCancelCircle } from "react-icons/im";
@@ -11,13 +12,13 @@ const Header = () => {
     const [showMenuBar, setShowMenuBar] = useState(false)
 
     return (
-        <div className='lg:px-8 px-2 py-6 h-[80px] lg:flex  bg-primary-dark-green justify-between'>
+        <div className='lg:px-8 px-2 py-6 h-[80px] w-full z-50 lg:flex  bg-primary-header opacity-85 justify-between absolute top-0'>
             <div className='flex space-x-3 items-center'>
-                <img src={logo} className='h-[30px] lg:max-h-10' />
-                <img src={textlogowhite} className='h-[30px] lg:max-h-10' />
+                <img src={logo} className='h-[30px] lg:h-[40px]' />
+                <img src={textlogowhite} className='h-[30px] lg:h-[40px]' />
             </div>
-            <div className='hidden lg:flex space-x-8 items-center'>
-                <p className='text-white cursor-pointer'>Megas</p>
+            <div className='hidden lg:flex space-x-8 items-center '>
+                <RouterLink to="/"><p className='text-white cursor-pointer'>Megas</p></RouterLink>
                 <Link
                     to="about"
                     spy={true}
@@ -42,8 +43,8 @@ const Header = () => {
                     <p className='text-white cursor-pointer lg:text-[14px]'>Our Products</p>
 
                 </Link>
-                <Link
-                    to="realestate"
+                <RouterLink
+                    to="/services"
                     spy={true}
                     smooth={true}
                     offset={20}
@@ -53,11 +54,12 @@ const Header = () => {
 
                     <p className='text-white cursor-pointer lg:text-[14px]'>Our Services</p>
 
-                </Link>
+                </RouterLink>
 
 
                 {/* <p className='text-white cursor-pointer lg:text-[14px]'>Our Team</p> */}
                 <Link
+
                     to="contactus"
                     spy={true}
                     smooth={true}
@@ -76,7 +78,7 @@ const Header = () => {
                 {!showMenuBar && <HiOutlineMenuAlt2 size={40} color='white' className='cursor-pointer' onClick={() => setShowMenuBar(!showMenuBar)} />}
 
                 {showMenuBar &&
-                    <div className='absolute z-50 transition-transform ease-in duration-9000 lg:hidden -mr-2 flex-col px-4 py-4 max-h-[450px] w-4/5 shadow-2xl shadow-gray-500 rounded-2xl top-0 bg-primary-dark-green  right-0'>
+                    <div className='absolute z-50 transition-transform ease-in duration-9000 lg:hidden -mr-2 flex-col px-4 py-4 h-[100vh] w-4/5 shadow-2xl shadow-gray-500 -mt-5 top-0 bg-primary-dark-green  right-0'>
                         <ImCancelCircle size={30} color='white' className=' cursor-pointer' onClick={() => setShowMenuBar(!showMenuBar)} />
                         <div className='items-center text-white font-neulis  text-[15px]'>
                             <p className=' cursor-pointer my-4'>Megas</p>

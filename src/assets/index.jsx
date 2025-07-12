@@ -71,11 +71,14 @@ import cashew1 from './images/cashew-1.svg'
 import cocoa1 from './images/cocoa-1.svg'
 import apple from './images/apple.png'
 import google from './images/google.png'
+import background from './images/background.svg'
+import peoplecomplete from './images/people-complete.svg'
 
 
 
 
 export {
+    background,
     annualReturn,
     farmSetup,
     selectFarm,
@@ -146,7 +149,8 @@ export {
     cashew1,
     ginger1,
     apple,
-    google
+    google,
+    peoplecomplete
 
 
 }

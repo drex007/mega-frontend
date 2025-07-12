@@ -34,3 +34,19 @@
     src: url('/fonts/neulis-light.ttf') format('truetype');
     font-weight: 300;
 }
+@font-face {
+    font-family: "Fractul";
+    src: url('/fonts/fractul-bold.otf') format('truetype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Fractul";
+    src: url('/fonts/fractul-medium.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Fractul";
+    src: url('/fonts/fractul-light.ttf') format('truetype');
+    font-weight: 300;
+}

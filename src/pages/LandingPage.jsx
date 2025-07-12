@@ -14,7 +14,7 @@ import { Helmet } from 'react-helmet-async'
 
 const LandingPage = () => {
     return (
-        <div className='h-[400px]'>
+        <div className='relative'>
             <Helmet>
                 <title>Mega Export | Agricultural Supply  And Finance Solutions</title>
                 <meta name='description' content='MegasAgriculture is dedicated to revolutionizing agro chain supply in Nigeria and Africa' />
@@ -58,9 +58,8 @@ const LandingPage = () => {
 
             <CertifcationCompliance />
             <GlobalFootPrint />
-            <RealEstate />
             <ImportExport />
-            <ContactForm />
+            {/* <ContactForm /> */}
             <Footer />
 
 

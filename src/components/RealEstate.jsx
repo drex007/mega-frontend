@@ -6,12 +6,12 @@ import FarmInvestmentCard from './FarmInvestmentCard'
 
 const RealEstate = () => {
     return (
-        <div className='w-full bg-white text-white font-neulis' id='realestate'>
+        <div className='w-full bg-white text-white font-neulis mb-4' id='realestate'>
 
             <div style={{ backgroundImage: `url(${realEstate})` }} className='lg:h-[100vh] h-[40vh] w-full bg-no-repeat bg-cover flex flex-col items-center justify-center '>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black' >Own A Farm. Grow Wealth</p>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black'>Impact Lives</p>
-                <p className=' lg:text-[20px] text-[10px] text-primary-green-black'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>
+                <p className=' lg:text-[20px] text-[10px] text-primary-green-black font-fractul'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>
 
                 <p className='px-8 py-3 rounded-full text-white bg-primary-light-green my-2'>Start Your Investment</p>
 
@@ -22,7 +22,7 @@ const RealEstate = () => {
                     <RealEstateCard
                         title={"Security titled land"}
                         image={security}
-                        text={"Own farm land with proper legal documentation"}
+                        text={"Own farm land with proper legal documentation, we ensure a hassle free experience"}
 
                     />
                 </div>
@@ -53,7 +53,7 @@ const RealEstate = () => {
             </div>
 
             <p className='text-primary-green-black flex justify-center lg:text-[50px] text-[25px] my-4'>Farm Investment Explorer</p>
-            <div className="lg:flex lg:space-x-4 grid px-4 gap-y-3">
+            <div className="lg:flex lg:space-x-4 grid px-4 gap-y-3 font-fractul">
                 <select name="" id="" className='lg:w-1/3  py-4 bg-white border border-black text-black'>
                     <option value="">Filter Crop</option>
 
@@ -69,7 +69,7 @@ const RealEstate = () => {
                 </select>
 
             </div>
-            <div className='my-16 grid grid-cols-1 lg:grid-cols-4 px-8 lg:gap-x-4'>
+            <div className='my-16 grid grid-cols-1 lg:grid-cols-4 px-8 lg:gap-x-16'>
                 <FarmInvestmentCard
                     image={cocoa1}
                     text={"Cocoa"}
@@ -102,10 +102,10 @@ const RealEstate = () => {
 
             </div>
             <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>How It Works?</p>
-            <div className='text-black px-4 lg:flex lg:justify-between lg:space-y-0 space-y-4 font-neulis'>
+            <div className='text-black lg:px-8 px-2 lg:flex lg:justify-between lg:space-y-0 space-y-4 font-fractul text-[13px]'>
 
                 <div className='flex space-x-4'>
-                    <img src={selectFarm} />
+                    <img src={selectFarm} className='w-1/4' />
                     <div>
                         <p >Select Farm +</p>
                         <p>crop</p>
@@ -115,28 +115,28 @@ const RealEstate = () => {
 
 
                 <div className='flex space-x-4'>
-                    <img src={choose} />
+                    <img src={choose} className='w-1/4' />
                     <div>
                         <p>Choose</p>
                         <p>Ownership Model</p>
                     </div>
                 </div>
                 <div className='flex space-x-4'>
-                    <img src={signContract} />
+                    <img src={signContract} className='w-1/4' />
                     <div>
                         <p>Sign Contract +</p>
                         <p>Pay</p>
                     </div>
                 </div>
-                <div className='flex space-x-4'>
-                    <img src={farmSetup} />
+                <div className='flex space-x-4 i'>
+                    <img src={farmSetup} className='w-1/4' />
                     <div>
                         <p>Farm Setup &</p>
                         <p>Updates</p>
                     </div>
                 </div>
                 <div className='flex space-x-4'>
-                    <img src={annualReturn} />
+                    <img src={annualReturn} className='w-1/4' />
                     <div>
                         <p>Get Annual</p>
                         <p>Returns</p>
@@ -144,28 +144,28 @@ const RealEstate = () => {
                 </div>
             </div>
             <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>Ownership Models</p>
-            <div className="lg:flex justify-between grid px-4 lg:space-y-0 space-y-4">
-                <div className='flex flex-col items-center text-black'>
+            <div className="lg:flex justify-between grid px-4 lg:space-y-0 space-y-4 font-fractul">
+                <div className='flex flex-col items-center text-black text-[13px]'>
                     <img src={home} />
                     <p className="text-black font-semibold my-2">Full Ownership</p>
-                    <p className='justify-center text-black lg:w-3/5 w-4/5'>Purchase the property outright with full control and responsibility </p>
-                    <p className='flex justify-center'>• Total control</p>
-                    <p className='flex justify-center'>• 100% equity </p>
+                    <p className='justify-center text-black lg:w-2/5 w-4/5 text-center'>Purchase the property outright with full control and responsibility </p>
+                    <p className='flex justify-center text-center'>• Total control</p>
+                    <p className='flex justify-center text-center'>• 100% equity </p>
                 </div>
 
-                <div className='flex flex-col items-center text-black'>
+                <div className='flex flex-col items-center text-black text-[13px]'>
                     <img src={calendar} />
                     <p className="text-black font-semibold my-2">Lease-To-Own</p>
-                    <p className='text-black lg:w-3/5 w-4/5'>Gradually build ownership through lease payments</p>
-                    <p className='flex justify-center'>• Fixed monthly cost</p>
-                    <p className='flex'>• Path to ownership</p>
+                    <p className='text-black lg:w-3/5 w-4/5 text-center'>Gradually build ownership through lease payments</p>
+                    <p className='flex justify-center text-center'>• Fixed monthly cost</p>
+                    <p className='flex text-center'>• Path to ownership</p>
                 </div>
-                <div className='flex flex-col items-center text-black'>
+                <div className='flex flex-col items-center text-black text-[13px]'>
                     <img src={group} />
                     <p className="text-black font-semibold my-2">Fractional Co-Investment</p>
-                    <p className='text-black lg:w-3/5 w-4/5'>Own a share of the property alonside co-investors </p>
-                    <p className='flex justify-center'>• Lower upfront cost </p>
-                    <p className='flex justify-center'>• Shared expenses</p>
+                    <p className='text-black lg:w-3/5 w-4/5 text-center'>Own a share of the property alonside co-investors </p>
+                    <p className='flex justify-center text-center'>• Lower upfront cost </p>
+                    <p className='flex justify-center text-center'>• Shared expenses</p>
                 </div>
 
 

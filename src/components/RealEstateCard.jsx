@@ -6,7 +6,7 @@ const RealEstateCard = ({ title, image, text }) => {
 
             <img src={image} className='flex justify-center' loading='lazy' alt='Export agro products' />
             <p className="text-black font-semibold my-2 font-poppins text-[14px]">{title}</p>
-            <p className="text-black flex justify-center lg:text-[14px] text-[12px] ">{text}</p>
+            <p className="text-black flex justify-center lg:text-[12px] text-[12px] text-center font-fractul ">{text}</p>
 
         </div>
     )

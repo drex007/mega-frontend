@@ -134,7 +134,7 @@ const MegaAnimalAndFeed = () => {
                     <div className='lg:px-16 px-4  lg:flex-[0.6]'>
                         <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
                         <p className='lg:hidden font-neulis lg:text-[48px]  text-[20px] mb-4  text-primary-dark-green lg:w-4/6 w-full font-extralight'>Animal Feed And Livestock<br></br> AF-LS</p>
-                           <p className='font-neulis lg:text-[48px]  text-[20px] mb-4  text-primary-dark-green lg:w-4/6 w-full font-extralight'>Animal Feed And  <br></br>Livestock AF-LS</p>
+                           <p className='hidden lg:flex font-neulis lg:text-[48px]  text-[20px] mb-4  text-primary-dark-green lg:w-4/6 w-full font-extralight'>Animal Feed And  <br></br>Livestock AF-LS</p>
 
                         <p className='font-fractul text-white lg:text-[13px] text-[12px] lg:w-3/5 w-full'>High quality feed and livestock products tailored to meet diverse agricultural needs.</p>
                     </div>

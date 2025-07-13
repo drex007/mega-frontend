@@ -9,16 +9,16 @@ const ImportExport = () => {
             </div>
             <div className='lg:flex-[0.5]'>
                 <div className=''>
-                    <p className='text-primary-dark-green font-extralight lg:text-[35px] text-[20px] my-2'>Lets Work Together</p>
+                    <p className='flex lg:justify-start lg:text-left justify-center text-center text-primary-dark-green font-extralight lg:text-[35px] text-[20px] my-2'>Lets Work Together</p>
 
-                    <div className='lg:text-[15px] text-[12px] font-fractul'>
+                    <div className='flex lg:justify-start lg:text-left justify-center text-center lg:text-[15px] text-[12px] font-fractul'>
                         <p>• Need a reliable bulk supplier? <br></br>• Want to co-develop agro-projects? <br></br>• Interested in investment-grade agro assets? Partner with us for long-term success.</p>
                     </div>
                 </div>
                 <div>
-                    <p className='text-primary-dark-green font-extralight lg:text-[35px] text-[20px] my-2'>Our Core Services</p>
+                    <p className='flex lg:justify-start lg:text-left justify-center text-center text-primary-dark-green font-extralight lg:text-[35px] text-[20px] my-2'>Our Core Services</p>
 
-                    <div className='lg:text-[15px] text-[12px] font-fractul'>
+                    <div className='flex lg:justify-start lg:text-left justify-center text-center lg:text-[15px] text-[12px] font-fractul'>
                         • Export-Grade Farm Produce<br></br> • Agro Investment & Advisory<br></br> • Sourcing & Aggregation <br></br> • International Market Access Solutions
                     </div>
                 </div>

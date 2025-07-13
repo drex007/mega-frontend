@@ -46,6 +46,7 @@ export default {
       colors: {
         "primary-light-green": '#00C54A',
         "primary-header": '#0DB14B',
+        "primary-text-dark-green":"#0A652C",
         "primary-dark-green": '#0B933C',
         "primary-bg-dark-gren": "#1E1E1E",
         "primary-green-black": '#103233',

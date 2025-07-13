@@ -75,9 +75,11 @@ import background from './images/background.svg'
 import peoplecomplete from './images/people-complete.svg'
 import livestockbg from './images/livestock-bg.svg'
 import cerealsbg from './images/cereals-bg.svg'
+import cerealaboutus from './images/cereal-aboutus.svg'
 
 
 export {
+    cerealaboutus,
     livestockbg,
     cerealsbg,
     background,

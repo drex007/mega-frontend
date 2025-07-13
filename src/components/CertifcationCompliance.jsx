@@ -13,7 +13,7 @@ const CertifcationCompliance = () => {
             whileInView={'show'}
             viewport={{ once: false, amount: 0.1 }}
         >
-            <div className='lg:rounded-t-[100px]  bg-primary-green-black pb-8'>
+            <div className='lg:rounded-t-[100px]  bg-primary-green-black lg:pb-8'>
                 <p className='flex justify-center text-green-200 2xl:text-[70px] lg:text-[64px] text-[20px] py-8 font-neulis font-light'>CERTIFCATIONS & COMPLIANCE</p>
                 <p className='flex lg:justify-center text-white font-fractul lg:px-16 px-4 lg:text-[15px] text-[12px]'>Megas Agriculture Limited is a fully certified, internationally compliant agribusiness and export company. We uphold the highest standards of transparency, sustainability, and quality assurance across our operations.</p>
 
@@ -23,8 +23,8 @@ const CertifcationCompliance = () => {
                             <img src={cert1} />
                             <p className='text-white font-fractul lg:text-[15px] text-[12px]'>Registered with the Corporate Affairs Commission (Nigeria) RC 6944026</p>
                         </div>
-                        <div className=' hidden  lg:w-2/6 2xl:2/5 lg:flex items-center space-x-4'>
-                            <img src={cert4} />
+                        <div className=' lg:w-2/6 2xl:w-2/5 flex items-center space-x-4 lg:mt-0 mt-4'>
+                            <img src={cert4} className="lg:w-1/3 w-1/4" />
                             <p className='text-white font-fractul lg:text-[15px] text-[12px]'>Licensed Agro-Exporter with the Nigerian Export Promotion Council (NEPC)</p>
                         </div>
 

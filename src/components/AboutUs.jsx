@@ -1,5 +1,5 @@
 import React from 'react'
-import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed, apple, google, background, peoplecomplete, cerealsbg } from '../assets'
+import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed, apple, google, background, peoplecomplete, cerealsbg, cerealaboutus } from '../assets'
 import { motion } from 'framer-motion'
 import fadeIn from './Variant'
 
@@ -75,6 +75,7 @@ const AboutUs = () => {
     return (
         <div className=' bg-white  overflow-hidden' id='about'>
             <p className='flex lg:justify-start justify-center lg:px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[12px]  lg:my-0 my-1'>Africa's Farm-To-Market Plaform</p>
+            <img src={cerealaboutus} alt="Cereals for agro export" className='lg:hidden flex justify-center mx-auto px-4 ml-2' />
 
             <motion.div
 
@@ -86,7 +87,7 @@ const AboutUs = () => {
 
             >
 
-                <div className='lg:flex flex-1 items-center -mt-4'>
+                <div className='lg:flex flex-1 items-center -mt-h4'>
                     <div className='lg:px-16   lg:flex-[0.5]'>
 
                         <p className='flex lg:justify-start justify-center font-neulis text-primary-green-black font-regular 2xl:text-[100px] lg:text-[96px] text-[40px] lg:my-0 my-1 py-0'>About us</p>
@@ -102,10 +103,6 @@ const AboutUs = () => {
                             <div
 
 
-                                animate={{
-                                    y: ["50%", "-10%"]
-                                }}
-                                transition={bounceTransition}
 
                                 className='flex space-x-4 justify-center mx-4'>
                                 <img src={apple} alt="" className='rounded-lg lg:h-[45px] h-[40px] cursor-pointer' />
@@ -126,7 +123,7 @@ const AboutUs = () => {
 
                 </div>
             </motion.div>
-            <div className='w-[120vw] relative lg:hidden left-1/2 -translate-x-1/2 -ml-10 flex h-[40vh] mt-16 justify-center overflow-hidden' style={{ backgroundImage: `url(${peoplecomplete})` }}>
+            <div className='w-[140vw] bg-cover  bg-no-repeat relative lg:hidden left-1/2 -translate-x-1/2 lg:-ml-10 flex h-[40vh] mt-16 justify-center overflow-hidden' style={{ backgroundImage: `url(${peoplecomplete})` }}>
 
             </div>
             {/* Second */}
@@ -164,7 +161,7 @@ const AboutUs = () => {
 
 
             {/* Third */}
-            <div className='w-[120vw] relative lg:hidden left-1/2 -translate-x-1/3 -ml-10 flex h-[40vh] mt-4 justify-center overflow-hidden' style={{ backgroundImage: `url(${cerealsbg})` }}>
+            <div className='w-[140vw] relative lg:hidden left-1/2 -translate-x-1/3 bg-cover -ml-10 flex h-[40vh] mt-4 justify-center overflow-hidden bg-no-repeat' style={{ backgroundImage: `url(${cerealsbg})` }}>
 
             </div>
             <div className='lg:flex lg:flex-1 grid lg:py-0 py-8 items-center -mt-4 bg-gradient-to-b lg:from-white from-green-100 lg:to-green-300 to-green-100' id='products'>
@@ -205,9 +202,9 @@ const AboutUs = () => {
             </motion.div>
             {/* Fifth */}
             <div
-                className='lg:flex flex-1 items-center bg-gradient-to-b from-black to-primary-light-green bg-blend-overlay bg-cover bg-center'
+                className='hidden lg:flex flex-1 items-center bg-gradient-to-b from-primary-text-dark-green from-[5%]   to-[#00FF60] to-[90%] bg-blend-overlay bg-cover bg-center'
                 style={{
-                    backgroundImage: `linear-gradient(to bottom, #0A662F, #00C54A), url(${background})`,
+                    backgroundImage: `linear-gradient(to bottom, #0A662F, #00FF60), url(${background})`,
                 }}
             >
 
@@ -226,8 +223,26 @@ const AboutUs = () => {
 
 
             </div>
+            {/*Fifth for a small screen */}
+            <div
+                className='lg:hidden flex flex-col  items-center bg-gradient-to-b from-primary-text-dark-green from-[5%]   to-[#00FF60] to-[90%] bg-cover bg-center'
+
+            >
+                <div className='relative w-full flex items-center pt-8 pl-[5vw]'>
+                    <img src={nutseed} className='absolute w-3/6' />
+                    <img src={nutseedhuman} className='w-4/6 z-10 ml-[30vw]' />
+
+                </div>
+
+                <div className='flex flex-col items-center justify-center'>
+                    <p className='font-neulis text-primary-text-dark-green font-semibold text-[69px] z-50'>Megas</p>
+                    <p className='font-neulis  text-[25px]  text-black '>Nuts and Seeds</p>
+
+                    <p className='font-fractul text-black text-center px-8 pb-8 w-full text-[12px]'>Explore our variety of nutrient-packed nuts and seeds for food and industrial purpose.</p>
+                </div>
 
 
+            </div>
 
         </div>
     )

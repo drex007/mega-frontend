@@ -120,8 +120,8 @@ const MegaAnimalAndFeed = () => {
                     {contents?.map((e, i) => {
                         return <div className='flex flex-col items-center justify-center w-full ' key={i}>
                             <img src={e?.image} className='lg:w-4/5' />
-                            <p className='rounded-full bg-primary-dark-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis mt-8 font-semibold lg:text-[12px] text-[10px]'>{e?.title}</p>
-                            <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-fractul my-2 text-[12px] text-center'>{e?.text}</p>
+                            <p className='rounded-full bg-primary-dark-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis mt-8 lg:text-[20px] text-[10px]'>{e?.title}</p>
+                            <p className='rounded-full  px-8 py-4 text-white flex justify-center w-full font-fractul my-2 lg:text-[13px] lg:w-4/5 text-[12px] text-center'>{e?.text}</p>
                         </div>
 
 
@@ -130,16 +130,16 @@ const MegaAnimalAndFeed = () => {
 
                 </div>
                 <div className='flex flex-1 items-center -mt-4'>
-                    <div className='lg:px-16 px-4  lg:flex-[0.5]'>
+                    <div className='lg:px-16 px-4  lg:flex-[0.6]'>
                         <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
-                        <p className='font-neulis lg:text-[35px]  text-[20px] mb-4  text-primary-light-green w-4/6 font-extralight'>Animal Feed And <br></br>Livestock AF-LS</p>
+                        <p className='font-neulis lg:text-[48px]  text-[20px] mb-4  text-primary-dark-green w-4/6 font-extralight'>Animal Feed And <br></br>Livestock AF-LS</p>
 
-                        <p className='font-fractul text-white lg:text-[15px] text-[14px] w-4/5'>High quality feed and livestock products tailored to meet divese qgricultural needs.</p>
+                        <p className='font-fractul text-white lg:text-[13px] text-[14px] w-4/5'>High quality feed and livestock products tailored to meet divese qgricultural needs.</p>
                     </div>
-                    <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center w-full'>
+                    <div className='hidden flex-[0.4] lg:flex relative justify-end mr-10 items-center w-full'>
                         <img src={cows} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10  -mt-[5vh]' />
                         <img src={chicken} className='z-10' />
-                        <div className='absolute 2xl:h-[120%] h-[120%] bg-primary-light-green w-full rounded-full lg:-mr-[25vw] 2xl:-mr-[32vw] mt-10'>
+                        <div className='absolute 2xl:h-[120%] h-[120%] bg-primary-light-green w-full rounded-full lg:-mr-[20vw] 2xl:-mr-[32vw] mt-10'>
 
                         </div>
 
@@ -150,7 +150,7 @@ const MegaAnimalAndFeed = () => {
                     {contents2?.map((e, i) => {
                         return <div className='flex flex-col items-center justify-center w-full ' key={i}>
                             <img src={e?.image} className='w-4/5 lg:w-4/5' />
-                            <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 font-semibold text-[9px]  lg:text-[12px]'>{e?.title}</p>
+                            <p className='rounded-full bg-button-dark-green px-2 py-3 text-primary-light-green flex justify-center w-3/5 font-neulis my-2 text-[9px]  lg:text-[11px]'>{e?.title}</p>
                             <p className='rounded-full  px-1 py-4 text-white flex justify-center font-fractul my-2 lg:text-[12px] text-[9px] lg:w-full w-4/5 text-center '>{e?.text}</p>
                         </div>
 

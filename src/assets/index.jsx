@@ -73,11 +73,13 @@ import apple from './images/apple.png'
 import google from './images/google.png'
 import background from './images/background.svg'
 import peoplecomplete from './images/people-complete.svg'
-
-
+import livestockbg from './images/livestock-bg.svg'
+import cerealsbg from './images/cereals-bg.svg'
 
 
 export {
+    livestockbg,
+    cerealsbg,
     background,
     annualReturn,
     farmSetup,

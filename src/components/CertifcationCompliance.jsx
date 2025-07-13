@@ -14,7 +14,7 @@ const CertifcationCompliance = () => {
             viewport={{ once: false, amount: 0.1 }}
         >
             <div className='lg:rounded-t-[100px]  bg-primary-green-black pb-8'>
-                <p className='flex justify-center text-green-200 2xl:text-[70px] lg:text-[50px] text-[20px] py-8 font-neulis font-light'>CERTIFCATIONS & COMPLIANCE</p>
+                <p className='flex justify-center text-green-200 2xl:text-[70px] lg:text-[64px] text-[20px] py-8 font-neulis font-light'>CERTIFCATIONS & COMPLIANCE</p>
                 <p className='flex lg:justify-center text-white font-fractul lg:px-16 px-4 lg:text-[15px] text-[12px]'>Megas Agriculture Limited is a fully certified, internationally compliant agribusiness and export company. We uphold the highest standards of transparency, sustainability, and quality assurance across our operations.</p>
 
                 <div className='lg:p-8 p-4'>
@@ -54,8 +54,8 @@ const CertifcationCompliance = () => {
                     </div>
                 </div>
                 <div className='lg:p-16 p-4'>
-                    <p className='text-green-300 lg:text-[30px] text-[20px] font-neulis'>What This Means for You:</p>
-                    <div className='font-fractul text-white lg:text-[15px] text-[12px]'>
+                    <p className='text-green-300 lg:text-[40px] text-[20px] font-neulis font-extra-light'>What This Means for You:</p>
+                    <div className='font-fractul text-white lg:text-[16px] text-[12px]'>
                         • Guaranteed product quality
                         <br></br>• Hassle-free export processes
                         <br></br> • Transparent documentation and traceability

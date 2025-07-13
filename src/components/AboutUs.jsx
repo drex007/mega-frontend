@@ -1,5 +1,5 @@
 import React from 'react'
-import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed, apple, google, background, peoplecomplete } from '../assets'
+import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed, apple, google, background, peoplecomplete, cerealsbg } from '../assets'
 import { motion } from 'framer-motion'
 import fadeIn from './Variant'
 
@@ -74,7 +74,7 @@ const AboutUs = () => {
     ]
     return (
         <div className=' bg-white  overflow-hidden' id='about'>
-            <p className='px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[15px]  lg:my-0 my-8'>Africa's Farm-To-Market Plaform</p>
+            <p className='flex lg:justify-start justify-center lg:px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[12px]  lg:my-0 my-1'>Africa's Farm-To-Market Plaform</p>
 
             <motion.div
 
@@ -87,15 +87,18 @@ const AboutUs = () => {
             >
 
                 <div className='lg:flex flex-1 items-center -mt-4'>
-                    <div className='lg:px-16 px-4  lg:flex-[0.5]'>
+                    <div className='lg:px-16   lg:flex-[0.5]'>
 
-                        <p className='font-neulis text-primary-green-black font-regular 2xl:text-[100px] lg:text-[60px] text-[40px] lg:my-0 my-1 py-0'>About us</p>
-                        <p className='font-neulis lg:text-[25px] text-[15px] mb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
+                        <p className='flex lg:justify-start justify-center font-neulis text-primary-green-black font-regular 2xl:text-[100px] lg:text-[96px] text-[40px] lg:my-0 my-1 py-0'>About us</p>
+                        <p className='hidden lg:flex font-neulis lg:text-[25px] text-[15px] mb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
-                        <p className='font-fractul font-light text-gray-700 lg:text-[15px] text-[12px]'>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
-                        <img src={mobileapp} className='flex lg:hidden w-full' />
+                        <p className='font-fractul font-light text-gray-700 lg:text-[13px] text-[12px] lg:text-left text-center lg:px-0 px-4'>At Megas Agriculture Limited, we are dedicated to revolutionizing the agro-supply chain in Nigeria and Africa. With over several years of experience, we specialize in connecting producers with markets, offering top-quality agricultural products and raw materials, and ensuring seamless logistics solutions that meet the demands of our partners.</p>
+                        <div className='lg:hidden flex relative w-full items-center '>
+                            <div className="bg-primary-light-green left-1/2 -translate-x-1/2 h-[45vh] absolute w-[110vw]  mx-auto  rounded-full overflow-hidden -z-5"></div>
+                            <img src={mobileapp} className='flex justify-center mx-auto lg:hidden w-4/5 z-10 ' />
+                        </div>
                         <div className='lg:py-12 lg:px-4 lg:flex lg:justify-self-start justify-center mt-0 lg:mt-0 items-center lg:space-x-4'>
-                            <p className='font-medium text-[15px] flex justify-center lg:my-0 my-2'>DOWNLOAD THE APP ON </p>
+                            <p className='font-medium text-[13px] flex justify-center lg:my-0 my-2'>DOWNLOAD THE APP ON </p>
                             <div
 
 
@@ -123,7 +126,9 @@ const AboutUs = () => {
 
                 </div>
             </motion.div>
+            <div className='w-[120vw] relative lg:hidden left-1/2 -translate-x-1/2 -ml-10 flex h-[40vh] mt-16 justify-center overflow-hidden' style={{ backgroundImage: `url(${peoplecomplete})` }}>
 
+            </div>
             {/* Second */}
             <motion.div
 
@@ -142,10 +147,10 @@ const AboutUs = () => {
 
                     </div>
                     <div className='lg:px-8 px-4  lg:flex-[0.5]'>
-                        <p className='font-neulis text-primary-green-black font-regular 2xl:text-[100px] lg:text-[60px] text-[40px]'>Welcome To</p>
-                        <p className='font-neulis lg:text-[30px] text-[20px] lg:pb-0 pb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
+                        <p className='flex justify-center lg:justify-start  font-neulis text-primary-green-black font-regular 2xl:text-[100px] lg:text-[79px] text-[40px]'>Welcome To</p>
+                        <p className='flex justify-center lg:justify-start  font-neulis lg:text-[24px] text-[20px] lg:pb-0 pb-4  text-primary-text-grey '><span className='font-semibold'>Megas</span> Agriculture Limited</p>
 
-                        <p className='font-fractul text-primary-text-grey lg:text-[15px] text-[12px]'>Our robust B2B agro platform, supported by an extensive network of representatives across states, regions, and market localities, provides unmatched reach and efficiency. Whether sourcing raw materials or distributing commodities, our swift and reliable infrastructure guarantees quality, speed, and customer satisfaction.<span className='hidden lg:flex mt-4'>We pride ourselves on our innovative approach, blending traditional market expertise with cutting-edge digital systems. Our upcoming app will further enhance our services, allowing for real-time tracking, efficient distribution, and effortless transactions. At Megas Agriculture Limited, our mission is to empower businesses, drive economic growth, and create lasting partnerships within the agro-industry. We are the trusted bridge between producers and markets, both locally and internationally</span></p>
+                        <p className='font-fractul lg:text-left text-center lg:px-0 px-4 text-primary-text-grey lg:text-[13px] text-[12px]'>Our robust B2B agro platform, supported by an extensive network of representatives across states, regions, and market localities, provides unmatched reach and efficiency. Whether sourcing raw materials or distributing commodities, our swift and reliable infrastructure guarantees quality, speed, and customer satisfaction.<br></br><span className='lg:flex mt-4'>We pride ourselves on our innovative approach, blending traditional market expertise with cutting-edge digital systems. Our upcoming app will further enhance our services, allowing for real-time tracking, efficient distribution, and effortless transactions. At Megas Agriculture Limited, our mission is to empower businesses, drive economic growth, and create lasting partnerships within the agro-industry. We are the trusted bridge between producers and markets, both locally and internationally</span></p>
 
 
 
@@ -156,17 +161,20 @@ const AboutUs = () => {
 
 
             </motion.div>
-            <img src={peoplecomplete} className='w-full rounded-xl flex mx-auto justify-center ml-2 lg:hidden' />
+
 
             {/* Third */}
-            <div className='lg:flex lg:flex-1 grid  items-center -mt-4 bg-gradient-to-b from-white to-green-300' id='products'>
-                <div className='lg:px-16 px-4 lg:py-0 py-4 lg:flex-[0.5]'>
-                    <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[60px] text-[40px]'>Megas</p>
-                    <p className='font-neulis lg:text-[30px] text-[20px] mb-4  text-black '>Grains and Cereals</p>
+            <div className='w-[120vw] relative lg:hidden left-1/2 -translate-x-1/3 -ml-10 flex h-[40vh] mt-4 justify-center overflow-hidden' style={{ backgroundImage: `url(${cerealsbg})` }}>
 
-                    <p className='font-fractul text-primary-text-grey lg:text-[15px] text-[12px]'>Our premium grains and cereals are sourced from trusted farms, ensuring quality and freshness to demand standard.</p>
+            </div>
+            <div className='lg:flex lg:flex-1 grid lg:py-0 py-8 items-center -mt-4 bg-gradient-to-b lg:from-white from-green-100 lg:to-green-300 to-green-100' id='products'>
+                <div className='lg:px-16 px-4 lg:py-0 py-4 lg:flex-[0.5]'>
+                    <p className='flex lg:justify-start justify-center font-neulis text-primary-dark-green font-semibold 2xl:text-[100px] lg:text-[79px] text-[40px]'>Megas</p>
+                    <p className='flex lg:justify-start justify-center font-neulis lg:text-[48px] text-[20px] mb-4  text-primary-green-black '>Grains and Cereals</p>
+
+                    <p className='flex lg:text-start text-center font-fractul text-primary-text-grey lg:text-[13px] text-[12px]'>Our premium grains and cereals are sourced from trusted farms, ensuring quality and freshness to demand standard.</p>
                 </div>
-                <img src={megacerealsandgrains} className='p-4 rounded-xl mx-auto flex justify-center lg:hidden' />
+
                 <div className='hidden flex-[0.5] lg:flex relative justify-end mr-10 items-center'>
                     <img src={megacerealsandgrains} className='2xl:-mr-[10vw] md:-mr-[20vw] z-10' />
                     <img src={silo} className='z-10' />
@@ -181,12 +189,12 @@ const AboutUs = () => {
             <motion.div
 
             >
-                <div className='grid lg:grid-cols-3 grid-cols-1 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5' style={{ backgroundImage: `url(${background})` }}>
+                <div className='grid lg:grid-cols-3 grid-cols-2 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 -z-5' style={{ backgroundImage: `url(${background})` }}>
                     {contents?.map((e, i) => {
                         return <div className='flex flex-col items-center justify-center lg:w-5/6  lg:px-0 px-4 w-full' key={i}>
                             <img src={e?.image} className='w-full' />
-                            <p className='rounded-full bg-primary-dark-green px-6 py-2 text-white flex justify-center w-2/5 font-neulis my-2 font-semibold lg:text-[10px] text-[8px]'>{e?.title}</p>
-                            <p className='rounded-full  lg:px-8 py-4 text-white flex justify-center w-full font-fractul my-2 text-[10px] text-center'>{e?.text}</p>
+                            <p className='rounded-full bg-primary-dark-green px-6 py-2 text-white flex justify-center lg:w-2/5 w-4/5 font-neulis my-2 lg:text-[15px] text-[8px]'>{e?.title}</p>
+                            <p className='rounded-full  lg:px-8 py-4 text-white flex justify-center w-full font-fractul my-2 lg:text-[13px] text-[10px] text-center'>{e?.text}</p>
                         </div>
 
 
@@ -204,10 +212,10 @@ const AboutUs = () => {
             >
 
                 <div className='lg:px-16 p-4  lg:flex-[0.5]'>
-                    <p className='font-neulis text-black font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
-                    <p className='font-neulis lg:text-[30px] text-[20px] lg:mb-2  text-black '>Nuts and Seeds</p>
+                    <p className='font-neulis text-black font-semibold 2xl:text-[100px] lg:text-[79px] text-[40px]'>Megas</p>
+                    <p className='font-neulis lg:text-[48px] text-[20px] lg:mb-2  text-black '>Nuts and Seeds</p>
 
-                    <p className='font-fractul text-black lg:w-4/5 w-full lg:text-[15px] text-[12px]'>Explore our variety of nutrient-packed nuts and seeds for food and industrial purpose.</p>
+                    <p className='font-fractul text-black lg:w-4/5 w-full lg:text-[16px] text-[12px]'>Explore our variety of nutrient-packed nuts and seeds for food and industrial purpose.</p>
                 </div>
                 <div className='lg:flex-[0.5] flex lg:relative justify-end items-center'>
                     <img src={nutseed} className='2xl:-mr-[8vw] lg:-mr-[10vw]' />

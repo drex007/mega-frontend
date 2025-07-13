@@ -8,12 +8,12 @@ const RealEstate = () => {
     return (
         <div className='w-full bg-white text-white font-neulis mb-4' id='realestate'>
 
-            <div style={{ backgroundImage: `url(${realEstate})` }} className='lg:h-[100vh] h-[40vh] w-full bg-no-repeat bg-cover flex flex-col items-center justify-center '>
+            <div style={{ backgroundImage: `url(${realEstate})` }} className='lg:h-[100vh] h-[80vh] w-full bg-no-repeat bg-cover flex flex-col items-center justify-center '>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black' >Own A Farm. Grow Wealth</p>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black'>Impact Lives</p>
-                <p className=' lg:text-[20px] text-[10px] text-primary-green-black font-fractul'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>
+                <p className=' lg:text-[20px] text-[10px] text-primary-green-black font-fractul font-semibold'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>
 
-                <p className='px-8 py-3 rounded-full text-white bg-primary-light-green my-2'>Start Your Investment</p>
+                <p className='px-8 py-3 rounded-full text-white bg-primary-light-green my-2 font-fractul font-semibold'>Start Your Investment</p>
 
             </div>
             <p className='text-primary-green-black flex justify-center lg:text-[50px] text-[25px] my-4'>Why Agri-Real Estate ?</p>
@@ -102,10 +102,10 @@ const RealEstate = () => {
 
             </div>
             <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>How It Works?</p>
-            <div className='text-black lg:px-8 px-2 lg:flex lg:justify-between lg:space-y-0 space-y-4 font-fractul text-[13px]'>
+            <div className='text-black lg:px-8 px-2 lg:flex lg:justify-between lg:space-y-0 space-y-4 font-fractul text-[14px]'>
 
-                <div className='flex space-x-4'>
-                    <img src={selectFarm} className='w-1/4' />
+                <div className='flex space-x-4 items-center'>
+                    <img src={selectFarm} className='lg:w-1/4 w-1/6' />
                     <div>
                         <p >Select Farm +</p>
                         <p>crop</p>
@@ -114,29 +114,29 @@ const RealEstate = () => {
 
 
 
-                <div className='flex space-x-4'>
-                    <img src={choose} className='w-1/4' />
+                <div className='flex space-x-4 items-center'>
+                    <img src={choose} className='lg:w-1/4 w-1/6' />
                     <div>
                         <p>Choose</p>
                         <p>Ownership Model</p>
                     </div>
                 </div>
-                <div className='flex space-x-4'>
-                    <img src={signContract} className='w-1/4' />
+                <div className='flex space-x-4 items-center'>
+                    <img src={signContract} className='lg:w-1/4 w-1/6' />
                     <div>
                         <p>Sign Contract +</p>
                         <p>Pay</p>
                     </div>
                 </div>
-                <div className='flex space-x-4 i'>
-                    <img src={farmSetup} className='w-1/4' />
+                <div className='flex space-x-4 items-center'>
+                    <img src={farmSetup} className='lg:w-1/4 w-1/6' />
                     <div>
                         <p>Farm Setup &</p>
                         <p>Updates</p>
                     </div>
                 </div>
-                <div className='flex space-x-4'>
-                    <img src={annualReturn} className='w-1/4' />
+                <div className='flex space-x-4 items-center'>
+                    <img src={annualReturn} className='lg:w-1/4 w-1/6' />
                     <div>
                         <p>Get Annual</p>
                         <p>Returns</p>
@@ -144,7 +144,7 @@ const RealEstate = () => {
                 </div>
             </div>
             <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>Ownership Models</p>
-            <div className="lg:flex justify-between grid px-4 lg:space-y-0 space-y-4 font-fractul">
+            <div className="lg:flex lg:justify-between grid grid-col-1 px-4 lg:space-y-0 space-y-4 font-fractul">
                 <div className='flex flex-col items-center text-black text-[13px]'>
                     <img src={home} />
                     <p className="text-black font-semibold my-2">Full Ownership</p>

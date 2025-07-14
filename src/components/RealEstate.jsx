@@ -13,7 +13,7 @@ const RealEstate = () => {
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black'>Impact Lives</p>
                 <p className=' lg:text-[20px] text-[10px] text-primary-green-black font-fractul font-semibold'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>
 
-                <p className='px-8 py-3 rounded-full text-white bg-primary-light-green my-2 font-fractul font-semibold'>Start Your Investment</p>
+                <p className='px-8 py-3 rounded-full text-white bg-primary-light-green my-2 font-fractul cursor-pointer font-semibold' onClick={() => { window.location.href = "/contact" }}>Start Your Investment</p>
 
             </div>
             <p className='text-primary-green-black flex justify-center lg:text-[50px] text-[25px] my-4'>Why Agri-Real Estate ?</p>

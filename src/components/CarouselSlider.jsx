@@ -24,7 +24,7 @@ const CarouselSlider = () => {
 
             </div>
 
-            <div className='hidden lg:flex absolute -top-[15%] h-full w-full justify-between px-8 items-center z-20 '>
+            <div className='hidden lg:flex absolute top-[35%] h-[10vh] w-full justify-between px-8 items-center z-20   '>
                 <img src={arrowback} className='hover:cursor-pointer w-[20px] lg:w-[40px]' onClick={prevSlide} />
                 <img src={arrowfront} className='hover:cursor-pointer w-[20px] lg:w-[40px]' onClick={nextSlide} />
 
@@ -32,8 +32,16 @@ const CarouselSlider = () => {
 
 
             <div className='absolute space-x-6 lg:top-[10%] -top-[5%] h-full flex justify-center items-center w-full'>
-                <button className='rounded-full bg-yellow-300 py-2 px-6 2xl:w-[200px] 2xl:py-6 lg:w-[140px] text-[12px] font-neulis-semibold'>Send Quota</button>
-                <button className='rounded-full bg-white py-2 px-6 lg:w-[140px] 2xl:w-[200px] 2xl:py-6 text-[12px] font-neulis-semibold' onClick={() => console.log("hiiiii")}>Read Reviews</button>
+                <button className='rounded-full cursor-pointer bg-yellow-300 py-2 px-6 2xl:w-[200px] 2xl:py-6 lg:w-[140px] text-[12px] font-neulis-semibold' onClick={() => {
+                    if (currentIndex !== 1) {
+                        window.location.href ="/contact"
+                    }
+                    else {
+                        window.location.href ="/services"
+                    }
+
+                }}>Send Quota</button>
+                <button className='rounded-full cursor-pointer bg-white py-2 px-6 lg:w-[140px] 2xl:w-[200px] 2xl:py-6 text-[12px] font-neulis-semibold'>Read Reviews</button>
 
             </div>
             {currentIndex == 0 && <div className='absolute lg:top-[70%] top-[50%] space-x-6 flex h-full  justify-start  px-8 w-full'>

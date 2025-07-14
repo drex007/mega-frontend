@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './pages/LandingPage';
 import ServicesPages from './pages/ServicesPages';
+import ContactPage from './pages/ContactPage';
 function App() {
 
   return (
@@ -25,11 +26,11 @@ function App() {
 
         } />
 
-        {/* <Route path='/login' element={
+        <Route path='/contact' element={
 
-          <LoginPage />
+          <ContactPage />
 
-        } /> */}
+        } />
 
       </Routes>
     </BrowserRouter>

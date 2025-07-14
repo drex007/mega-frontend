@@ -3,20 +3,16 @@ export const AppContext = React.createContext();
 export const AppContextProvider = ({ children }) => {
 
 
-    const [userModalState, setUserModalState] = useState("")
+    const [showContactForm, setShowContactForm] = useState(false)
 
-    const [transactionFormData, setTransactionFormData] = useState(
-        {
-            email: "",
-
-        }
-
-    )
+  
     return (
 
         <>
             <AppContext.Provider value={{
-                userModalState,
+            
+                showContactForm,
+                setShowContactForm
         
 
             }}>

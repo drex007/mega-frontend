@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='bg-black text-white font-fractul'>
             <p className='flex justify-center lg:text-[20px] text-[15px]  pt-4 font-semibold'>Africa's Farm To Market Platform</p>
             <p className='flex justify-center lg:text-[15px] text-[12px] lg:px-0 px-4 py-4 text-center'>At megas agriculture,  we are boosting production and distribution of agricultural commodities using AI, Modern Technology and sustainable farming.</p>
-            <div className=' grid lg:grid-cols-4 grid-cols-2 lg:gap-y-0 gap-y-2 text-white font-fractul px-4 py-4  lg:text-[14px] text-[10px]'>
+            <div className=' grid lg:grid-cols-4 grid-cols-2 lg:gap-y-0 gap-y-2 lg:gap-x-0 gap-x-16 text-white font-fractul px-4 py-4  lg:text-[14px] text-[10px]'>
                 <div>
                     <p className='font-semibold lg:text-[20px] text-[14px]'>Quick Links</p>
 

@@ -16,7 +16,7 @@ const LandingPage = () => {
     return (
         <div className='relative'>
             <Helmet>
-                <title>Mega Export | Agricultural Supply  And Finance Solutions</title>
+                <title>MegaAgriculture Limited  And Finance Solutions</title>
                 <meta name='description' content='MegasAgriculture is dedicated to revolutionizing agro chain supply in Nigeria and Africa' />
                 <meta name='keywords' content='agro tech, agro fintech, agro export, agro import, agro supply, agricultural finance, agricultural' />
                 <script type="application/ld+json">

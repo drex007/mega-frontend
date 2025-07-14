@@ -75,7 +75,7 @@ const AboutUs = () => {
     return (
         <div className=' bg-white  overflow-hidden' id='about'>
             <p className='flex lg:justify-start justify-center lg:px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[12px]  lg:my-0 my-1'>Africa's Farm-To-Market Plaform</p>
-            <img src={cerealaboutus} alt="Cereals for agro export" className='lg:hidden flex justify-center mx-auto px-4 ml-2' />
+            <img src={cerealaboutus} alt="Cereals for agro export" className='lg:hidden w-full flex justify-center mx-auto px-4 ml-2' />
 
             <motion.div
 

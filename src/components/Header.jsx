@@ -9,6 +9,7 @@ import { ImCancelCircle } from "react-icons/im";
 
 
 const Header = () => {
+    const baseUrl = import.meta.env.VITE_BASE_URL;
     const [showMenuBar, setShowMenuBar] = useState(false)
 
     return (

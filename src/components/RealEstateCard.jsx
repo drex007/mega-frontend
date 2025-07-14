@@ -4,8 +4,8 @@ const RealEstateCard = ({ title, image, text }) => {
     return (
         <div className="bg-white shadow-xl rounded-lg w-full flex flex-col justify-center items-center p-8" >
 
-            <img src={image} className='flex justify-center' loading='lazy' alt='Export agro products' />
-            <p className="text-black font-semibold my-2 font-poppins text-[14px]">{title}</p>
+            <img src={image} className='flex justify-center lg:w-1/2 w-2/4' loading='lazy' alt='Export agro products' />
+            <p className="text-black font-semibold my-2 font-poppins lg:text-[14px] text-[12px] text-center">{title}</p>
             <p className="text-black flex justify-center lg:text-[12px] text-[12px] text-center font-fractul ">{text}</p>
 
         </div>

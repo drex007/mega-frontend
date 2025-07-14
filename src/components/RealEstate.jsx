@@ -17,8 +17,8 @@ const RealEstate = () => {
 
             </div>
             <p className='text-primary-green-black flex justify-center lg:text-[50px] text-[25px] my-4'>Why Agri-Real Estate ?</p>
-            <div className='grid lg:grid-cols-4 '>
-                <div className='p-8 '>
+            <div className='grid lg:grid-cols-4 grid-cols-2 lg:gap-y-0 gap-y-2 '>
+                <div className='lg:p-8 px-2 '>
                     <RealEstateCard
                         title={"Security titled land"}
                         image={security}
@@ -26,7 +26,7 @@ const RealEstate = () => {
 
                     />
                 </div>
-                <div className='p-8'>
+                <div className='lg:p-8 px-2'>
                     <RealEstateCard
                         title={"Fully managed farm"}
                         image={farmLogo}
@@ -34,7 +34,7 @@ const RealEstate = () => {
 
                     />
                 </div>
-                <div className='p-8'>
+                <div className='lg:p-8 px-2'>
                     <RealEstateCard
                         title={"Export and local return "}
                         image={localReturn}
@@ -42,7 +42,7 @@ const RealEstate = () => {
 
                     />
                 </div>
-                <div className='p-8'>
+                <div className='lg:p-8 px-2'>
                     <RealEstateCard
                         title={"Track farm digitally"}
                         image={trackFarm}
@@ -52,24 +52,24 @@ const RealEstate = () => {
                 </div>
             </div>
 
-            <p className='text-primary-green-black flex justify-center lg:text-[50px] text-[25px] my-4'>Farm Investment Explorer</p>
+            <p className='text-primary-green-black flex justify-center lg:text-[50px] text-[20px] my-4'>Farm Investment Explorer</p>
             <div className="lg:flex lg:space-x-4 grid px-4 gap-y-3 font-fractul">
-                <select name="" id="" className='lg:w-1/3  py-4 bg-white border border-black text-black'>
+                <select name="" id="" className='lg:w-1/3 text-[12px]  py-4 bg-white border border-black text-black'>
                     <option value="">Filter Crop</option>
 
                 </select>
 
-                <select name="" id="" className='lg:w-1/3 py-4 bg-white border border-black text-black'>
+                <select name="" id="" className='lg:w-1/3 text-[12px] py-4 bg-white border border-black text-black'>
                     <option value="">State</option>
 
                 </select>
-                <select name="" id="" className='lg:w-1/3 py-4 bg-white border border-black text-black'>
+                <select name="" id="" className='lg:w-1/3 text-[12px] py-4 bg-white border border-black text-black'>
                     <option value="">Budget</option>
 
                 </select>
 
             </div>
-            <div className='my-16 grid grid-cols-1 lg:grid-cols-4 px-8 lg:gap-x-16'>
+            <div className='lg:my-16 grid grid-cols-2 lg:grid-cols-4 px-8 lg:gap-x-16 gap-x-4'>
                 <FarmInvestmentCard
                     image={cocoa1}
                     text={"Cocoa"}
@@ -101,11 +101,11 @@ const RealEstate = () => {
                 />
 
             </div>
-            <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>How It Works?</p>
-            <div className='text-black lg:px-8 px-2 lg:flex lg:justify-between lg:space-y-0 space-y-4 font-fractul text-[14px]'>
+            <p className='text-primary-light-green flex justify-center lg:text-[40px] text-[25px] lg:my-8 my-4'>How It Works?</p>
+            <div className='text-black lg:px-8 px-8 grid lg:grid-cols-5 grid-cols-2 lg:justify-between lg:space-y-0 space-y-4 font-fractul lg:text-[14px] text-[12px]'>
 
                 <div className='flex space-x-4 items-center'>
-                    <img src={selectFarm} className='lg:w-1/4 w-1/6' />
+                    <img src={selectFarm} className='lg:w-1/6 w-1/6' />
                     <div>
                         <p >Select Farm +</p>
                         <p>crop</p>
@@ -115,35 +115,35 @@ const RealEstate = () => {
 
 
                 <div className='flex space-x-4 items-center'>
-                    <img src={choose} className='lg:w-1/4 w-1/6' />
+                    <img src={choose} className='lg:w-1/6 w-1/6' />
                     <div>
                         <p>Choose</p>
                         <p>Ownership Model</p>
                     </div>
                 </div>
                 <div className='flex space-x-4 items-center'>
-                    <img src={signContract} className='lg:w-1/4 w-1/6' />
+                    <img src={signContract} className='lg:w-1/6 w-1/6' />
                     <div>
                         <p>Sign Contract +</p>
                         <p>Pay</p>
                     </div>
                 </div>
                 <div className='flex space-x-4 items-center'>
-                    <img src={farmSetup} className='lg:w-1/4 w-1/6' />
+                    <img src={farmSetup} className='lg:w-1/6 w-1/6' />
                     <div>
                         <p>Farm Setup &</p>
                         <p>Updates</p>
                     </div>
                 </div>
                 <div className='flex space-x-4 items-center'>
-                    <img src={annualReturn} className='lg:w-1/4 w-1/6' />
+                    <img src={annualReturn} className='lg:w-1/6 w-1/6' />
                     <div>
                         <p>Get Annual</p>
                         <p>Returns</p>
                     </div>
                 </div>
             </div>
-            <p className='text-primary-light-green flex justify-center lg:text-[50px] text-[25px] my-8'>Ownership Models</p>
+            <p className='text-primary-light-green flex justify-center lg:text-[40px] text-[25px] my-8'>Ownership Models</p>
             <div className="lg:flex lg:justify-between grid grid-col-1 px-4 lg:space-y-0 space-y-4 font-fractul">
                 <div className='flex flex-col items-center text-black text-[13px]'>
                     <img src={home} />

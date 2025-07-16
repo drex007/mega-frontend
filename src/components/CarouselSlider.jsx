@@ -12,14 +12,14 @@ const CarouselSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length)
     const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
-
+   
     return (
         <div className='overflow-hidden md:h-[100vh] lg:h-[120vh] 2xl:h-[90vh] w-full m-auto relative '>
 
             <div className='flex transition-transform duration-500 w-full'
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                 {images?.map((e, i) => {
-                    return <img src={e} key={i} className='w-full lg:h-full h-[80vh] object-cover flex-shrink-0' loading='lazy' />
+                    return <img src={e} key={i} className='w-full lg:h-full h-[100vh] object-cover flex-shrink-0 opacity-100' loading='lazy' />
                 })}
 
             </div>
@@ -45,7 +45,7 @@ const CarouselSlider = () => {
 
             </div>
             {currentIndex == 0 && <div className='absolute lg:top-[70%] top-[50%] space-x-6 flex h-full  justify-start  px-8 w-full'>
-                <p className='2xl:text-[100px] lg:text-[96px] text-[50px] font-neulis text-white '>Export With <span className='text-primary-light-green font-semibold'>Megas</span></p>
+                <p className='2xl:text-[100px] lg:text-[96px] text-[60px] font-neulis text-white '>Export With <span className='text-primary-light-green font-semibold'>Megas</span></p>
             </div>}
             {currentIndex == 1 && <div className='absolute lg:top-[62%] top-[50%] space-x-6 flex h-full  justify-start  px-8 w-full'>
                 <p className='2xl:text-[75px] lg:text-[75px] text-[40px] font-neulis text-white '>Looking To Invest ? <br></br> Invest Smart With <span className='text-primary-light-green font-semibold'>Megas</span></p>

@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 const ServicesPages = () => {
     return (
-        <div>
+        <div className='3xl:px-[20vw]'>
             <Header />
             <RealEstate />
             <Footer />

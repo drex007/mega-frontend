@@ -12,7 +12,9 @@ import {
     whitechiken,
     cowbeef,
     goatchevon,
-    livestockbg
+    livestockbg,
+    cows1,
+    chicken1
 } from '../assets'
 import WhyChooseUs from './WhyChooseUs'
 import { motion } from 'framer-motion'
@@ -134,12 +136,12 @@ const MegaAnimalAndFeed = () => {
                     <div className='lg:px-16 px-4  lg:flex-[0.6]'>
                         <p className='font-neulis text-primary-light-green font-semibold 2xl:text-[100px] lg:text-[80px] text-[40px]'>Megas</p>
                         <p className='lg:hidden font-neulis lg:text-[48px]  text-[20px] mb-4  text-primary-dark-green lg:w-4/6 w-full font-extralight'>Animal Feed And Livestock<br></br> AF-LS</p>
-                           <p className='hidden lg:flex font-neulis lg:text-[48px]  text-[20px] mb-4  text-primary-dark-green lg:w-4/6 w-full font-extralight'>Animal Feed And  <br></br>Livestock AF-LS</p>
+                        <p className='hidden lg:flex font-neulis lg:text-[48px]  text-[20px] mb-4  text-primary-dark-green lg:w-4/6 w-full font-extralight'>Animal Feed And  <br></br>Livestock AF-LS</p>
 
                         <p className='font-fractul text-white lg:text-[13px] text-[12px] lg:w-3/5 w-full'>High quality feed and livestock products tailored to meet diverse agricultural needs.</p>
                     </div>
                     <div className='hidden flex-[0.4] lg:flex relative justify-end mr-10 items-center w-full'>
-                        <img src={cows} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10  -mt-[5vh]' />
+                        <img src={cows1} className='2xl:-mr-[10vw] md:-mr-[12vw] z-10  -mt-[5vh] rounded-2xl' />
                         <img src={chicken} className='z-10' />
                         <div className='absolute 2xl:h-[120%] h-[120%] -mt-10 bg-primary-light-green w-full rounded-full lg:-mr-[20vw] 2xl:-mr-[32vw]'>
 
@@ -148,7 +150,10 @@ const MegaAnimalAndFeed = () => {
                     </div>
 
                 </div>
-                <div className='w-[100vw] bg-cover  bg-no-repeat relative lg:hidden left-1/2 -translate-x-1/2 lg:-ml-10 flex h-[40vh] mt-4 justify-center overflow-hidden' style={{ backgroundImage: `url(${livestockbg})` }}>
+                {/* SmallScreen */}
+                <div className='w-[100vw] lg:hidden flex flex-1 h-[50vh] mt-4 justify-center overflow-hidden items-center'>
+                    <img src={cows1} className='h-[45vh] rounded-[40px] z-10 -mr-[10vw]' />
+                    <img src={chicken1} className='h-[45vh] -z-5' />
                 </div>
                 <div className='grid lg:grid-cols-6 grid-cols-2 lg:px-8 px-2 items-stretch justify-items-center gap-y-6 bg-primary-green-black py-16 z-50'>
                     {contents2?.map((e, i) => {

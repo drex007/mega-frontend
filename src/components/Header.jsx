@@ -73,7 +73,7 @@ const Header = ({ isTransparent }) => {
                         <div className='items-center text-white font-fractul  text-[14px] font-semibold'>
                             <p className='text-white cursor-pointer my-4' onClick={() => { window.location.href = "/" }}>Megas</p>
                             <hr className='text-white'></hr>
-                            <Link
+                            {/* <Link
                                 to="about"
                                 spy={true}
                                 smooth={true}
@@ -82,9 +82,9 @@ const Header = ({ isTransparent }) => {
 
                             >
                                 <p className=' cursor-pointer my-4'>About Us</p>
-                            </Link>
+                            </Link> */}
 
-                            <hr className='text-white'></hr>
+                            {/* <hr className='text-white'></hr>
                             <Link
                                 to="products"
                                 spy={true}
@@ -95,7 +95,7 @@ const Header = ({ isTransparent }) => {
                             >
 
                                 <p className=' cursor-pointer my-4'>Our Products</p>
-                            </Link>
+                            </Link> */}
 
                             <hr className='text-white'></hr>
 

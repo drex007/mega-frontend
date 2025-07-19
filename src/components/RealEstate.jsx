@@ -1,5 +1,5 @@
 import React from 'react'
-import { annualReturn, calendar, choose, farmLogo, farmSetup, group, home, localReturn, realEstate, security, selectFarm, signContract, trackFarm, cocoa1, cashew1, poultry1, ginger1 } from '../assets'
+import { annualReturn, calendar, choose, farmLogo, farmSetup, group, home, localReturn, realEstate, security, selectFarm, signContract, trackFarm, cocoa1, cashew1, poultry1, ginger1,realestate1 } from '../assets'
 import RealEstateCard from './RealEstateCard'
 import FarmInvestmentCard from './FarmInvestmentCard'
 
@@ -8,7 +8,7 @@ const RealEstate = () => {
     return (
         <div className='w-full bg-white text-white font-neulis mb-4' id='realestate'>
 
-            <div style={{ backgroundImage: `url(${realEstate})` }} className='lg:h-[100vh] h-[80vh] w-full bg-no-repeat bg-cover flex flex-col items-center justify-center '>
+            <div style={{ backgroundImage: `url(${realestate1})` }} className='lg:h-[100vh] h-[80vh] w-full bg-no-repeat bg-cover flex flex-col items-center justify-center '>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black' >Own A Farm. Grow Wealth</p>
                 <p className='lg:text-[60px] text-[25px] text-primary-green-black'>Impact Lives</p>
                 <p className=' lg:text-[20px] text-[10px] text-primary-green-black font-fractul font-semibold'>"Invest in high-value, fully managed agri-farms across Nigeria"</p>

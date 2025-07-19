@@ -52,7 +52,7 @@ import importexport from './images/export-import.svg'
 import messageIcon from './icons/message.svg'
 import locationIcon from './icons/location-logo.svg'
 import worldIcon from './icons/world-logo.svg'
-import realEstate from  './images/realestate.svg'
+import realEstate from './images/realestate.svg'
 import security from './icons/security.svg'
 import home from './icons/home.svg'
 import group from './icons/group.svg'
@@ -62,10 +62,10 @@ import farmLogo from './icons/farmLogo.svg'
 import trackFarm from './icons/trackFarm.svg'
 import annualReturn from './icons/annualReturn.svg'
 import farmSetup from './icons/farmSetup.svg'
-import selectFarm from  './icons/selectFarm.svg'
+import selectFarm from './icons/selectFarm.svg'
 import choose from './icons/choose.svg'
 import signContract from './icons/signContract.svg'
-import poultry1 from  './images/poultry-1.svg'
+import poultry1 from './images/poultry-1.svg'
 import ginger1 from './images/ginger-1.svg'
 import cashew1 from './images/cashew-1.svg'
 import cocoa1 from './images/cocoa-1.svg'
@@ -76,9 +76,34 @@ import peoplecomplete from './images/people-complete.svg'
 import livestockbg from './images/livestock-bg.svg'
 import cerealsbg from './images/cereals-bg.svg'
 import cerealaboutus from './images/cereal-aboutus.svg'
-
+import cows1 from './images/cows.png'
+import ship1 from './images/ship.png'
+import youngman1 from './images/young-man.png'
+import youngwoman1 from './images/young-woman.png'
+import familyfarming1 from './images/family-farming.png'
+import w11 from './images/w1-1.png'
+import w22 from './images/w2-2.png'
+import w33 from './images/w3-3.png'
+import w44 from './images/w4-4.png'
+import realestate1 from './images/realestate.png'
+import chicken1 from './images/chicken.png'
+import newcereal from './images/new-cereal.png'
+import familysmall from './images/family-small.png'
 
 export {
+    familysmall,
+    newcereal,
+    chicken1,
+    realestate1,
+    w11,
+    w22,
+    w33,
+    w44,
+    familyfarming1,
+    youngwoman1,
+    youngman1,
+    ship1,
+    cows1,
     cerealaboutus,
     livestockbg,
     cerealsbg,
@@ -143,7 +168,7 @@ export {
     realEstate,
     security,
     home,
-    calendar, 
+    calendar,
     group,
     localReturn,
     farmLogo,

@@ -1,16 +1,16 @@
 import React from 'react'
-import { w1, w2, w3, w4 } from '../assets'
+import { w1, w2, w3, w4,w11,w22,w33, w44} from '../assets'
 
 
 const WhyChooseUs = () => {
-    const images = [w1, w2, w3, w4]
+    const images = [w11, w22, w33, w44]
     return (
         <div className='bg-white  rounded-t-[50px] lg:rounded-t-[100px] px-4 lg:px-16 ' id='chooseus'>
             <p className='flex justify-center font-neulis lg:text-[70px] text-[30px] font-extralight py-8 text-primary-text-grey'>WHY CHOOSE US ?</p>
             <div className=' grid grid-cols-4 lg:gap-4 gap-2  justify-evenly'>
                 {images?.map((e, i) => {
-                    return <div className='flex items-center ' key={i}>
-                        <img src={e} className='w-full' />
+                    return <div className='flex items-center' key={i}>
+                        <img src={e} className='w-full lg:h-[400px] h-[150px] rounded-2xl' />
                     </div>
 
 

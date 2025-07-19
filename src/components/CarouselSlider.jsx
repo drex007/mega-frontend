@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ship, youngman, youngwoman, familyfarming, arrowback, arrowfront } from '../assets'
+import { ship, ship1, youngman, youngwoman,youngwoman1, familyfarming,familyfarming1, arrowback, arrowfront, youngman1 } from '../assets'
 
 
 
@@ -7,7 +7,7 @@ import { ship, youngman, youngwoman, familyfarming, arrowback, arrowfront } from
 
 const CarouselSlider = () => {
     // slides = [0, 1, 2, 3]
-    const images = [ship, youngman, familyfarming, youngwoman,]
+    const images = [ship1, youngman1, familyfarming1, youngwoman1,]
     const slideIndex = [0, 1, 2, 3]
     const [currentIndex, setCurrentIndex] = useState(0)
     const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length)

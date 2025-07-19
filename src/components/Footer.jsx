@@ -7,7 +7,7 @@ const Footer = () => {
             <p className='flex justify-center lg:text-[20px] text-[15px]  pt-4 font-semibold'>Africa's Farm To Market Platform</p>
             <div className='flex justify-start  space-x-2 w-full px-4 my-2 items-center '>
                 <img src={messageIcon} className='w-[20px]' />
-                <p className='flex justify-center lg:text-[12px] text-[12px]'>info@megasagriculture.com</p>
+                <p className='flex justify-center lg:text-[12px] text-[12px]'>info@megasagricultureltd.com</p>
             </div>
 
             <div className='flex justify-start  space-x-2 w-full px-4 '>

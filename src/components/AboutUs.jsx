@@ -1,5 +1,5 @@
 import React from 'react'
-import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed, apple, google, background, peoplecomplete, cerealsbg, cerealaboutus } from '../assets'
+import { mobileapp, megsaboutus, welcometo, silo, megacerealsandgrains, corn, wheat, soya, rice, sorgium, cassava, nutseedhuman, nutseed, apple, google, background, peoplecomplete, cerealsbg, cerealaboutus, newcereal, familysmall } from '../assets'
 import { motion } from 'framer-motion'
 import fadeIn from './Variant'
 
@@ -75,7 +75,7 @@ const AboutUs = () => {
     return (
         <div className=' bg-white  overflow-hidden' id='about'>
             <p className='flex lg:justify-start justify-center lg:px-4 py-2 font-neulis font-regular text-primary-text-grey 2xl:text-[50px] lg:text-[30px] text-[12px]  lg:my-0 my-1'>Africa's Farm-To-Market Plaform</p>
-            <img src={cerealaboutus} alt="Cereals for agro export" className='lg:hidden w-full flex justify-center mx-auto px-4 ml-2' />
+            <img src={newcereal} alt="Cereals for agro export" className='lg:hidden w-full flex justify-center mx-auto p-8 rounded-[50px]' />
 
             <motion.div
 
@@ -123,7 +123,7 @@ const AboutUs = () => {
 
                 </div>
             </motion.div>
-            <div className='w-[140vw] bg-cover  bg-no-repeat relative lg:hidden left-1/2 -translate-x-1/2 lg:-ml-10 flex h-[40vh] mt-16 justify-center overflow-hidden' style={{ backgroundImage: `url(${peoplecomplete})` }}>
+            <div className='w-[140vw] bg-cover  bg-no-repeat relative lg:hidden left-1/2 -translate-x-1/2 lg:-ml-10 flex h-[40vh] mt-16 justify-center overflow-hidden' style={{ backgroundImage: `url(${familysmall})` }}>
 
             </div>
             {/* Second */}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ship, ship1, youngman, youngwoman,youngwoman1, familyfarming,familyfarming1, arrowback, arrowfront, youngman1 } from '../assets'
+import { ship1,youngwoman1,familyfarming1, arrowback, arrowfront, youngman1 } from '../assets'
 
 
 

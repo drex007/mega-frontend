@@ -16,13 +16,13 @@ const Header = ({ isTransparent }) => {
     }, [])
 
     return (
-        <div className='lg:px-8 px-2 py-6 h-[80px] w-full z-50 lg:flex  lg:bg-primary-header bg-transparent opacity-85 justify-between absolute top-0'>
+        <div className=' lg:px-8 px-2 py-6 h-[80px] w-full z-50 lg:flex  lg:bg-primary-header bg-transparent opacity-85 justify-between absolute top-0'>
             <div className='flex space-x-3 items-center'>
                 <img src={logo} className='h-[30px] lg:h-[40px]' />
 
                 {isTransparent && currentScreenSize <= 900 ? <img src={textlogo} className='lg:h-[40px] h-[30px]' /> : <img src={textlogowhite} className='lg:h-[40px] h-[30px]' />}
             </div>
-            <div className='hidden lg:flex space-x-8 items-center '>
+            <div className='3xl:px-[10vw] hidden lg:flex space-x-8 items-center '>
                 <p className='text-white cursor-pointer' onClick={() => { window.location.href = "/" }}>Megas</p>
                 <Link
                     to="about"

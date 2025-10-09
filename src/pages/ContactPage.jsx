@@ -6,7 +6,7 @@ import ContactForm from '../components/ContactForm'
 const ContactPage = () => {
     return (
         
-            <div className='h-screen flex flex-col justify-between 3xl:px-[20vw]'>
+            <div className='h-screen flex flex-col justify-between'>
                 <Header isTransparent ={true}/>
                 <ContactForm />
                 <Footer />

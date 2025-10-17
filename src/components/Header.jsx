@@ -16,7 +16,7 @@ const Header = ({ isTransparent }) => {
     }, [])
 
     return (
-        <div className=' lg:px-8 px-2 py-6 h-[80px] w-full z-50 lg:flex  lg:bg-primary-header bg-transparent opacity-85 justify-between absolute top-0'>
+        <div className=' lg:px-8 px-2 py-6 h-[80px] w-full z-50 lg:flex  lg:bg-primary-header bg-transparent opacity-85 justify-between absolute top-0  3xl:relative 4xl:px-[5vw]'>
             <div className='flex space-x-3 items-center'>
                 <img src={logo} className='h-[30px] lg:h-[40px]' />
 

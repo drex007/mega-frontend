@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 export const AppContext = React.createContext();
+import {dashBoard} from "./config/adminConfig"
 export const AppContextProvider = ({ children }) => {
 
 
     const [showContactForm, setShowContactForm] = useState(false)
+    const [AdminPage, setAdminPage] = useState(dashBoard)
 
   
     return (
@@ -12,7 +14,9 @@ export const AppContextProvider = ({ children }) => {
             <AppContext.Provider value={{
             
                 showContactForm,
-                setShowContactForm
+                setShowContactForm,
+                AdminPage,
+                setAdminPage
         
 
             }}>

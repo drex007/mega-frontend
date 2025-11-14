@@ -1,0 +1,6 @@
+export const dashBoard = "Dashboard"
+export const Transactions = "Transactions"
+export const users = "users"
+export const KYCs = "Kycs"
+export const ledger = "Ledger"
+export const Orders = "Orders"

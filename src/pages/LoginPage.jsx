@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { adminLoginAction } from '../Api/admin/admin.api'
+// import { adminLoginAction } from '../Api/admin/admin.api'
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { BsEye } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
@@ -25,11 +25,11 @@ const LoginPage = () => {
     return (
         <div className='sticky items-center h-screen flex justify-center w-full  bg-white  3xl:px-[25%] '>
             <div className='fixed -z-10 text-[700px] font-african blur-xl  overflow-y-hidden overflow-x-hidden 3xl:px-[50%]'>
-                <p className='text-gray-500'>DECILLON</p>
+                <p className='text-gray-500'>Megas</p>
             </div>
             <div className='w-5/6 flex justify-center'>
                 <div className='min-h-[400px] shadow-2xl px-2 bg-white flex flex-col items-center w-2/6 py-4 rounded-lg'>
-                    <p className='font-african text-black'>Decillon</p>
+                    <p className='font-poppins text-black'>Megas Admin</p>
                     <p className='text-black my-4'>Login To Account</p>
 
                     <div className='flex flex-col justify-start w-4/5'>
@@ -53,7 +53,7 @@ const LoginPage = () => {
 
                         {authLoading && <ButtonLoader mt={100} className="pt-4" />}
 
-                        {!authLoading && <button className='flex justify-center bg-black w-full py-3 text-[13px] rounded-md font-african  text-white' onClick={() => dispatch(adminLoginAction({ formdata, navigate }))}>LOG IN</button>}
+                        {!authLoading && <button className='flex justify-center bg-green-500 w-full py-3 text-[13px] rounded-md font-african  text-white' onClick={() => dispatch(adminLoginAction({ formdata, navigate }))}>LOG IN</button>}
 
                     </div>
 

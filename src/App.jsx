@@ -5,6 +5,8 @@ import ServicesPages from "./pages/ServicesPages";
 import ContactPage from "./pages/ContactPage";
 import { DotLoader } from "react-spinners";
 import  { Toaster } from 'react-hot-toast';
+import LoginPage from "./pages/LoginPage";
+import DashBoard from "./components/admin/DashBoard";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -49,6 +51,8 @@ function App() {
             <Route index element={<LandingPage />} />
             <Route path="/services" element={<ServicesPages />} />
             <Route path="/contact" element={<ContactPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/dashboard" element={<DashBoard />} />
           </Routes>
           <Toaster />
         </BrowserRouter>

@@ -1,8 +1,23 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import AdminDashBoardCard from "./AdminDashBoardCard";
 import { formatCurrency } from "../../constants";
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
+import { getAdminDetailsAction } from "../../Api/admin/admin.api";
 
 const DisplayBoard = () => {
+
+    const {current_admin } = useSelector(state => state.admin)
+    const [showPassword, setShowPassword] = useState(false)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+
+  useEffect(() => {
+    dispatch(getAdminDetailsAction({navigate}))
+  
+  }, [])
+  
   return (
     <div className="p-4">
       <div className="grid grid-cols-4 gap-4">
@@ -41,9 +56,9 @@ const DisplayBoard = () => {
                 <th scope="col" class="px-6 py-3 font-medium">
                   Last online
                 </th>
-                <th scope="col" class="px-6 py-3 font-medium">
+                {/* <th scope="col" class="px-6 py-3 font-medium">
                   Actions
-                </th>
+                </th> */}
               </tr>
             </thead>
             <tbody className="text-[12px]">
@@ -58,11 +73,11 @@ const DisplayBoard = () => {
                 <td class="px-6 py-4">MEGS-MEGASX</td>
                 <td class="px-6 py-4">Active</td>
                 <td class="px-6 py-4">June 12 2009</td>
-                <td class="px-6 py-4 flex space-x-2">
+                {/* <td class="px-6 py-4 flex space-x-2">
                  <button className="bg-green-500 p-2 text-[12px] text-white">Activate </button>
                   <button className="bg-orange-500 p-2 text-[12px] text-white">Deactivate </button>
                    <button className="bg-blue-500 p-2 text-[12px] text-white">Fine user</button>
-                </td>
+                </td> */}
               </tr>
             </tbody>
           </table>

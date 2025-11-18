@@ -9,9 +9,11 @@ import { MdMenuBook } from "react-icons/md";
 import { GrDocumentVerified } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useSelector } from "react-redux";
 
 const SideBar = () => {
   const { AdminPage, setAdminPage } = useContext(AppContext);
+  const {current_admin } = useSelector(state => state.admin)
   const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("user");
@@ -20,7 +22,8 @@ const SideBar = () => {
   };
   return (
     <div className="px-4  font-spacegrotesk">
-      <p className="f text-[20px] my-1 font-poppin">Megas Admin</p>
+      <p className=" text-[20px] my-1 font-poppin">Megas Admin</p>
+       <p className=" text-[14px] my-1 font-poppin">{current_admin?.first_name} {current_admin?.last_name}</p>
 
       <div
         className={`${
@@ -46,7 +49,7 @@ const SideBar = () => {
         } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
         onClick={() => setAdminPage(usersConfig)}
       >
-        <TbUsers size={25} />
+        <TbUsers size={25} /> run 
         <p className="text-[13px]">Users</p>
       </div>
 

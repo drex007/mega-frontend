@@ -1,32 +1,33 @@
 import { createSlice } from '@reduxjs/toolkit'
-// import { addAccountAction, addNetworkAssetAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminGetAccountAction, adminGetFeeAction, adminLoginAction, adminUpdateTransactionAction, fetchNetworksAction, getAdminAnalyticsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
+import { addAccountAction, addNetworkAssetAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminGetFeeAction, adminLoginAction, adminUpdateTransactionAction, fetchNetworksAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
 
 
 export const adminSlice = createSlice({
   name: 'admin',
   initialState: {
     authLoading: false,
+    current_admin: null
 
   },
   reducers: {},
   extraReducers: (builder) => {
     //Admin Login
 
-    // builder.addCase(adminLoginAction.pending, (state, action) => {
-    //   state.authLoading = true
-    // })
-    // builder.addCase(adminLoginAction.fulfilled, (state, action) => {
-    //   state.authLoading = false
-    //   state.authData = action.payload
-    // })
-    // builder.addCase(adminLoginAction.rejected, (state, action) => {
-    //   state.authLoading = false
-    // })
+    builder.addCase(adminLoginAction.pending, (state, action) => {
+      state.authLoading = true
+    })
+    builder.addCase(adminLoginAction.fulfilled, (state, action) => {
+      state.authLoading = false
+      state.authData = action.payload
+    })
+    builder.addCase(adminLoginAction.rejected, (state, action) => {
+      state.authLoading = false
+    })
 
-    // //Admin Gets Account
-    // builder.addCase(adminGetAccountAction.fulfilled, (state, action) => {
-    //   state.adminAccounts = action.payload
-    // })
+    //Admin Gets Account
+    builder.addCase(getAdminDetailsAction.fulfilled, (state, action) => {
+      state.current_admin = action.payload
+    })
 
 
     //Delete Account

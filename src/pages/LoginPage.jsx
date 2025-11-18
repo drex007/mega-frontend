@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-// import { adminLoginAction } from '../Api/admin/admin.api'
+
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { BsEye } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import ButtonLoader from '../components/button/buttonLoader';
+import { adminLoginAction } from '../Api/admin/admin.api';
 
 const LoginPage = () => {
     const { authLoading, authData } = useSelector(state => state.admin)

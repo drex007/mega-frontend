@@ -1,12 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { addAccountAction, addNetworkAssetAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminGetFeeAction, adminLoginAction, adminUpdateTransactionAction, fetchNetworksAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
+import { addAccountAction, addNetworkAssetAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, fetchNetworksAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
 
 
 export const adminSlice = createSlice({
   name: 'admin',
   initialState: {
     authLoading: false,
-    current_admin: null
+    current_admin: null,
+    dashboard_analytics:null
 
   },
   reducers: {},
@@ -32,18 +33,9 @@ export const adminSlice = createSlice({
 
     //Delete Account
 
-    // builder.addCase(adminDeleteAccountAction.pending, (state, action) => {
-    //   state.deleteAccount = null
-    // })
-
-
-    // builder.addCase(adminDeleteAccountAction.fulfilled, (state, action) => {
-    //   state.deleteAccount = action.payload
-    // })
-
-    // builder.addCase(adminDeleteAccountAction.rejected, (state, action) => {
-    //   state.deleteAccount = null
-    // })
+    builder.addCase(adminGetDashboardAnalyticsAction.fulfilled, (state, action) => {
+      state.dashboard_analytics = action.payload
+    })
 
 
 

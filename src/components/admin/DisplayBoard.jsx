@@ -1,42 +1,71 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import AdminDashBoardCard from "./AdminDashBoardCard";
 import { formatCurrency } from "../../constants";
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom';
-import { getAdminDetailsAction } from "../../Api/admin/admin.api";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import {
+  getAdminDetailsAction,
+  adminGetDashboardAnalyticsAction,
+} from "../../Api/admin/admin.api";
 
 const DisplayBoard = () => {
-
-    const {current_admin } = useSelector(state => state.admin)
-    const [showPassword, setShowPassword] = useState(false)
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-
+  const { current_admin, dashboard_analytics } = useSelector(
+    (state) => state.admin
+  );
+  const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getAdminDetailsAction({navigate}))
-  
-  }, [])
-  
+    dispatch(getAdminDetailsAction({ navigate }));
+    dispatch(adminGetDashboardAnalyticsAction());
+  }, []);
+
   return (
     <div className="p-4">
       <div className="grid grid-cols-4 gap-4">
-        <AdminDashBoardCard title={"Total users"} value={"1000"} />
+        <AdminDashBoardCard
+          title={"Total users"}
+          value={dashboard_analytics?.total_users ?? 0}
+        />
         <AdminDashBoardCard
           title={"Total amount processed"}
-          value={`N ${formatCurrency(10000.567, "NGN")}`}
+          value={`N ${formatCurrency(
+            dashboard_analytics?.total_amount_processed ?? 0,
+            "NGN"
+          )}`}
         />
-        <AdminDashBoardCard title={"Total orders"} value={"1000"} />
-        <AdminDashBoardCard title={"Amount in sytem"} value={"1000"} />
-        <AdminDashBoardCard title={"Users"} value={"1000"} />
+        <AdminDashBoardCard
+          title={"Total orders"}
+          value={dashboard_analytics?.total_orders_processed ?? 0}
+        />
+        <AdminDashBoardCard
+          title={"Amount in sytem"}
+          value={`N ${formatCurrency(
+            dashboard_analytics?.total_amount_in_system ?? 0,
+            "NGN"
+          )}`}
+        />
+        <AdminDashBoardCard
+          title={"Total transactions"}
+          value={dashboard_analytics?.total_transactions ?? 0}
+        />
+        <AdminDashBoardCard
+          title={"Admins"}
+          value={dashboard_analytics?.total_admins ?? 0}
+        />
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between my-8">
         <div></div>
         <div className="">
-            <input type="text" name="" placeholder="Enter mega id" id="" className="px-4 h-[40px] w-[500px] rounded-sm focus:outline-none font-light" />
-
+          <input
+            type="text"
+            name=""
+            placeholder="Enter mega id"
+            id=""
+            className="px-4 h-[40px] w-[500px] rounded-sm focus:outline-none font-light"
+          />
         </div>
-
       </div>
 
       <div className="my-10">
@@ -62,13 +91,12 @@ const DisplayBoard = () => {
               </tr>
             </thead>
             <tbody className="text-[12px]">
-      
               <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft">
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-heading whitespace-nowrap"
                 >
-                 Emmanuel James Aforlabi
+                  Emmanuel James Aforlabi
                 </th>
                 <td class="px-6 py-4">MEGS-MEGASX</td>
                 <td class="px-6 py-4">Active</td>

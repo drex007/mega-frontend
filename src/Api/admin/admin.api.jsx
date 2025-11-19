@@ -1,5 +1,5 @@
 import { createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
-import { addAccountRoute, addNetworkAssetRoute, adminLoginRoute, adminUpdateTransactionRoute, deleteAccountRoute, deleteNetworkAssetRoute, getAdminDetailsRoute, getAdminAnalyticsRoute, getAllUsersRoute, getNetworksRoute, getSwapRequestRoute,getDashboardAnalyticsRoute, getTransactionsRoute, updateAccountRoute, updateNetworkRoute, updateTransactionFeeRoute } from "./routes";
+import { addAccountRoute, addNetworkAssetRoute, adminLoginRoute, adminUpdateTransactionRoute, deleteAccountRoute, deleteNetworkAssetRoute, getAdminDetailsRoute, getAdminAnalyticsRoute, getAllUsersRoute, getUsersRoute, getSwapRequestRoute,getDashboardAnalyticsRoute, getTransactionsRoute, updateAccountRoute, updateNetworkRoute, updateTransactionFeeRoute } from "./routes";
 import toast from "react-hot-toast";
 
 export const adminLoginAction = createAsyncThunk(
@@ -69,12 +69,12 @@ export const adminGetDashboardAnalyticsAction = createAsyncThunk(
 
 )
 
-export const fetchNetworksAction = createAsyncThunk(
-    'admin/fetchNetworksAction',
+export const getUsersRouteAction = createAsyncThunk(
+    'admin/getUsersRouteAction',
     async (_, thunkAPI) => {
         try {
-            const { data } = await getNetworksRoute()
-            return data.data
+            const { data } = await getUsersRoute()
+            return data
 
         } catch (error) {
 

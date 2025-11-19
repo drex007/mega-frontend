@@ -49,7 +49,7 @@ const SideBar = () => {
         } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
         onClick={() => setAdminPage(usersConfig)}
       >
-        <TbUsers size={25} /> run 
+        <TbUsers size={25} />  
         <p className="text-[13px]">Users</p>
       </div>
 

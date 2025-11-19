@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { addAccountAction, addNetworkAssetAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, fetchNetworksAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
+import { addAccountAction, addNetworkAssetAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
 
 
 export const adminSlice = createSlice({
@@ -7,7 +7,8 @@ export const adminSlice = createSlice({
   initialState: {
     authLoading: false,
     current_admin: null,
-    dashboard_analytics:null
+    dashboard_analytics:null,
+    usersObject:null
 
   },
   reducers: {},
@@ -31,10 +32,14 @@ export const adminSlice = createSlice({
     })
 
 
-    //Delete Account
+    //Fetch Dashboars analytiscs 
 
     builder.addCase(adminGetDashboardAnalyticsAction.fulfilled, (state, action) => {
       state.dashboard_analytics = action.payload
+    })
+
+    builder.addCase(getUsersRouteAction.fulfilled, (state, action) => {
+      state.usersObject = action.payload
     })
 
 

@@ -7,7 +7,7 @@ import { API } from "../axios.config";
 export const adminLoginRoute = (formdata) => API.post('/auth/login', formdata)
 export const getAdminDetailsRoute = () => API.get('/users/get-user')
 export const getDashboardAnalyticsRoute = () => API.get('/admin/dashboard-analytics')
-export const getNetworksRoute = () => API.get('/admin/assets')
+export const getUsersRoute = () => API.get('/admin/get-users')
 export const addNetworkAssetRoute = (formdata) => API.post('/admin/asset/add', formdata)
 export const addAccountRoute = (formdata) => API.post('/admin/account/add', formdata)
 export const updateAccountRoute = (formdata, id) => API.put(`admin/account/update/${id}`, formdata)

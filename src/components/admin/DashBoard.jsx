@@ -62,12 +62,12 @@ const DashBoard = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="py-4 px-2 font-spacegrotesk bg-gray-50 h-screen">
+    <div className="py-4 px-2 font-spacegrotesk bg-gray-50 max-h-screen">
       <div className="flex flex-1">
         <div className="flex-[0.1]">
           <SideBar />
         </div>
-        <div className="flex-[0.9]">
+        <div className="flex-[0.9] h-full max-h-screen overflow-y-auto">
           {AdminPage == dashBoard && <DisplayBoard />}
           {/* <DisplayBoard /> */}
           {AdminPage == OrdersConfig && <Orders />}

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { addAccountAction, addNetworkAssetAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
+import { getTransactionByIDAction, fetchPaymentHistoriesAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
 
 
 export const adminSlice = createSlice({
@@ -8,7 +8,10 @@ export const adminSlice = createSlice({
     authLoading: false,
     current_admin: null,
     dashboard_analytics:null,
-    usersObject:null
+    usersObject:null,
+    payment_histories:null,
+    payment_history_by_id:null,
+    payment_history_by_id_loading:null
 
   },
   reducers: {},
@@ -41,6 +44,24 @@ export const adminSlice = createSlice({
     builder.addCase(getUsersRouteAction.fulfilled, (state, action) => {
       state.usersObject = action.payload
     })
+
+    builder.addCase(fetchPaymentHistoriesAction.fulfilled, (state, action) => {
+      state.payment_histories = action.payload
+    })
+    
+    // Get Single Transaction BY ID
+    builder.addCase(getTransactionByIDAction.pending, (state, action) => {
+      state.payment_history_by_id_loading = true
+    })
+    builder.addCase(getTransactionByIDAction.fulfilled, (state, action) => {
+      state.payment_history_by_id_loading = false
+      state.payment_histories = action.payload
+    })
+    builder.addCase(getTransactionByIDAction.rejected, (state, action) => {
+      state.payment_history_by_id_loading = false
+    })
+
+
 
 
 

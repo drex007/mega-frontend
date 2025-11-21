@@ -1,5 +1,5 @@
 import { createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
-import { addAccountRoute, addNetworkAssetRoute, adminLoginRoute, adminUpdateTransactionRoute, deleteAccountRoute, deleteNetworkAssetRoute, getAdminDetailsRoute, getAdminAnalyticsRoute, getAllUsersRoute, getUsersRoute, getSwapRequestRoute,getDashboardAnalyticsRoute, getTransactionsRoute, updateAccountRoute, updateNetworkRoute, updateTransactionFeeRoute } from "./routes";
+import { getTransactionByIDRoute, fetchTransactionsRoute, adminLoginRoute, adminUpdateTransactionRoute, deleteAccountRoute, deleteNetworkAssetRoute, getAdminDetailsRoute, getAdminAnalyticsRoute, getAllUsersRoute, getUsersRoute, getSwapRequestRoute,getDashboardAnalyticsRoute, getTransactionsRoute, updateAccountRoute, updateNetworkRoute, updateTransactionFeeRoute } from "./routes";
 import toast from "react-hot-toast";
 
 export const adminLoginAction = createAsyncThunk(
@@ -57,7 +57,6 @@ export const adminGetDashboardAnalyticsAction = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const { data } = await getDashboardAnalyticsRoute()
-            console.log(data)
             return data
 
         } catch (error) {
@@ -87,19 +86,16 @@ export const getUsersRouteAction = createAsyncThunk(
 
 
 
-export const addNetworkAssetAction = createAsyncThunk(
-    'admin/addNetworkAsset',
-    async (formdata, thunkAPI) => {
+export const fetchPaymentHistoriesAction = createAsyncThunk(
+    'admin/fetchPaymentHistories',
+    async (_, thunkAPI) => {
      
         try {
-            if (!formdata.assetName || !formdata.walletAddress || !formdata.networkName) return toast.error("Asset, Network and WalletAdress required")
-            const { data } = await addNetworkAssetRoute(formdata)
-            toast.success("Asset added successfully")
-            formdata.setAdminDashBoardModal(null)
-            return data.data
+           
+            const { data } = await fetchTransactionsRoute()
+            return data
 
         } catch (error) {
-            toast.error("Action failed, try again")
             return {}
 
         }
@@ -107,18 +103,16 @@ export const addNetworkAssetAction = createAsyncThunk(
 
 )
 
-export const addAccountAction = createAsyncThunk(
-    'admin/addAccountAction',
-    async (formdata, thunkAPI) => {
+export const getTransactionByIDAction = createAsyncThunk(
+    'admin/getTransactionByIDAction',
+    async ({id}, thunkAPI) => {
         try {
-            if (!formdata.accountName || !formdata.accountNumber || !formdata.bankName) return toast.error("Account number, Bank name and Account name required")
-            const { data } = await addAccountRoute(formdata)
-            toast.success("Account added successfully")
-            formdata.setAdminDashBoardModal(null)
-            return data.data
+
+            const { data } = await getTransactionByIDRoute(id)
+           
+            return data
 
         } catch (error) {
-            toast.error("Action failed, try again")
             return {}
 
         }

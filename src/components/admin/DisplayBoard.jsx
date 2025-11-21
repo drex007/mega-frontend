@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AdminDashBoardCard from "./AdminDashBoardCard";
-import { formatCurrency } from "../../constants";
+import { formatCurrency, formatFullDateTime } from "../../constants";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
@@ -16,6 +16,7 @@ const DisplayBoard = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     dispatch(getAdminDetailsAction({ navigate }));
@@ -100,7 +101,7 @@ const DisplayBoard = () => {
             </thead>
             <tbody className="text-[12px]">
               {usersObject?.users?.map((e, i) => (
-                <tr
+                <tr key={i}
                   class="odd:bg-neutral-primary even:bg-neutral-secondary-soft"
                   className=""
                 >
@@ -127,7 +128,7 @@ const DisplayBoard = () => {
                       {e?.is_active ? "Active" : "In-active"}{" "}
                     </p>
                   </td>
-                  <td class="px-6 py-4"> {e?.last_login}</td>
+                  <td class="px-6 py-4">  {e?.last_login ? formatFullDateTime(e?.last_login) : "N/A"}</td>
                 </tr>
               ))}
             </tbody>

@@ -49,11 +49,7 @@ const DashBoard = () => {
 
   useEffect(() => {}, []);
 
-  // useEffect(() => {
-  //     const getUser = localStorage.getItem("user")
-  //     if (!getUser) navigate("/login")
 
-  // }, [])
 
   const handleGoToPage = (e) => {
     setgoToPage(Number(e.target.value));
@@ -62,7 +58,7 @@ const DashBoard = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="py-4 px-2 font-spacegrotesk bg-gray-50 h-screen">
+    <div className="py-4 px-2 font-spacegrotesk  h-screen">
       <div className="flex flex-1">
         <div className="flex-[0.1]">
           <SideBar />

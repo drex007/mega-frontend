@@ -1,5 +1,5 @@
 import { createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
-import { getTransactionByIDRoute, fetchTransactionsRoute, adminLoginRoute, adminUpdateTransactionRoute, deleteAccountRoute, deleteNetworkAssetRoute, getAdminDetailsRoute, getAdminAnalyticsRoute, getAllUsersRoute, getUsersRoute, getSwapRequestRoute,getDashboardAnalyticsRoute, getTransactionsRoute, updateAccountRoute, updateNetworkRoute, updateTransactionFeeRoute } from "./routes";
+import { getTransactionByIDRoute, fetchTransactionsRoute, adminLoginRoute, adminUpdateTransactionRoute, deleteAccountRoute, deleteNetworkAssetRoute, getAdminDetailsRoute, getAdminAnalyticsRoute, getAllUsersRoute, getUsersRoute, getSwapRequestRoute,getDashboardAnalyticsRoute, getTransactionsRoute, updateAccountRoute, updateNetworkRoute, updateTransactionFeeRoute, activateAndDeactivateUserRoute, fineAUsersRoute, fetchAUserRoute } from "./routes";
 import toast from "react-hot-toast";
 
 export const adminLoginAction = createAsyncThunk(
@@ -119,6 +119,66 @@ export const getTransactionByIDAction = createAsyncThunk(
     }
 
 )
+
+
+export const activateAndDeactivateUserAction = createAsyncThunk(
+    'admin/activateAndDeactivateUserAction',
+    async ({id, choice}, thunkAPI) => {
+        try {
+
+            const { data } = await activateAndDeactivateUserRoute(id, choice)
+            toast.success(`user ${choice}d successfully`)
+           
+            return data
+
+        } catch (error) {
+            toast.error("Error occured try again!!")
+            return {}
+
+        }
+    }
+
+)
+
+export const fineAUserAction = createAsyncThunk(
+    'admin/fineAUserAction',
+    async ({id, formdata}, thunkAPI) => {
+        try {
+            if(!id || formdata?.amount <=0) {
+                return toast.error("Amount must be greater than zero and user id is requied")
+            }
+
+            const { data } = await fineAUsersRoute(id, formdata)
+            toast.success(`user fined successfully`)
+           
+            return data
+
+        } catch (error) {
+            toast.error("Error occured try again!!")
+            return {}
+
+        }
+    }
+
+)
+export const fetchAUserRouteAction = createAsyncThunk(
+    'admin/fetchAUserRouteAction',
+    async ({id}, thunkAPI) => {
+        try {
+
+            const { data } = await fetchAUserRoute(id)
+
+            return data
+
+        } catch (error) {
+           
+            return {}
+
+        }
+    }
+
+)
+
 
 
 export const updateAccountAction = createAsyncThunk(

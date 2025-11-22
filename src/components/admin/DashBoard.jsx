@@ -23,12 +23,14 @@ import Verifications from "./Verifications";
 
 import {
   dashBoard,
+  fineuserModal,
   KYCsConfig,
   ledgerConfig,
   OrdersConfig,
   TransactionsConfig,
   usersConfig,
 } from "../../config/adminConfig";
+import FineAUserModal from "../../modals/admin/FineAUserModal";
 
 const DashBoard = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -36,7 +38,7 @@ const DashBoard = () => {
   const dispatch = useDispatch();
   const [goToPage, setgoToPage] = useState(0);
   const [currentSelectedIndex, setcurrentSelectedIndex] = useState(-1);
-    const { AdminPage, setAdminPage } = useContext(AppContext);
+    const { AdminPage, setAdminPage, modalConfig, setModalConfig } = useContext(AppContext);
 
   const [transactionsTableQuery, setTransactionsTableQuery] = useState({
     limit: 25,
@@ -58,7 +60,8 @@ const DashBoard = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="py-4 px-2 font-spacegrotesk  h-screen">
+    <div className="py-4 font-spacegrotesk  h-screen">
+      {modalConfig == fineuserModal && <FineAUserModal/>}
       <div className="flex flex-1">
         <div className="flex-[0.1]">
           <SideBar />

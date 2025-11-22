@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getTransactionByIDAction, fetchPaymentHistoriesAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction } from '../Api/admin/admin.api'
+import { getTransactionByIDAction, fetchPaymentHistoriesAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction, activateAndDeactivateUserAction, fineAUserAction, fetchAUserRouteAction } from '../Api/admin/admin.api'
 
 
 export const adminSlice = createSlice({
@@ -41,7 +41,11 @@ export const adminSlice = createSlice({
       state.dashboard_analytics = action.payload
     })
 
-    builder.addCase(getUsersRouteAction.fulfilled, (state, action) => {
+    builder.addCase(fetchAUserRouteAction.fulfilled, (state, action) => {
+      state.usersObject = action.payload
+    })
+
+     builder.addCase(getUsersRouteAction.fulfilled, (state, action) => {
       state.usersObject = action.payload
     })
 
@@ -61,7 +65,18 @@ export const adminSlice = createSlice({
       state.payment_history_by_id_loading = false
     })
 
+      //Activate And Deativate User
+    builder.addCase(activateAndDeactivateUserAction.fulfilled, (state, action) => {
+      // state.payment_history_by_id_loading = false
+    })
 
+    //Fine A User
+    builder.addCase(fineAUserAction.fulfilled, (state, action) => {
+      // state.payment_history_by_id_loading = false
+    })
+
+
+    
 
 
 

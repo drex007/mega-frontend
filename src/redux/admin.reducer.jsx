@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getTransactionByIDAction, fetchPaymentHistoriesAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateAccountAction, updateNetworkAction, updateTransactionFeeAction, activateAndDeactivateUserAction, fineAUserAction, fetchAUserRouteAction } from '../Api/admin/admin.api'
+import { getTransactionByIDAction, fetchPaymentHistoriesAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateNetworkAction, updateTransactionFeeAction, activateAndDeactivateUserAction, fineAUserAction, fetchAUserRouteAction, getOrdersAction, getSingleOrderAction } from '../Api/admin/admin.api'
 
 
 export const adminSlice = createSlice({
@@ -11,7 +11,8 @@ export const adminSlice = createSlice({
     usersObject:null,
     payment_histories:null,
     payment_history_by_id:null,
-    payment_history_by_id_loading:null
+    payment_history_by_id_loading:null,
+    orders: null
 
   },
   reducers: {},
@@ -74,6 +75,18 @@ export const adminSlice = createSlice({
     builder.addCase(fineAUserAction.fulfilled, (state, action) => {
       // state.payment_history_by_id_loading = false
     })
+
+
+    // getOrdersAction
+      builder.addCase(getOrdersAction.fulfilled, (state, action) => {
+      state.orders = action.payload
+    })
+
+     // getSingleOrder
+      builder.addCase(getSingleOrderAction.fulfilled, (state, action) => {
+      state.orders = action.payload
+    })
+
 
 
     

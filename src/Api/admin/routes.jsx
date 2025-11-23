@@ -11,6 +11,13 @@ export const getUsersRoute = () => API.get('/admin/get-users')
 export const fetchTransactionsRoute = () => API.get('/bank/payments')
 export const getTransactionByIDRoute = (id) => API.get(`/bank/payments/${id}`)
 export const fetchAUserRoute = (id) => API.get(`/admin/fetch-user/${id}`)
+export const getOrdersRoute = (status) => API.get(`/admin/get-orders`, {
+    params:{
+        status:status
+    }
+})
+export const getSingleOrdersRoute = (id) => API.get(`/order/get-order/${id}`)
+export const addDeliveryAgentRoute = (id, formdata) => API.post(`/order/add-delivery-agent/${id}`, formdata)
 export const activateAndDeactivateUserRoute = (id, choice) => API.get(`/admin/user/activate-deactivate/${id}/${choice}`)
 export const fineAUsersRoute = (id, formdata) => API.post(`/admin/user/fine/${id}`, formdata)
 export const updateAccountRoute = (formdata, id) => API.put(`admin/account/update/${id}`, formdata)

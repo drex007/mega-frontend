@@ -9,3 +9,4 @@ export const OrdersConfig = "Orders"
 //Modal Config
 
 export const fineuserModal = "fineuserModal"
+export const addDeliveryAgent = "addDeliveryAgent"

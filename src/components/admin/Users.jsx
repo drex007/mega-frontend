@@ -12,19 +12,15 @@ import { fineuserModal } from "../../config/adminConfig";
 import { BsSearch } from "react-icons/bs";
 
 const Users = () => {
-  const {  usersObject } = useSelector(
-    (state) => state.admin
-  );
+  const { usersObject } = useSelector((state) => state.admin);
+
   const [formdata, setFormdata] = useState({
     user_id: "",
   });
 
   const dispatch = useDispatch();
   // const navigate = useNavigate();
-  const {
-    setModalConfig,
-    setCurrentUser,
-  } = useContext(AppContext);
+  const { setModalConfig, setCurrentUser } = useContext(AppContext);
 
   const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value });

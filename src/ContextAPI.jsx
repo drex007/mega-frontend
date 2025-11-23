@@ -6,6 +6,7 @@ export const AppContextProvider = ({ children }) => {
   const [AdminPage, setAdminPage] = useState(dashBoard);
   const [modalConfig, setModalConfig] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
+  const [currentOrder, setCurrentOrder] = useState(null);
 
   return (
     <>
@@ -18,7 +19,9 @@ export const AppContextProvider = ({ children }) => {
           modalConfig,
           setModalConfig,
           currentUser,
-          setCurrentUser
+          setCurrentUser,
+          currentOrder,
+          setCurrentOrder
         }}
       >
         {children}

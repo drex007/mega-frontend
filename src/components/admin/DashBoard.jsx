@@ -20,8 +20,8 @@ import Users from "./Users";
 import Ledger from "./Ledger";
 import Verifications from "./Verifications";
 
-
 import {
+  addDeliveryAgent,
   dashBoard,
   fineuserModal,
   KYCsConfig,
@@ -31,37 +31,17 @@ import {
   usersConfig,
 } from "../../config/adminConfig";
 import FineAUserModal from "../../modals/admin/FineAUserModal";
+import AddDeliveryAgentModal from "../../modals/admin/AddDeliveryAgentModal";
 
 const DashBoard = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [goToPage, setgoToPage] = useState(0);
-  const [currentSelectedIndex, setcurrentSelectedIndex] = useState(-1);
-    const { AdminPage, setAdminPage, modalConfig, setModalConfig } = useContext(AppContext);
-
-  const [transactionsTableQuery, setTransactionsTableQuery] = useState({
-    limit: 25,
-    transactionType: null,
-    from: null,
-    to: null,
-  });
-
-  useEffect(() => {}, []);
-
-  useEffect(() => {}, []);
-
-
-
-  const handleGoToPage = (e) => {
-    setgoToPage(Number(e.target.value));
-  };
-
-  useEffect(() => {}, []);
+  const { AdminPage, setAdminPage, modalConfig, setModalConfig } =
+    useContext(AppContext);
 
   return (
     <div className="py-4 font-spacegrotesk  h-screen">
-      {modalConfig == fineuserModal && <FineAUserModal/>}
+      {modalConfig == fineuserModal && <FineAUserModal />}
+      {modalConfig == addDeliveryAgent && <AddDeliveryAgentModal />}
+
       <div className="flex flex-1">
         <div className="flex-[0.1]">
           <SideBar />

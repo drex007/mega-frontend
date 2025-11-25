@@ -80,7 +80,7 @@ const SideBar = () => {
         onClick={() => setAdminPage(KYCsConfig)}
       >
         <GrDocumentVerified size={25} />
-        <p className="text-[13px]">KYCs</p>
+        <p className="text-[13px]">Verifications</p>
       </div>
 
       <div

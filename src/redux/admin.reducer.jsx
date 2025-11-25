@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getTransactionByIDAction, fetchPaymentHistoriesAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateNetworkAction, updateTransactionFeeAction, activateAndDeactivateUserAction, fineAUserAction, fetchAUserRouteAction, getOrdersAction, getSingleOrderAction } from '../Api/admin/admin.api'
+import { getTransactionByIDAction, fetchPaymentHistoriesAction,getUsersRouteAction,adminGetDashboardAnalyticsAction, adminDeleteAccountAction, adminDeleteNetworkAssetAction, adminLoginAction, adminUpdateTransactionAction, getAdminAnalyticsAction, getAdminDetailsAction, getAllUsersAction, getSwapRequestAction, getTransactionsActions, updateNetworkAction, updateTransactionFeeAction, activateAndDeactivateUserAction, fineAUserAction, fetchAUserRouteAction, getOrdersAction, getSingleOrderAction, fetchBusinessKYCAction } from '../Api/admin/admin.api'
 
 
 export const adminSlice = createSlice({
@@ -12,7 +12,8 @@ export const adminSlice = createSlice({
     payment_histories:null,
     payment_history_by_id:null,
     payment_history_by_id_loading:null,
-    orders: null
+    orders: null,
+    business_kyc:null
 
   },
   reducers: {},
@@ -86,6 +87,14 @@ export const adminSlice = createSlice({
       builder.addCase(getSingleOrderAction.fulfilled, (state, action) => {
       state.orders = action.payload
     })
+
+     // fetchBusinessKYCAction
+      builder.addCase(fetchBusinessKYCAction.fulfilled, (state, action) => {
+      state.business_kyc = action.payload
+    })
+
+
+    
 
 
 

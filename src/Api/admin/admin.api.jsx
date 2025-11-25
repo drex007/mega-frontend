@@ -22,6 +22,7 @@ import {
   getOrdersRoute,
   addDeliveryAgentRoute,
   getSingleOrdersRoute,
+  fetchBusinessKYCRoute,
 } from "./routes";
 import toast from "react-hot-toast";
 
@@ -214,6 +215,23 @@ export const addDeliveryAgentAction = createAsyncThunk(
     }
   }
 );
+
+
+export const fetchBusinessKYCAction = createAsyncThunk(
+  "admin/fetchBusinessKYCAction",
+  async ({status}, thunkAPI) => {
+    try {
+      
+      const { data } = await fetchBusinessKYCRoute(status);
+    
+      return data
+    } catch (error) {
+      
+      return {};
+    }
+  }
+);
+
 
 export const updateNetworkAction = createAsyncThunk(
   "admin/updateNetworkAction",

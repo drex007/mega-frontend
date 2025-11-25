@@ -7,6 +7,7 @@ export const AppContextProvider = ({ children }) => {
   const [modalConfig, setModalConfig] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
   const [currentOrder, setCurrentOrder] = useState(null);
+  const [currentVerification, setCurrentVerification] = useState(null);
 
   return (
     <>
@@ -21,7 +22,9 @@ export const AppContextProvider = ({ children }) => {
           currentUser,
           setCurrentUser,
           currentOrder,
-          setCurrentOrder
+          setCurrentOrder,
+          currentVerification,
+          setCurrentVerification
         }}
       >
         {children}

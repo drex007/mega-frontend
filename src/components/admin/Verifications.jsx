@@ -8,6 +8,7 @@ import {
 } from "../../Api/admin/admin.api";
 import { BsSearch } from "react-icons/bs";
 import { AppContext } from "../../ContextAPI";
+import VerificationDetails from "./VerificationDetails";
 
 const Verifications = () => {
   const { business_kyc } = useSelector((state) => state.admin);
@@ -18,7 +19,8 @@ const Verifications = () => {
 
   const dispatch = useDispatch();
   // const navigate = useNavigate();
-  const { setModalConfig, setCurrentUser } = useContext(AppContext);
+  const {   currentVerification, setCurrentVerification } = useContext(AppContext);
+  const [showVerificationDetails, setShowVerificationDetails] = useState(false)
 
   const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value });
@@ -32,7 +34,8 @@ const Verifications = () => {
 
   return (
     <div className="p-4 w-full">
-      <div className="flex justify-between">
+      {!showVerificationDetails && (
+        <div className="flex justify-between">
         <div>
           <p>Verifications</p>
         </div>
@@ -55,8 +58,9 @@ const Verifications = () => {
           </div>
         </div>
       </div>
+      )}
 
-      <div className="my-10 text-[14px]">
+     {!showVerificationDetails && ( <div className="my-10 text-[14px]">
         <div className="grid grid-cols-2  justify-between py-4">
           <p
             onClick={() => {
@@ -85,13 +89,7 @@ const Verifications = () => {
             Verified
           </p>
         </div>
-        {/* <div className="grid">
-          <label htmlFor="">Status</label>
-          <select name="" id="" className=" focus:outline-none my-4 px-4 py-2 bg-white border">
-            <option value="">Pending</option>
-            <option value="">Approved</option>
-          </select>
-        </div> */}
+      
         <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
           <table class="w-full text-sm text-left rtl:text-right text-body">
             <thead class="bg-neutral-secondary-soft border-b border-default text-[12px]">
@@ -116,7 +114,7 @@ const Verifications = () => {
             </thead>
             <tbody className="text-[12px]">
               {business_kyc?.business_kycs?.map((e, i) => (
-                <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft">
+                <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft" key={i}>
                    <td class="px-6 py-4">{i+1}</td>
                   <th
                     scope="row"
@@ -136,7 +134,12 @@ const Verifications = () => {
                     Add agent
                   </button> */}
                     {/* <button className="bg-orange-500 p-2 text-[12px] text-white">Deactivate user</button> */}
-                    <button className="bg-blue-500 p-2 text-[12px] text-white">
+                    <button className="bg-blue-500 p-2 text-[12px] text-white"
+                    onClick={()=>{
+                      setCurrentVerification(e)
+                      setShowVerificationDetails(!showVerificationDetails)
+                    }}
+                    >
                       Details
                     </button>
                   </td>
@@ -145,7 +148,9 @@ const Verifications = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div>)}
+
+      {showVerificationDetails && <VerificationDetails  showVerificationDetails ={showVerificationDetails} setShowVerificationDetails={setShowVerificationDetails}/>}
     </div>
   );
 };

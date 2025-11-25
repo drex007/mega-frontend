@@ -23,6 +23,7 @@ import {
   addDeliveryAgentRoute,
   getSingleOrdersRoute,
   fetchBusinessKYCRoute,
+  acceptOrRejectKybsRoute,
 } from "./routes";
 import toast from "react-hot-toast";
 
@@ -168,7 +169,6 @@ export const getOrdersAction = createAsyncThunk(
   "admin/getOrdersAction",
   async ({ status }, thunkAPI) => {
     try {
-    
       const { data } = await getOrdersRoute(status);
 
       return data;
@@ -182,7 +182,6 @@ export const getSingleOrderAction = createAsyncThunk(
   "admin/getSingleOrderAction",
   async ({ id }, thunkAPI) => {
     try {
-    
       const { data } = await getSingleOrdersRoute(id);
 
       return data;
@@ -192,23 +191,16 @@ export const getSingleOrderAction = createAsyncThunk(
   }
 );
 
-
 export const addDeliveryAgentAction = createAsyncThunk(
   "admin/addDeliveryAgentAction",
-  async ({id, formdata,setModalConfig}, thunkAPI) => {
+  async ({ id, formdata, setModalConfig }, thunkAPI) => {
     try {
-      if (
-        !formdata.name ||
-        !formdata.contact_detail 
-      
-      )
-        return toast.error(
-          "Agent name and contact required"
-        );
-      const { data } = await addDeliveryAgentRoute(id,formdata,);
+      if (!formdata.name || !formdata.contact_detail)
+        return toast.error("Agent name and contact required");
+      const { data } = await addDeliveryAgentRoute(id, formdata);
       toast.success("Agent added successfully");
       setModalConfig(null);
-      return data
+      return data;
     } catch (error) {
       toast.error("Error occurred, try again");
       return {};
@@ -216,22 +208,47 @@ export const addDeliveryAgentAction = createAsyncThunk(
   }
 );
 
-
 export const fetchBusinessKYCAction = createAsyncThunk(
   "admin/fetchBusinessKYCAction",
-  async ({status}, thunkAPI) => {
+  async ({ status }, thunkAPI) => {
     try {
-      
       const { data } = await fetchBusinessKYCRoute(status);
-    
-      return data
+
+      return data;
     } catch (error) {
-      
       return {};
     }
   }
 );
 
+export const acceptOrRejectKybsAction = createAsyncThunk(
+  "admin/acceptOrRejectKybsAction",
+  async (
+    {
+      business_id,
+      choice,
+      setShowVerificationDetails,
+      showVerificationDetails,
+    },
+    thunkAPI
+  ) => {
+    try {
+      const { data } = await acceptOrRejectKybsRoute(business_id, choice);
+      if (choice == "success") {
+        toast.success("Verification documents accepted");
+        setShowVerificationDetails(!showVerificationDetails);
+      } else {
+        toast.success("Verification documents rejected");
+      }
+
+      return data;
+    } catch (error) {
+      toast.error("Error occured while processing verification");
+
+      return {};
+    }
+  }
+);
 
 export const updateNetworkAction = createAsyncThunk(
   "admin/updateNetworkAction",

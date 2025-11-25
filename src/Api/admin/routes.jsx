@@ -25,6 +25,10 @@ export const fineAUsersRoute = (id, formdata) =>
   API.post(`/admin/user/fine/${id}`, formdata);
 export const fetchBusinessKYCRoute = (status) =>
   API.get(`/admin/business-kycs`, { params: { status: status } });
+
+
+export const acceptOrRejectKybsRoute = (business_id, choice) =>
+  API.get(`/admin/verify-kyb/${business_id}/${choice}`);
 export const updateAccountRoute = (formdata, id) =>
   API.put(`admin/account/update/${id}`, formdata);
 export const updateNetworkRoute = (formdata, id) =>

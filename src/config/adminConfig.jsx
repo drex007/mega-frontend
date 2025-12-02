@@ -10,3 +10,4 @@ export const OrdersConfig = "Orders"
 
 export const fineuserModal = "fineuserModal"
 export const addDeliveryAgent = "addDeliveryAgent"
+export const specificUserTransaction = "specificUserTransaction"

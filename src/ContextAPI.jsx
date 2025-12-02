@@ -8,6 +8,7 @@ export const AppContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [currentOrder, setCurrentOrder] = useState(null);
   const [currentVerification, setCurrentVerification] = useState(null);
+  const [currentUserTransaction, setCurrentUserTransaction] = useState(null)
 
   return (
     <>
@@ -24,7 +25,9 @@ export const AppContextProvider = ({ children }) => {
           currentOrder,
           setCurrentOrder,
           currentVerification,
-          setCurrentVerification
+          setCurrentVerification,
+          currentUserTransaction,
+          setCurrentUserTransaction
         }}
       >
         {children}

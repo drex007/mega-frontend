@@ -26,9 +26,17 @@ const Transactions = () => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value });
   };
 
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handleCurrentPageChange = (e) => {
+    if (e.target.value && e.target.value > 0) {
+      setCurrentPage(e.target.value);
+    }
+  };
+
   useEffect(() => {
-    dispatch(fetchPaymentHistoriesAction());
-  }, [formdata]);
+    dispatch(fetchPaymentHistoriesAction({ page: currentPage }));
+  }, [formdata, currentPage]);
 
   return (
     <div className="p-4 w-full">
@@ -94,7 +102,10 @@ const Transactions = () => {
               </thead>
               <tbody className="text-[12px]">
                 {payment_histories?.transactions?.map((e, i) => (
-                  <tr class="odd:bg-neutral-primary even:bg-neutral-secondary-soft">
+                  <tr
+                    class="odd:bg-neutral-primary even:bg-neutral-secondary-soft"
+                    key={i}
+                  >
                     <th
                       scope="row"
                       class="px-6 py-4 font-medium text-heading whitespace-nowrap"
@@ -137,11 +148,55 @@ const Transactions = () => {
                       >
                         Details
                       </button>
+                      
                     </td>
+                    
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+          <div className="flex justify-between my-2">
+            <div className="flex items-center space-x-3">
+              {payment_histories?.current_page > 1 && (
+                <button
+                  className="bg-blue-500 text-white p-2"
+                  onClick={() => {
+                    if (currentPage >= 2) {
+                      setCurrentPage(currentPage - 1);
+                    }
+                  }}
+                >
+                  Prev
+                </button>
+              )}
+              <p className="text-[12px]">
+                Current Page: {payment_histories?.current_page}
+              </p>
+            </div>
+            <div className="flex space-x-2 items-center">
+              <div className="flex">
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  className="border p-2 text-[10px] w- outline-none"
+                  placeholder="Enter page number"
+                  onChange={(e) => handleCurrentPageChange(e)}
+                />
+              </div>
+              {payment_histories?.current_page <
+                payment_histories?.total_pages && (
+                <button
+                  className="bg-orange-500 text-white p-2"
+                  onClick={() => {
+                    setCurrentPage(currentPage + 1);
+                  }}
+                >
+                  Next
+                </button>
+              )}
+            </div>
           </div>
         </div>
       )}

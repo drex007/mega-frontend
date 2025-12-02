@@ -14,7 +14,6 @@ import {
   getDashboardAnalyticsRoute,
   getTransactionsRoute,
   updateAccountRoute,
-  updateNetworkRoute,
   updateTransactionFeeRoute,
   activateAndDeactivateUserRoute,
   fineAUsersRoute,
@@ -24,6 +23,7 @@ import {
   getSingleOrdersRoute,
   fetchBusinessKYCRoute,
   acceptOrRejectKybsRoute,
+  getUserTransactionRoute,
 } from "./routes";
 import toast from "react-hot-toast";
 
@@ -82,9 +82,9 @@ export const adminGetDashboardAnalyticsAction = createAsyncThunk(
 
 export const getUsersRouteAction = createAsyncThunk(
   "admin/getUsersRouteAction",
-  async (_, thunkAPI) => {
+  async ({page}, thunkAPI) => {
     try {
-      const { data } = await getUsersRoute();
+      const { data } = await getUsersRoute(page);
       return data;
     } catch (error) {
       return {};
@@ -94,9 +94,9 @@ export const getUsersRouteAction = createAsyncThunk(
 
 export const fetchPaymentHistoriesAction = createAsyncThunk(
   "admin/fetchPaymentHistories",
-  async (_, thunkAPI) => {
+  async ({page}, thunkAPI) => {
     try {
-      const { data } = await fetchTransactionsRoute();
+      const { data } = await fetchTransactionsRoute(page);
       return data;
     } catch (error) {
       return {};
@@ -167,9 +167,9 @@ export const fetchAUserRouteAction = createAsyncThunk(
 
 export const getOrdersAction = createAsyncThunk(
   "admin/getOrdersAction",
-  async ({ status }, thunkAPI) => {
+  async ({ status, page }, thunkAPI) => {
     try {
-      const { data } = await getOrdersRoute(status);
+      const { data } = await getOrdersRoute(status, page);
 
       return data;
     } catch (error) {
@@ -210,9 +210,9 @@ export const addDeliveryAgentAction = createAsyncThunk(
 
 export const fetchBusinessKYCAction = createAsyncThunk(
   "admin/fetchBusinessKYCAction",
-  async ({ status }, thunkAPI) => {
+  async ({ status, page }, thunkAPI) => {
     try {
-      const { data } = await fetchBusinessKYCRoute(status);
+      const { data } = await fetchBusinessKYCRoute(status, page);
 
       return data;
     } catch (error) {
@@ -250,69 +250,21 @@ export const acceptOrRejectKybsAction = createAsyncThunk(
   }
 );
 
-export const updateNetworkAction = createAsyncThunk(
-  "admin/updateNetworkAction",
-  async (formdata, thunkAPI) => {
-    try {
-      if (
-        !formdata.assetName ||
-        !formdata.walletAddress ||
-        !formdata.networkName
-      )
-        return toast.error("Asset, WalletAddress and Network required");
-      const { data } = await updateNetworkRoute(formdata, formdata.id);
-      toast.success("Asset updated successfully");
-      formdata.setAdminDashBoardModal(null);
-      return data.data;
-    } catch (error) {
-      toast.error("Action failed, try again");
-      return {};
-    }
-  }
-);
 
-export const updateTransactionFeeAction = createAsyncThunk(
-  "admin/updateTransactionFeeAction",
-  async (formdata, thunkAPI) => {
-    try {
-      if (!formdata.fee) return toast.error("Fee is required");
-      const { data } = await updateTransactionFeeRoute(formdata, formdata.id);
-      toast.success("Fee updated successfully");
-      formdata.setAdminDashBoardModal(null);
-      return data.data;
-    } catch (error) {
-      toast.error("Action failed, try again");
-      return {};
-    }
-  }
-);
 
-export const getAdminAnalyticsAction = createAsyncThunk(
-  "admin/getAdminAnalyticsAction",
-  async (_, thunkAPI) => {
-    try {
-      const { data } = await getAdminAnalyticsRoute();
-      return data.data;
-    } catch (error) {
-      return {};
-    }
-  }
-);
 
-export const getTransactionsActions = createAsyncThunk(
-  "admin/getTransactionsActions",
+
+
+export const getUserTransactionAction = createAsyncThunk(
+  "admin/getUserTransactionAction",
   async (
-    { page, limit, transactionStatus, transationType, from, to },
+    { page, user_id },
     thunkAPI
   ) => {
     try {
-      const { data } = await getTransactionsRoute(
+      const { data } = await getUserTransactionRoute(
+        user_id,
         page,
-        limit,
-        transactionStatus,
-        transationType,
-        from,
-        to
       );
       return data;
     } catch (error) {
@@ -321,22 +273,7 @@ export const getTransactionsActions = createAsyncThunk(
   }
 );
 
-export const getSwapRequestAction = createAsyncThunk(
-  "admin/getSwapRequestAction",
-  async ({ page, limit, transactionStatus, transationType }, thunkAPI) => {
-    try {
-      const { data } = await getSwapRequestRoute(
-        page,
-        limit,
-        transactionStatus,
-        transationType
-      );
-      return data;
-    } catch (error) {
-      return {};
-    }
-  }
-);
+
 
 export const getAllUsersAction = createAsyncThunk(
   "admin/getAllUsersAction",
@@ -350,51 +287,6 @@ export const getAllUsersAction = createAsyncThunk(
   }
 );
 
-export const adminUpdateTransactionAction = createAsyncThunk(
-  "admin/adminUpdateTransactionAction",
-  async ({ formdata, transactionId }, thunkAPI) => {
-    try {
-      if (!transactionId) return toast.error("Transaction ID is required");
-      const { data } = await adminUpdateTransactionRoute(
-        formdata,
-        transactionId
-      );
-      toast.success("Transaction updated successfully");
-      formdata.setAdminDashBoardModal(null);
-      return data.data;
-    } catch (error) {
-      toast.error("Action failed, try again");
-      return {};
-    }
-  }
-);
 
-export const adminDeleteNetworkAssetAction = createAsyncThunk(
-  "admin/adminDeleteNetworkAssetAction",
-  async (formdata, thunkAPI) => {
-    try {
-      const { data } = await deleteNetworkAssetRoute(formdata?.id);
-      toast.success("Asset deleted successfully");
-      formdata.setAdminDashBoardModal(null);
-      return data.data;
-    } catch (error) {
-      toast.error("Action failed, try again");
-      return {};
-    }
-  }
-);
 
-export const adminDeleteAccountAction = createAsyncThunk(
-  "admin/adminDeleteAccountAction",
-  async (formdata, thunkAPI) => {
-    try {
-      const { data } = await deleteAccountRoute(formdata?.id);
-      toast.success("Account deleted successfully");
-      formdata.setAdminDashBoardModal(null);
-      return data.data;
-    } catch (error) {
-      toast.error("Action failed, try again");
-      return {};
-    }
-  }
-);
+

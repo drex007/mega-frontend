@@ -27,10 +27,18 @@ const Verifications = () => {
   };
   const [currentTab, setCurrentTab] = useState(0);
   const [kycStatus, setKycStatus] = useState("progress");
+    const [currentPage, setCurrentPage] = useState(1);
+  
+    const handleCurrentPageChange = (e) => {
+      if (e.target.value && e.target.value > 0) {
+        setCurrentPage(e.target.value);
+      }
+    };
+  
 
   useEffect(() => {
-    dispatch(fetchBusinessKYCAction({ status: kycStatus }));
-  }, [kycStatus]);
+    dispatch(fetchBusinessKYCAction({ status: kycStatus, page:currentPage }));
+  }, [kycStatus, currentPage]);
 
   return (
     <div className="p-4 w-full">
@@ -148,6 +156,48 @@ const Verifications = () => {
             </tbody>
           </table>
         </div>
+           <div className="flex justify-between my-2">
+            <div className="flex items-center space-x-3">
+              {business_kyc?.current_page > 1 && (
+                <button
+                  className="bg-blue-500 text-white p-2"
+                  onClick={() => {
+                    if (currentPage >= 2) {
+                      setCurrentPage(currentPage - 1);
+                    }
+                  }}
+                >
+                  Prev
+                </button>
+              )}
+              <p className="text-[12px]">
+                Current Page: {business_kyc?.current_page}
+              </p>
+            </div>
+            <div className="flex space-x-2 items-center">
+              <div className="flex">
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  className="border p-2 text-[10px] w- outline-none"
+                  placeholder="Enter page number"
+                  onChange={(e) => handleCurrentPageChange(e)}
+                />
+              </div>
+              {business_kyc?.current_page <
+                business_kyc?.total_pages && (
+                <button
+                  className="bg-orange-500 text-white p-2"
+                  onClick={() => {
+                    setCurrentPage(currentPage + 1);
+                  }}
+                >
+                  Next
+                </button>
+              )}
+            </div>
+          </div>
       </div>)}
 
       {showVerificationDetails && <VerificationDetails  showVerificationDetails ={showVerificationDetails} setShowVerificationDetails={setShowVerificationDetails}/>}

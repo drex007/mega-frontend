@@ -75,12 +75,13 @@ const OrderDetails = ({
                   <p>Name: {e?.name}</p>
                   <p>Sub-category: {e?.subcategory}</p>
                   <p>Category: {e?.category}</p>
-                  <p>Price: {e?.price}</p>
-                  <p>Quantity: {e?.quantity}</p>
+                  <p>Price: {currentOrder?.items[i]?.item_price}</p>
+                  <p>Quantity: {currentOrder?.items[i]?.quantity}</p>
                   <p>Item type: {e?.item_type}</p>
                   <p>Location : {e?.location}</p>
                 </div>
               ))}
+              
             </div>
           </div>
 

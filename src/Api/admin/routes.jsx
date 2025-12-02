@@ -46,7 +46,8 @@ export const updateAccountRoute = (formdata, id) =>
 export const getUserTransactionRoute = ( user_id, page) =>
   API.get(`/admin/payments/history/${user_id}`, {
     params:{
-      page:page
+      page:page,
+      page_size:10
     }
   });
 

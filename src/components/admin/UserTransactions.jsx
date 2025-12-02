@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useContext, useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { formatCurrency, formatFullDateTime } from "../../constants";
 import { AppContext } from "../../ContextAPI";
+import { getUserTransactionAction } from "../../Api/admin/admin.api";
 
 const UserTransactions = ({
   showUserTransactions,
@@ -10,15 +11,28 @@ const UserTransactions = ({
   const { user_transaction } = useSelector((state) => state.admin);
   const [currentPage, setCurrentPage] = useState(1);
   const { setModalConfig, currentUserTransaction } = useContext(AppContext);
+  const dispatch = useDispatch()
   const handleCurrentPageChange = (e) => {
     if (e.target.value && e.target.value > 0) {
       setCurrentPage(e.target.value);
     }
   };
+  useEffect(() => {
+    dispatch(
+      getUserTransactionAction({
+        page: currentPage,
+        user_id: currentUserTransaction?.user_id,
+      })
+    );
+  }, [currentPage]);
+
   return (
     <div className="min-h-[500px] pt-8  ">
       <div className="flex justify-between">
-        <div>{currentUserTransaction?.first_name ?? ""} {currentUserTransaction?.last_name ?? ""} Transaction history</div>
+        <div>
+          {currentUserTransaction?.first_name ?? ""}{" "}
+          {currentUserTransaction?.last_name ?? ""} Transaction history
+        </div>
         <div
           className="bg-red-500 rounded-full h-[30px] w-[30px] flex justify-center items-center cursor-pointer"
           onClick={() => {

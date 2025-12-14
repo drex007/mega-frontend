@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AdminDashBoardCard from "./AdminDashBoardCard";
 import { formatCurrency, formatFullDateTime } from "../../constants";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,21 +7,26 @@ import {
   getAdminDetailsAction,
   adminGetDashboardAnalyticsAction,
   getUsersRouteAction,
+  getAdminFeeAction,
 } from "../../Api/admin/admin.api";
+import { AppContext } from "../../ContextAPI";
+import { AdminFeeModal } from "../../config/adminConfig";
 
 const DisplayBoard = () => {
-  const { current_admin, dashboard_analytics, usersObject } = useSelector(
+  const { dashboard_analytics, usersObject, admin_fees } = useSelector(
     (state) => state.admin
   );
-  const [showPassword, setShowPassword] = useState(false);
+    const { setModalConfig } =
+      useContext(AppContext);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
 
   useEffect(() => {
     dispatch(getAdminDetailsAction({ navigate }));
     dispatch(adminGetDashboardAnalyticsAction());
-    dispatch(getUsersRouteAction());
+    // dispatch(getUsersRouteAction());
+    dispatch(getAdminFeeAction());
   }, []);
 
   return (
@@ -57,26 +62,32 @@ const DisplayBoard = () => {
           title={"Admins"}
           value={dashboard_analytics?.total_admins ?? 0}
         />
+        <AdminDashBoardCard
+          title={"Service Charge and  Delivery Fee"}
+          value={`N ${admin_fees?.service_charge}  -------------  ${admin_fees?.delivery_fee}%`}
+        />
       </div>
-      {/* <div className="flex justify-between my-8">
+
+      <div className="flex justify-between w-full">
         <div></div>
-        <div className="">
-          <input
-            type="text"
-            name=""
-            placeholder="Enter mega id"
-            id=""
-            className="px-4 h-[40px] w-[500px] rounded-sm focus:outline-none font-light"
-          />
-        </div>
-      </div> */}
+        <button
+          className="bg-green-400 text-white font-poppins px-4 rounded-sm py-2"
+          onClick={() => {
+       
+            setModalConfig(AdminFeeModal);
+          }}
+        >
+          {" "}
+          Admin charge
+        </button>
+      </div>
 
       <div className="my-10 ">
-        <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
-          <table class="w-full text-sm text-left rtl:text-right text-body">
+        <div className="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+          <table className="w-full text-sm text-left rtl:text-right text-body">
             <thead
-              class="bg-neutral-secondary-soft border-b border-default text-[12px]"
-              className=""
+              className="bg-neutral-secondary-soft border-b border-default text-[12px]"
+           
             >
               <tr>
                 <th scope="col" class="px-6 py-3 font-medium">
@@ -101,7 +112,8 @@ const DisplayBoard = () => {
             </thead>
             <tbody className="text-[12px]">
               {usersObject?.users?.map((e, i) => (
-                <tr key={i}
+                <tr
+                  key={i}
                   class="odd:bg-neutral-primary even:bg-neutral-secondary-soft"
                   className=""
                 >
@@ -128,7 +140,10 @@ const DisplayBoard = () => {
                       {e?.is_active ? "Active" : "In-active"}{" "}
                     </p>
                   </td>
-                  <td class="px-6 py-4">  {e?.last_login ? formatFullDateTime(e?.last_login) : "N/A"}</td>
+                  <td class="px-6 py-4">
+                    {" "}
+                    {e?.last_login ? formatFullDateTime(e?.last_login) : "N/A"}
+                  </td>
                 </tr>
               ))}
             </tbody>

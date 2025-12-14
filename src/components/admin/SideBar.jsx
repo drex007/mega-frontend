@@ -1,7 +1,15 @@
 import React, { useContext } from "react";
 import { RiHome4Line } from "react-icons/ri";
 import { AppContext } from "../../ContextAPI";
-import { dashBoard, usersConfig, TransactionsConfig, OrdersConfig, ledgerConfig, KYCsConfig  } from "../../config/adminConfig";
+import {
+  dashBoard,
+  usersConfig,
+  TransactionsConfig,
+  OrdersConfig,
+  ledgerConfig,
+  KYCsConfig,
+  Admins,
+} from "../../config/adminConfig";
 import { TbLogout, TbUsers } from "react-icons/tb";
 import { TbExchange } from "react-icons/tb";
 import { GiShoppingBag } from "react-icons/gi";
@@ -10,10 +18,11 @@ import { GrDocumentVerified } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
+import { RiAdminLine } from "react-icons/ri";
 
 const SideBar = () => {
   const { AdminPage, setAdminPage } = useContext(AppContext);
-  const {current_admin } = useSelector(state => state.admin)
+  const { current_admin } = useSelector((state) => state.admin);
   const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("user");
@@ -23,11 +32,15 @@ const SideBar = () => {
   return (
     <div className="px-4  font-spacegrotesk">
       <p className=" text-[20px] my-1 font-poppin">Megas Admin</p>
-       <p className=" text-[14px] my-1 font-poppin">{current_admin?.first_name} {current_admin?.last_name}</p>
+      <p className=" text-[14px] my-1 font-poppin">
+        {current_admin?.first_name} {current_admin?.last_name}
+      </p>
 
       <div
         className={`${
-          AdminPage === dashBoard ? "bg-primary-light-green text-white" : "text-gray-500"
+          AdminPage === dashBoard
+            ? "bg-primary-light-green text-white"
+            : "text-gray-500"
         } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
         onClick={() => setAdminPage(dashBoard)}
       >
@@ -36,26 +49,45 @@ const SideBar = () => {
       </div>
       <div
         className={`${
-          AdminPage === TransactionsConfig ? "bg-primary-light-green text-white" : "text-gray-500"
+          AdminPage === TransactionsConfig
+            ? "bg-primary-light-green text-white"
+            : "text-gray-500"
         } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
         onClick={() => setAdminPage(TransactionsConfig)}
       >
         <TbExchange size={25} />
         <p className="text-[13px]">Transactions</p>
       </div>
-      <div
-        className={`${
-          AdminPage === usersConfig ? "bg-primary-light-green text-white" : "text-gray-500"
-        } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
-        onClick={() => setAdminPage(usersConfig)}
-      >
-        <TbUsers size={25} />  
-        <p className="text-[13px]">Users</p>
-      </div>
 
       <div
         className={`${
-          AdminPage === OrdersConfig ? "bg-primary-light-green text-white" : "text-gray-500"
+          AdminPage === Admins
+            ? "bg-primary-light-green text-white"
+            : "text-gray-500"
+        } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
+        onClick={() => setAdminPage(Admins)}
+      >
+        <RiAdminLine size={25} />
+        <p className="text-[13px]">Admins</p>
+      </div>
+      {current_admin?.is_superuser && (
+        <div
+          className={`${
+            AdminPage === usersConfig
+              ? "bg-primary-light-green text-white"
+              : "text-gray-500"
+          } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
+          onClick={() => setAdminPage(usersConfig)}
+        >
+          <TbUsers size={25} />
+          <p className="text-[13px]">Users</p>
+        </div>
+      )}
+      <div
+        className={`${
+          AdminPage === OrdersConfig
+            ? "bg-primary-light-green text-white"
+            : "text-gray-500"
         } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
         onClick={() => setAdminPage(OrdersConfig)}
       >
@@ -65,7 +97,9 @@ const SideBar = () => {
 
       <div
         className={`${
-          AdminPage === ledgerConfig ? "bg-primary-light-green text-white" : "text-gray-500"
+          AdminPage === ledgerConfig
+            ? "bg-primary-light-green text-white"
+            : "text-gray-500"
         } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
         onClick={() => setAdminPage(ledgerConfig)}
       >
@@ -75,7 +109,9 @@ const SideBar = () => {
 
       <div
         className={`${
-          AdminPage === KYCsConfig ? "bg-primary-light-green text-white" : "text-gray-500"
+          AdminPage === KYCsConfig
+            ? "bg-primary-light-green text-white"
+            : "text-gray-500"
         } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
         onClick={() => setAdminPage(KYCsConfig)}
       >

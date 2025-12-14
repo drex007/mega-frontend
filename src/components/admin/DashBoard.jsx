@@ -1,17 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { IoIosNotificationsOutline } from "react-icons/io";
-import AdminDashBoardCard from "./AdminDashBoardCard";
-import { BiEditAlt } from "react-icons/bi";
 import { AppContext } from "../../ContextAPI";
-// import { allCoinToNGN, allDashBoardTranstion, allNGNToCoin } from '../../adminPageConfig';
-import { TbEyeShare } from "react-icons/tb";
-
-import { CgSearch } from "react-icons/cg";
-import { useNavigate } from "react-router-dom";
-
-import { useDispatch, useSelector } from "react-redux";
-import { formatCurrency, formatFullDateTime } from "../../constants";
-import { GoChevronRight } from "react-icons/go";
 import SideBar from "./SideBar";
 import DisplayBoard from "./DisplayBoard";
 import Orders from "./Orders";
@@ -22,6 +10,8 @@ import Verifications from "./Verifications";
 
 import {
   addDeliveryAgent,
+  AdminFeeModal,
+  Admins,
   dashBoard,
   fineuserModal,
   KYCsConfig,
@@ -32,15 +22,17 @@ import {
 } from "../../config/adminConfig";
 import FineAUserModal from "../../modals/admin/FineAUserModal";
 import AddDeliveryAgentModal from "../../modals/admin/AddDeliveryAgentModal";
+import MegaAdmins from "./MegaAdmins";
+import UpdateAdminFeesModal from "../../modals/admin/UpdateAdminFeesModal";
 
 const DashBoard = () => {
-  const { AdminPage, setAdminPage, modalConfig, setModalConfig } =
-    useContext(AppContext);
+  const { AdminPage, modalConfig, setModalConfig } =useContext(AppContext);
 
   return (
     <div className="py-4 font-spacegrotesk  h-screen">
       {modalConfig == fineuserModal && <FineAUserModal />}
       {modalConfig == addDeliveryAgent && <AddDeliveryAgentModal />}
+      {modalConfig == AdminFeeModal && <UpdateAdminFeesModal />}
 
       <div className="flex flex-1">
         <div className="flex-[0.1]">
@@ -48,9 +40,11 @@ const DashBoard = () => {
         </div>
         <div className="flex-[0.9] h-full max-h-screen overflow-y-auto">
           {AdminPage == dashBoard && <DisplayBoard />}
+     
           {/* <DisplayBoard /> */}
           {AdminPage == OrdersConfig && <Orders />}
           {AdminPage == TransactionsConfig && <Transactions />}
+          {AdminPage == Admins && <MegaAdmins />}
           {AdminPage == usersConfig && <Users />}
           {AdminPage == ledgerConfig && <Ledger />}
           {AdminPage == KYCsConfig && <Verifications />}

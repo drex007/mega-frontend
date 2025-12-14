@@ -3,18 +3,13 @@ import {
   getTransactionByIDRoute,
   fetchTransactionsRoute,
   adminLoginRoute,
-  adminUpdateTransactionRoute,
-  deleteAccountRoute,
-  deleteNetworkAssetRoute,
   getAdminDetailsRoute,
-  getAdminAnalyticsRoute,
+ 
   getAllUsersRoute,
   getUsersRoute,
-  getSwapRequestRoute,
+
   getDashboardAnalyticsRoute,
-  getTransactionsRoute,
-  updateAccountRoute,
-  updateTransactionFeeRoute,
+
   activateAndDeactivateUserRoute,
   fineAUsersRoute,
   fetchAUserRoute,
@@ -24,6 +19,8 @@ import {
   fetchBusinessKYCRoute,
   acceptOrRejectKybsRoute,
   getUserTransactionRoute,
+  getAdminFeeRoute,
+  updateAdminFeeRoute,
 } from "./routes";
 import toast from "react-hot-toast";
 
@@ -251,6 +248,19 @@ export const acceptOrRejectKybsAction = createAsyncThunk(
 );
 
 
+export const getAdminFeeAction = createAsyncThunk(
+  "admin/getAdminFeeAction",
+  async (_,
+    thunkAPI
+  ) => {
+    try {
+      const { data } = await getAdminFeeRoute();
+      return data;
+    } catch (error) {
+      return {};
+    }
+  }
+);
 
 
 
@@ -286,6 +296,36 @@ export const getAllUsersAction = createAsyncThunk(
     }
   }
 );
+
+
+
+export const UpdateAdminFeeAction = createAsyncThunk(
+  "admin/UpdateAdminFeeAction",
+  async (
+    { formdata , setModalConfig},
+    thunkAPI
+  ) => {
+    try {
+      const { data } = await updateAdminFeeRoute(
+        formdata
+      );
+      toast.success("Charges updated!!")
+      setModalConfig(null)
+      return data;
+    } catch (error) {
+      toast.error("Charges not updated!!")
+      return {};
+    }
+  }
+);
+
+
+
+
+
+
+
+
 
 
 

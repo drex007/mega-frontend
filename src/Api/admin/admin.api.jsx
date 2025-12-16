@@ -21,6 +21,7 @@ import {
   getUserTransactionRoute,
   getAdminFeeRoute,
   updateAdminFeeRoute,
+  adminDisbursePaymentRoute
 } from "./routes";
 import toast from "react-hot-toast";
 
@@ -314,6 +315,28 @@ export const UpdateAdminFeeAction = createAsyncThunk(
       return data;
     } catch (error) {
       toast.error("Charges not updated!!")
+      return {};
+    }
+  }
+);
+
+
+
+export const adminDisbursePaymentAction = createAsyncThunk(
+  "admin/adminDisbursePaymentAction",
+  async (
+    { order_id },
+    thunkAPI
+  ) => {
+    try {
+      const { data } = await adminDisbursePaymentRoute(
+        order_id
+      );
+      toast.success("Payment disbursed successfully!")
+  
+      return data;
+    } catch (error) {
+      toast.error("Payment not disbursed successfully!")
       return {};
     }
   }

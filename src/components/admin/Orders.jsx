@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import {
+  adminDisbursePaymentAction,
   getOrdersAction,
   getSingleOrderAction,
 } from "../../Api/admin/admin.api";
@@ -154,7 +155,7 @@ const Orders = () => {
                     <td class="px-6 py-4">{e?.status}</td>
                     <td class="px-6 py-4">{e?.phone_number}</td>
                     <td class="px-6 py-4 flex space-x-2">
-                      {status == "PROCESSING" && (
+                      {e?.status == "PROCESSING" && (
                         <button
                           className="bg-green-500 p-2 text-[12px] text-white"
                           onClick={() => {
@@ -175,6 +176,14 @@ const Orders = () => {
                       >
                         Details
                       </button>
+                   {!e?.disbursed &&  e?.status != "PROCESSING" &&     <button
+                        className="bg-orange-500 p-2 text-[12px] text-white"
+                        onClick={() => {
+                          dispatch(adminDisbursePaymentAction({order_id:e?.order_id}))
+                        }}
+                      >
+                        Disburse Payment
+                      </button>}
                     </td>
                   </tr>
                 ))}

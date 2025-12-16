@@ -55,49 +55,8 @@ export const getAdminFeeRoute = () => API.get("/admin/delivery-charge");
 export const updateAdminFeeRoute = (formdata) =>
   API.put(`admin/delivery-charge`, formdata);
 
-export const deleteNetworkAssetRoute = (id) =>
-  API.delete(`admin/asset/delete/${id}`);
-export const deleteAccountRoute = (id) =>
-  API.delete(`admin/account/delete/${id}`);
-
-export const getAdminAnalyticsRoute = () => API.get(`transaction/analytics`);
-export const getTransactionsRoute = (
-  page,
-  limit,
-  transactionStatus,
-  transactionType,
-  from,
-  to
-) =>
-  API.get("/transaction/all", {
-    params: {
-      page: page,
-      limit: limit,
-      transactionStatus: transactionStatus,
-      transactionType: transactionType,
-      from: from,
-      to: to,
-    },
-  });
-
-export const getSwapRequestRoute = (
-  page,
-  limit,
-  transactionStatus,
-  transactionType
-) => {
-  return API.get("/transaction/all", {
-    params: {
-      page: page,
-      limit: limit,
-      transactionStatus:
-        typeof transactionStatus === "string"
-          ? transactionStatus
-          : JSON.stringify(transactionStatus),
-      transactionType: transactionType,
-    },
-  });
-};
+export const adminDisbursePaymentRoute = (order_id) =>
+  API.get(`admin/order/${order_id}/disburse`);
 
 export const getAllUsersRoute = (page, limit) =>
   API.get("/user/all-users", {
@@ -107,5 +66,3 @@ export const getAllUsersRoute = (page, limit) =>
     },
   });
 
-export const adminUpdateTransactionRoute = (formdata, transactionId) =>
-  API.put(`/transaction/update/${transactionId}`, formdata);

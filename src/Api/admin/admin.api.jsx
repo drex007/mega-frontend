@@ -21,7 +21,9 @@ import {
   getUserTransactionRoute,
   getAdminFeeRoute,
   updateAdminFeeRoute,
-  adminDisbursePaymentRoute
+  adminDisbursePaymentRoute,
+  getAdminsRoute,
+  makeAUserAdminRoute
 } from "./routes";
 import toast from "react-hot-toast";
 
@@ -89,6 +91,40 @@ export const getUsersRouteAction = createAsyncThunk(
     }
   }
 );
+
+export const getAdminsAction = createAsyncThunk(
+  "admin/getAdminsAction",
+  async ({page}, thunkAPI) => {
+    try {
+      const { data } = await getAdminsRoute(page);
+      return data;
+    } catch (error) {
+      return {};
+    }
+  }
+);
+
+export const makeAUserAdminAction = createAsyncThunk(
+  "admin/makeAUserAdminAction",
+  async ({user_id, admin_option}, thunkAPI) => {
+    try {
+      const { data } = await makeAUserAdminRoute(user_id, admin_option);
+      if (admin_option === "add" ){
+        toast.success("Admin role added to user")
+
+      } else {
+            toast.success("Admin role removed from user")
+
+      }
+      return data;
+    } catch (error) {
+      
+       toast.error("Error occured try again")
+      return {};
+    }
+  }
+);
+
 
 export const fetchPaymentHistoriesAction = createAsyncThunk(
   "admin/fetchPaymentHistories",
@@ -162,6 +198,20 @@ export const fetchAUserRouteAction = createAsyncThunk(
     }
   }
 );
+
+export const fetchAnAdminRouteAction = createAsyncThunk(
+  "admin/fetchAnAdminRouteAction",
+  async ({ id }, thunkAPI) => {
+    try {
+      const { data } = await fetchAUserRoute(id);
+
+      return data;
+    } catch (error) {
+      return {};
+    }
+  }
+);
+
 
 export const getOrdersAction = createAsyncThunk(
   "admin/getOrdersAction",

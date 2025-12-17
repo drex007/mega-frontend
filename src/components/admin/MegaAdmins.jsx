@@ -4,9 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { formatFullDateTime } from "../../constants";
 import {
   activateAndDeactivateUserAction,
+  fetchAnAdminRouteAction,
   fetchAUserRouteAction,
+  getAdminsAction,
   getUsersRouteAction,
   getUserTransactionAction,
+  makeAUserAdminAction,
 } from "../../Api/admin/admin.api";
 import { AppContext } from "../../ContextAPI";
 import { fineuserModal } from "../../config/adminConfig";
@@ -14,20 +17,19 @@ import { BsSearch } from "react-icons/bs";
 import UserTransactions from "./UserTransactions";
 
 const MegaAdmins = () => {
-  const { usersObject } = useSelector((state) => state.admin);
+  const { usersObject, admins } = useSelector((state) => state.admin);
   const [showUserTransactions, setShowUserTransactions] = useState(false);
 
   const [formdata, setFormdata] = useState({
     user_id: "",
   });
 
-
-
   const [currentPage, setCurrentPage] = useState(1);
 
   const dispatch = useDispatch();
   // const navigate = useNavigate();
-  const { setModalConfig, setCurrentUser, setCurrentUserTransaction } = useContext(AppContext);
+  const { setModalConfig, setCurrentUser, setCurrentUserTransaction } =
+    useContext(AppContext);
 
   const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value });
@@ -40,12 +42,17 @@ const MegaAdmins = () => {
   };
 
   useEffect(() => {
-    dispatch(getUsersRouteAction({ page: currentPage }));
+    dispatch(getAdminsAction({ page: currentPage }));
   }, [getUsersRouteAction, formdata, currentPage]);
 
   return (
     <div className="p-4">
-      {showUserTransactions && <UserTransactions  showUserTransactions = {showUserTransactions} setShowUserTransactions = {setShowUserTransactions}/>}
+      {showUserTransactions && (
+        <UserTransactions
+          showUserTransactions={showUserTransactions}
+          setShowUserTransactions={setShowUserTransactions}
+        />
+      )}
       {!showUserTransactions && (
         <div>
           <div className="flex justify-between">
@@ -63,7 +70,7 @@ const MegaAdmins = () => {
                 <BsSearch
                   className="cursor-pointer"
                   onClick={() =>
-                    dispatch(fetchAUserRouteAction({ id: formdata.user_id }))
+                    dispatch(fetchAnAdminRouteAction({ id: formdata.user_id }))
                   }
                 />
               </div>
@@ -100,7 +107,7 @@ const MegaAdmins = () => {
                   </tr>
                 </thead>
                 <tbody className="text-[12px]">
-                  {usersObject?.users?.map((e, i) => (
+                  {admins?.users?.map((e, i) => (
                     <tr
                       key={i}
                       class="odd:bg-neutral-primary even:bg-neutral-secondary-soft"
@@ -114,8 +121,11 @@ const MegaAdmins = () => {
                       </th>
                       <th
                         scope="row"
-                        class="px-6 py-4 font-medium text-heading whitespace-nowrap"
+                        class="px-6 py-4 font-medium text-heading whitespace-nowrap flex"
                       >
+                        {e?.is_superuser && (
+                          <div className="w-[10px] h-[10px] rounded-full bg-orange-400 -ml-2 mr-1"></div>
+                        )}
                         {e?.email}
                       </th>
                       <th
@@ -160,10 +170,33 @@ const MegaAdmins = () => {
                               dispatch(getUsersRouteAction());
                             }}
                           >
+                            Deactivate
+                          </button>
+                        )}
+
+                        {e?.is_admin === true ? (
+                          <button
+                            className="bg-black p-2 text-[12px] text-white"
+                            onClick={() => {
+                              dispatch(
+                                makeAUserAdminAction({ user_id: e?.user_id, admin_option:"remove" })
+                              );
+                            }}
+                          >
+                            Remove Admin Role
+                          </button>
+                        ) : (
+                          <button
+                            className="bg-purple-500 p-2 text-[12px] text-white"
+                            onClick={() => {
+                              dispatch(
+                                makeAUserAdminAction({ user_id: e?.user_id, admin_option:"add" })
+                              );
+                            }}
+                          >
                             Make Admin
                           </button>
                         )}
- 
                       </td>
                     </tr>
                   ))}

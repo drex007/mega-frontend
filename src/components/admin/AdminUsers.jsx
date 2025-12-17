@@ -4,7 +4,7 @@ import { AppContext } from '../../ContextAPI';
 import { CgSearch } from "react-icons/cg";
 import { tick } from '../../assets';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllUsersAction } from '../../Api/admin/admin.api';
+import { getAdminsAction } from '../../Api/admin/admin.api';
 import { GoChevronRight } from "react-icons/go";
 import { formatFullDateTime } from '../../constants';
 
@@ -30,9 +30,8 @@ const AdminUsers = () => {
         setgoToPage(Number(e.target.value))
     }
     useEffect(() => {
-        dispatch(getAllUsersAction({
-            page: currentPage,
-            limit: usersTableQuery?.limit
+        dispatch(getAdminsAction({
+            page: currentPage
         }))
     }, [currentPage, usersTableQuery?.limit])
     return (

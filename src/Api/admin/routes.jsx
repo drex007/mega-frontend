@@ -12,6 +12,18 @@ export const getUsersRoute = (page) =>
       page: page,
     },
   });
+
+
+export const getAdminsRoute = (page) =>
+  API.get("/admin/get-admins", {
+    params: {
+      page: page,
+    },
+  });
+
+  export const makeAUserAdminRoute = (user_id, admin_option) =>
+  API.get(`/admin/${user_id}/make-admin/${admin_option}`);
+
 export const fetchTransactionsRoute = (page) =>
   API.get("/bank/payments", {
     params: {

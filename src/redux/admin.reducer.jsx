@@ -14,6 +14,8 @@ import {
   fetchBusinessKYCAction,
   getUserTransactionAction,
   getAdminFeeAction,
+  getAdminsAction,
+  fetchAnAdminRouteAction,
 } from "../Api/admin/admin.api";
 
 export const adminSlice = createSlice({
@@ -29,7 +31,8 @@ export const adminSlice = createSlice({
     orders: null,
     business_kyc: null,
     user_transaction: null,
-    admin_fees: null
+    admin_fees: null,
+    admins:null
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -121,6 +124,17 @@ export const adminSlice = createSlice({
     builder.addCase(getAdminFeeAction.fulfilled, (state, action) => {
       state.admin_fees = action.payload;
     });
+      // Get admins
+     builder.addCase(getAdminsAction.fulfilled, (state, action) => {
+      state.admins = action.payload;
+    });
+
+
+    //Get single admin
+    builder.addCase(fetchAnAdminRouteAction.fulfilled, (state, action) => {
+      state.admins = action.payload;
+    });
+    
 
   },
 });

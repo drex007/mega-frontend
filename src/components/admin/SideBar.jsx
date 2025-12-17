@@ -59,17 +59,19 @@ const SideBar = () => {
         <p className="text-[13px]">Transactions</p>
       </div>
 
-      <div
-        className={`${
-          AdminPage === Admins
-            ? "bg-primary-light-green text-white"
-            : "text-gray-500"
-        } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
-        onClick={() => setAdminPage(Admins)}
-      >
-        <RiAdminLine size={25} />
-        <p className="text-[13px]">Admins</p>
-      </div>
+      {current_admin?.is_superuser && (
+        <div
+          className={`${
+            AdminPage === Admins
+              ? "bg-primary-light-green text-white"
+              : "text-gray-500"
+          } flex  items-center space-x-4 px-4 py-4  rounded-md  my-4 cursor-pointer`}
+          onClick={() => setAdminPage(Admins)}
+        >
+          <RiAdminLine size={25} />
+          <p className="text-[13px]">Admins</p>
+        </div>
+      )}
       {current_admin?.is_superuser && (
         <div
           className={`${
